@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*Title*@
+    <title>@ViewData["Title"] - ecommerce</title>
+    @*Icon*@
+    <link rel="shortcut icon" type="image/png" href="~/Image/favicon.png">
+    @*Web Fonts*@
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    @*Bootstrap*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @*FontAwesome*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @*css1*@
+    <link rel="stylesheet" href="~/css/css1/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/css1/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/css1/animate.css">
+    <link rel="stylesheet" href="~/css/css1/meanmenu.min.css" />
+    <link rel="stylesheet" href="~/css/css1/main.css" />
+    <link rel="stylesheet" href="~/css/css1/responsive.css" />
+
+    @*MVC*@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ecommerce.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Links", required: false)
+
+</head>
+<body>
+    @*NavBar Start*@
+    <partial name="_NavBarPartial"></partial>
+    @*NavBar End*@
+    @*Body Start*@
+        @RenderBody()
+    @*Body End
+    @*Footer Start*@
+    <partial name="_FooterPartial"></partial>
+    @*Footer End*@
+    @*Scripts Start*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/js1/main.js"></script>
+    @*js1*@
+    <script src="~/js/js1/jquery-1.11.3.min.js"></script>
+    <script src="~/js/js1/jquery.countdown.js"></script>
+    <script src="~/js/js1/main.js"></script>
+    <script src="~/js/js1/jquery.isotope-3.0.6.min.js"></script>
+    <script src="~/js/js1/waypoints.js"></script>
+    <script src="~/js/js1/owl.carousel.min.js"></script>
+    <script src="~/js/js1/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/js1/jquery.meanmenu.min.js"></script>
+    <script src="~/js/js1/sticker.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @*Scripts End*@
+</body>
+</html>

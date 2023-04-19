@@ -1,5 +1,6 @@
 E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\bin\Debug\net7.0\appsettings.Development.json
 E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\bin\Debug\net7.0\appsettings.json
+E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\bin\Debug\net7.0\libman.json
 E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\bin\Debug\net7.0\ecommerce.staticwebassets.runtime.json
 E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\bin\Debug\net7.0\ecommerce.exe
 E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\bin\Debug\net7.0\ecommerce.deps.json

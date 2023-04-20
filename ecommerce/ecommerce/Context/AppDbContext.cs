@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ecommerce.Models;
+using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using System.IO;
 
@@ -11,10 +12,16 @@ public class AppDbContext : DbContext
     { }
     public AppDbContext(DbContextOptions options) : base(options)
     { }
-    #endregion
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	#endregion
+	public DbSet<Product> Products { get; set; }
+	public DbSet<Category> Categories { get; set; }
+
+	public DbSet<Variation> Variations { get; set; }
+	public DbSet<VariationOptions> VariationOptions { get; set; }
+
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=MovieProject; Trusted_Connection=true; Encrypt=false");
+        optionsBuilder.UseSqlServer("Server=.; Database=ECommerce; Trusted_Connection=true; Encrypt=false");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

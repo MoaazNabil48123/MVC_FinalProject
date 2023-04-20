@@ -15,4 +15,6 @@ public class ProductItem
 	//Navigational Properties
 	public Product? Product { get; set; }
 	public List<ProductConfiguration>? ProductConfigurations { get; set; }
+
+	public List<OrderLine> OrderLines { get; set; }
 }

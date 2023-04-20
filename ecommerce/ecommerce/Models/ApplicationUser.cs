@@ -6,7 +6,9 @@ namespace ecommerce.Models
     {
         public string Address { get; set; } 
 
-        // we will add some attribute like orders 
+        // we will add some attribute like orders
+        // 
+        public List<ShopOrder> shopOrders { get; set; }
     }
 }
  

@@ -14,7 +14,8 @@ namespace ecommerce.Controllers
 
 		public IActionResult Index(int categoryId)
 		{
-            return View(ProductRepo.GetAll(p => p.CategoryId == categoryId));
+			var result = ProductRepo.GetAll(p => p.CategoryId==categoryId).ToList();
+				return View(result);
 		}
 		public IActionResult Details(int productId)
 		{

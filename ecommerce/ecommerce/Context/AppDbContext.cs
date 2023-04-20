@@ -33,7 +33,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     #endregion
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
+        optionsBuilder.UseSqlServer("Server=.; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ecommerce.Models
 {
-    public class User_Address
+    public class UserAddress
     {
 
-        public int User_Id { get; set; }
+        public int UserId { get; set; }
 
         [ForeignKey("Address")]
 
-        public int Address_Id { get; set; } 
+        public int AddressId { get; set; } 
 
         public virtual Address Address {get; set; }
        

@@ -17,7 +17,6 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 
 	#endregion
 	
-
     #region DbSets
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
@@ -28,21 +27,15 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     #endregion
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-
-        optionsBuilder.UseSqlServer("Server=.; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
-
-
+        optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ProductConfiguration>().HasKey(entity => new { entity.ProductItemId, entity.VariationOptionsId });
-
-        
-
         //base.OnModelCreating(modelBuilder);
-        
 
         #region DataSeeding 
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         using (var package = new ExcelPackage(new FileInfo("../../DB/DB.xlsx")))
         {
             
@@ -156,6 +149,5 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
             base.OnModelCreating(modelBuilder);
         }
         #endregion
-            
     }
 }

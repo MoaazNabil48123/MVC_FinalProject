@@ -12,14 +12,13 @@ namespace ecommerce.Controllers
 			this.ProductRepo = ProductRepo;
 		}
 
-		public IActionResult Index(int CategoryId)
+		public IActionResult Index(int categoryId)
 		{
-
-            return View(ProductRepo.GetAll().Where(p => p.CategoryId == CategoryId).ToList());
+            return View(ProductRepo.GetAll(p => p.CategoryId == categoryId));
 		}
-		public IActionResult Details(int ProductId)
+		public IActionResult Details(int productId)
 		{
-			return View(ProductRepo.GetById(ProductId));
+			return View(ProductRepo.GetById(productId));
 		}
 	}
 }

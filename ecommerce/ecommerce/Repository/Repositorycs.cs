@@ -21,12 +21,21 @@ public class Repository<T> : IRepository<T> where T : class
     {
         return _context.Set<T>().ToList();
     }
-    public List<T> GetAll(params Expression<Func<T, object>>[] includes)
+    public List<T> GetAll(params Expression<Func<T, object>>[] includes)//GetAll with include(join with another table)
     {
         IQueryable<T> query = _context.Set<T>();
         foreach (var include in includes)
         {
             query = query.Include(include);
+        }
+        return query.ToList();
+    }
+    public List<T> GetAll(params Expression<Func<T, bool>>[] filters)//GetAll with filters
+    {
+        IQueryable<T> query = _context.Set<T>();
+        foreach (var filter in filters)
+        {
+            query = query.Where(filter);
         }
         return query.ToList();
     }

@@ -5,8 +5,9 @@ namespace ecommerce.Models
 {
     public class User_Address
     {
+        [ForeignKey("ApplicationUser")]
 
-        public int User_Id { get; set; }
+        public string User_Id { get; set; }
 
         [ForeignKey("Address")]
 
@@ -15,7 +16,6 @@ namespace ecommerce.Models
         public virtual Address Address {get; set; }
        
         
-        [ForeignKey("ApplicationUserId")]
 
         public virtual ApplicationUser ApplicationUser { get; set; }
     }

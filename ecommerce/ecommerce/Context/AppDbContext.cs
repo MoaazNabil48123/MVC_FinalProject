@@ -16,17 +16,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     { }
 
 	#endregion
-	public DbSet<Product> Products { get; set; }
-	public DbSet<Category> Categories { get; set; }
-
-	public DbSet<Variation> Variations { get; set; }
-	public DbSet<VariationOptions> VariationOptions { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer("Server=.; Database=ECommerce; Trusted_Connection=true; Encrypt=false");
-
-    }
+	
 
     #region DbSets
     public DbSet<Category> Categories { get; set; }
@@ -39,7 +29,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
-        optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
+        optionsBuilder.UseSqlServer("Server=.; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
 
 
     }
@@ -50,10 +40,12 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
         
 
         //base.OnModelCreating(modelBuilder);
+        
+
         #region DataSeeding 
         using (var package = new ExcelPackage(new FileInfo("../../DB/DB.xlsx")))
         {
-
+            
             #region CategorySeeding
             var worksheet = package.Workbook.Worksheets[0];//Category
             var rows = worksheet.Cells.Select(cell => cell.Start.Row).Distinct().OrderBy(row => row);
@@ -70,7 +62,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
             }
             modelBuilder.Entity<Category>().HasData(categoryList);
             #endregion
-
+            
             #region ProductSeeding
             worksheet = package.Workbook.Worksheets[1];//Product
             rows = worksheet.Cells.Select(cell => cell.Start.Row).Distinct().OrderBy(row => row);
@@ -164,5 +156,6 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
             base.OnModelCreating(modelBuilder);
         }
         #endregion
+            
     }
 }

@@ -1,6 +1,6 @@
-﻿
+﻿@model List<CartProducts>
 @{
-    ViewData["Title"] = "Cart";
+	ViewData["Title"] = "Cart";
 }
 
 <!-- breadcrumb-section -->
@@ -35,30 +35,17 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="table-body-row">
-								<td class="product-remove"><a href="#"><i class="far fa-window-close text-danger"></i></a></td>
-								<td class="product-image"><img src="assets/img/products/product-img-1.jpg" alt=""></td>
-								<td class="product-name">Strawberry</td>
-								<td class="product-price">$85</td>
-								<td class="product-quantity"><input type="number" placeholder="0"></td>
-								<td class="product-total">1</td>
-							</tr>
-							<tr class="table-body-row">
-								<td class="product-remove"><a href="#"><i class="far fa-window-close text-danger"></i></a></td>
-								<td class="product-image"><img src="assets/img/products/product-img-2.jpg" alt=""></td>
-								<td class="product-name">Berry</td>
-								<td class="product-price">$70</td>
-								<td class="product-quantity"><input type="number" placeholder="0"></td>
-								<td class="product-total">1</td>
-							</tr>
-							<tr class="table-body-row">
-								<td class="product-remove"><a href="#"><i class="far fa-window-close text-danger"></i></a></td>
-								<td class="product-image"><img src="assets/img/products/product-img-3.jpg" alt=""></td>
-								<td class="product-name">Lemon</td>
-								<td class="product-price">$35</td>
-								<td class="product-quantity"><input type="number" placeholder="0"></td>
-								<td class="product-total">1</td>
-							</tr>
+							@foreach (var item in Model)
+							{
+								<tr class="table-body-row">
+									<td class="product-remove"><button onclick="DeleteProduct(@item.Id)"><i class="far fa-window-close text-danger"></i></button></td>
+									<td class="product-image"><img src="@item.ProductItem.Image" alt=""></td>
+									<td class="product-name">@item.ProductItem.Product.Name</td>
+									<td class="product-price">$@item.ProductItem.Price</td>
+									<td class="product-quantity"><input type="number" value="@item.Quantity"></td>
+									<td class="product-total">@item.ProductItem.Price*@item.Quantity</td>
+								</tr>
+							}
 						</tbody>
 					</table>
 				</div>
@@ -108,4 +95,14 @@
 	</div>
 </div>
 <!-- end cart -->
+@section Scripts{
+	<script>
+		function DeleteProduct(int id) {
+			var check = confirm("Are You Sure?")
+			if (check) {
+				window.location.href = "/Cart/DeleteProduct/" + id;
+			}
+		}
+	</script>
+}
 

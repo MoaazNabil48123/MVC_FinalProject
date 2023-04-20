@@ -24,10 +24,11 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Variation> Variations { get; set; }
     public DbSet<VariationOptions> VariationOptions { get; set; }
     public DbSet<ProductConfiguration> ProductConfigurations { get; set; }
-    #endregion
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public DbSet<CartProducts> CartProducts { get; set; }
+	#endregion
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

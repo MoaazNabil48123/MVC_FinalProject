@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ecommerce.Context;
 
@@ -11,9 +12,11 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230420163510_FinalIsa")]
+    partial class FinalIsa
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2925,13 +2928,16 @@ namespace ecommerce.Migrations
                     b.Property<int>("Address_Id")
                         .HasColumnType("int");
 
-                    b.Property<string>("User_Id")
+                    b.Property<string>("ApplicationUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("User_Id")
+                        .HasColumnType("int");
+
                     b.HasIndex("Address_Id");
 
-                    b.HasIndex("User_Id");
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("user_Addresses");
                 });
@@ -3133,7 +3139,7 @@ namespace ecommerce.Migrations
 
                     b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
                         .WithMany()
-                        .HasForeignKey("User_Id")
+                        .HasForeignKey("ApplicationUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

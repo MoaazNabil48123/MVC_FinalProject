@@ -16,5 +16,5 @@ public class ProductItem
 	public Product? Product { get; set; }
 	public List<ProductConfiguration>? ProductConfigurations { get; set; }
     public List<CartProducts>? CartProducts { get; set; }
-
+	public List<OrderLine> OrderLines { get; set; }
 }

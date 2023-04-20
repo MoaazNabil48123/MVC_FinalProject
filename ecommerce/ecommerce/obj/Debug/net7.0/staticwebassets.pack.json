@@ -1,471 +1,471 @@
 {
   "Files": [
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css",
       "PackagePath": "staticwebassets\\ecommerce.bundle.scp.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\1.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\1.jpg",
       "PackagePath": "staticwebassets\\Image\\Products\\1.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\2.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\2.jpg",
       "PackagePath": "staticwebassets\\Image\\Products\\2.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\favicon.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\favicon.png",
       "PackagePath": "staticwebassets\\Image\\favicon.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\1.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\1.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\1.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\a.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\a.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\a.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\abt.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\abt.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\abt.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar1.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar1.png",
       "PackagePath": "staticwebassets\\Image\\img1\\avaters\\avatar1.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar2.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar2.png",
       "PackagePath": "staticwebassets\\Image\\img1\\avaters\\avatar2.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar3.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar3.png",
       "PackagePath": "staticwebassets\\Image\\img1\\avaters\\avatar3.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\breadcrumb-bg.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\breadcrumb-bg.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\breadcrumb-bg.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\1.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\1.png",
       "PackagePath": "staticwebassets\\Image\\img1\\company-logos\\1.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\2.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\2.png",
       "PackagePath": "staticwebassets\\Image\\img1\\company-logos\\2.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\3.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\3.png",
       "PackagePath": "staticwebassets\\Image\\img1\\company-logos\\3.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\4.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\4.png",
       "PackagePath": "staticwebassets\\Image\\img1\\company-logos\\4.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\5.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\5.png",
       "PackagePath": "staticwebassets\\Image\\img1\\company-logos\\5.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\dd.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\dd.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\dd.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\favicon.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\favicon.png",
       "PackagePath": "staticwebassets\\Image\\img1\\favicon.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\feature-bg.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\feature-bg.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\feature-bg.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-2.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-2.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\hero-bg-2.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-3.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-3.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\hero-bg-3.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\hero-bg.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg1.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg1.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\hero-bg1.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\homepage-bg-pattern.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\homepage-bg-pattern.png",
       "PackagePath": "staticwebassets\\Image\\img1\\homepage-bg-pattern.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-1.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-1.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\latest-news\\news-bg-1.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-2.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-2.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\latest-news\\news-bg-2.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-3.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-3.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\latest-news\\news-bg-3.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-4.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-4.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\latest-news\\news-bg-4.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-5.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-5.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\latest-news\\news-bg-5.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-6.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-6.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\latest-news\\news-bg-6.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\logo.png",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\logo.png",
       "PackagePath": "staticwebassets\\Image\\img1\\logo.png"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-1.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-1.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\products\\product-img-1.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-2.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-2.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\products\\product-img-2.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-3.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-3.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\products\\product-img-3.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-4.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-4.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\products\\product-img-4.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-5.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-5.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\products\\product-img-5.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-6.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-6.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\products\\product-img-6.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-1.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-1.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\team\\team-1.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-2.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-2.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\team\\team-2.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-3.jpg",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-3.jpg",
       "PackagePath": "staticwebassets\\Image\\img1\\team\\team-3.jpg"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\all.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\all.min.css",
       "PackagePath": "staticwebassets\\css\\css1\\all.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\animate.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\animate.css",
       "PackagePath": "staticwebassets\\css\\css1\\animate.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\magnific-popup.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\magnific-popup.css",
       "PackagePath": "staticwebassets\\css\\css1\\magnific-popup.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\main.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\main.css",
       "PackagePath": "staticwebassets\\css\\css1\\main.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\meanmenu.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\meanmenu.min.css",
       "PackagePath": "staticwebassets\\css\\css1\\meanmenu.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\owl.carousel.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\owl.carousel.css",
       "PackagePath": "staticwebassets\\css\\css1\\owl.carousel.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\responsive.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\responsive.css",
       "PackagePath": "staticwebassets\\css\\css1\\responsive.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\site.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\favicon.ico",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\form-validate.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\form-validate.js",
       "PackagePath": "staticwebassets\\js\\js1\\form-validate.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery-1.11.3.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery-1.11.3.min.js",
       "PackagePath": "staticwebassets\\js\\js1\\jquery-1.11.3.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.countdown.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.countdown.js",
       "PackagePath": "staticwebassets\\js\\js1\\jquery.countdown.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.isotope-3.0.6.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.isotope-3.0.6.min.js",
       "PackagePath": "staticwebassets\\js\\js1\\jquery.isotope-3.0.6.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.magnific-popup.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.magnific-popup.min.js",
       "PackagePath": "staticwebassets\\js\\js1\\jquery.magnific-popup.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.meanmenu.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.meanmenu.min.js",
       "PackagePath": "staticwebassets\\js\\js1\\jquery.meanmenu.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\main.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\main.js",
       "PackagePath": "staticwebassets\\js\\js1\\main.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\owl.carousel.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\js1\\owl.carousel.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\sticker.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\sticker.js",
       "PackagePath": "staticwebassets\\js\\js1\\sticker.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\waypoints.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\waypoints.js",
       "PackagePath": "staticwebassets\\js\\js1\\waypoints.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\site.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

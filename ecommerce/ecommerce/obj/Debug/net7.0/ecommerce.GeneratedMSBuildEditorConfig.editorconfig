@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ecommerce
 build_property.RootNamespace = ecommerce
-build_property.ProjectDir = E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce\
+build_property.ProjectDir = D:\Project\MVC_FinalProject\ecommerce\ecommerce\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\ITI\14- Entity Framwork, MVC\MVC\01- lab\FinalProject\MVC_FinalProject\ecommerce\ecommerce
+build_property.MSBuildProjectDirectory = D:\Project\MVC_FinalProject\ecommerce\ecommerce
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Cart.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Checkout.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Index.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Privacy.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Product/Details.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Product/Index.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/Error.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_FooterPartial.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_MyLayout.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_MyLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_NavBarPartial.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_NavBarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZCYXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/_ViewImports.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/_ViewStart.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ITI/14- Entity Framwork\, MVC/MVC/01- lab/FinalProject/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_Layout.cshtml]
+[D:/Project/MVC_FinalProject/ecommerce/ecommerce/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9gj9yy8tln

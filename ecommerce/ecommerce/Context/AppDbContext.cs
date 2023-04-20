@@ -32,15 +32,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         modelBuilder.Entity<ProductConfiguration>().HasKey(entity => new { entity.ProductItemId, entity.VariationOptionsId });
 
-        //modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
-        // modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
-
-
-        //modelBuilder.Entity<IdentityUserLogin<int>>()
-        //    .Property(login => login.UserId)
-        //    .ForMySQLHasColumnType("PK")
-        //    .UseSqlServerIdentityColumn()
-        //    .UseMySQLAutoIncrementColumn("AI");
+        
 
         //base.OnModelCreating(modelBuilder);
         #region DataSeeding 

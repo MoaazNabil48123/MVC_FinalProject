@@ -4,7 +4,7 @@ namespace ecommerce.Models;
 
 public class Variation
 {
-	public int ID { get; set; }
+	public int Id { get; set; }
 	public string Name { get; set; } = string.Empty;
 	[ForeignKey(nameof(Category))]
 	public int CategoryId { get; set; }

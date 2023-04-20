@@ -14,7 +14,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     { }
     public AppDbContext(DbContextOptions options) : base(options)
     { }
-<<<<<<< HEAD
+
 	#endregion
 	public DbSet<Product> Products { get; set; }
 	public DbSet<Category> Categories { get; set; }
@@ -22,11 +22,11 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	public DbSet<Variation> Variations { get; set; }
 	public DbSet<VariationOptions> VariationOptions { get; set; }
 
-	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer("Server=.; Database=ECommerce; Trusted_Connection=true; Encrypt=false");
-=======
-    #endregion
+
+    }
 
     #region DbSets
     public DbSet<Category> Categories { get; set; }
@@ -38,12 +38,10 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     #endregion
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-<<<<<<< HEAD
+
         optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
-=======
-        optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
->>>>>>> 591276beed4bfd0a2e25ec43b579a88ba4f5f8f9
->>>>>>> ff759cef28f75b41fea0deed3ef6d4c4ebfac8a4
+
+
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

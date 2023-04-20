@@ -1,4 +1,6 @@
-﻿namespace ecommerce.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ecommerce.Models;
 
 public class Product
 {
@@ -6,6 +8,7 @@ public class Product
 	public string Name { get; set; } = string.Empty;
 	public string Description { get; set; } = string.Empty;
 	public string Image { get; set; } = string.Empty;
+	[ForeignKey(nameof(Category))]
 	public int CategoryId { get; set; }
 	//Navigational Properties
 	public Category? Category { get; set; }

@@ -1,11 +1,13 @@
 ﻿using ecommerce.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using System.IO;
 
 namespace ecommerce.Context;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<ApplicationUser>
 {
     #region Constructor
     public AppDbContext() : base()
@@ -24,11 +26,22 @@ public class AppDbContext : DbContext
     #endregion
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
+        optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ProductConfiguration>().HasKey(entity => new { entity.ProductItemId, entity.VariationOptionsId });
+
+        //modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
+        // modelBuilder.Entity<IdentityUserLogin<string>>().HasNoKey();
+
+
+        //modelBuilder.Entity<IdentityUserLogin<int>>()
+        //    .Property(login => login.UserId)
+        //    .ForMySQLHasColumnType("PK")
+        //    .UseSqlServerIdentityColumn()
+        //    .UseMySQLAutoIncrementColumn("AI");
+
         //base.OnModelCreating(modelBuilder);
         #region DataSeeding 
         using (var package = new ExcelPackage(new FileInfo("../../DB/DB.xlsx")))
@@ -140,6 +153,8 @@ public class AppDbContext : DbContext
             }
             modelBuilder.Entity<ProductConfiguration>().HasData(ProductConfigurationList);
             #endregion
+
+            base.OnModelCreating(modelBuilder);
         }
         #endregion
     }

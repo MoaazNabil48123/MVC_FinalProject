@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {}
+    "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {}
   },
   "projects": {
-    "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {
+    "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
+        "projectUniqueName": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
         "projectName": "ecommerce",
-        "projectPath": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
-        "packagesPath": "C:\\Users\\moaaz\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
+        "projectPath": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\moaaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +43,10 @@
             "EPPlus": {
               "target": "Package",
               "version": "[6.2.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

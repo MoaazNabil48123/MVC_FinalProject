@@ -293,7 +293,7 @@ namespace ecommerce.Migrations
                             Id = 1,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -301,7 +301,7 @@ namespace ecommerce.Migrations
                             Id = 2,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -309,7 +309,7 @@ namespace ecommerce.Migrations
                             Id = 3,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -317,7 +317,7 @@ namespace ecommerce.Migrations
                             Id = 4,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -325,7 +325,7 @@ namespace ecommerce.Migrations
                             Id = 5,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -333,7 +333,7 @@ namespace ecommerce.Migrations
                             Id = 6,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -341,7 +341,7 @@ namespace ecommerce.Migrations
                             Id = 7,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -349,7 +349,7 @@ namespace ecommerce.Migrations
                             Id = 8,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -357,7 +357,7 @@ namespace ecommerce.Migrations
                             Id = 9,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -365,7 +365,7 @@ namespace ecommerce.Migrations
                             Id = 10,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -373,7 +373,7 @@ namespace ecommerce.Migrations
                             Id = 11,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -381,7 +381,7 @@ namespace ecommerce.Migrations
                             Id = 12,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -389,7 +389,7 @@ namespace ecommerce.Migrations
                             Id = 13,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -397,7 +397,7 @@ namespace ecommerce.Migrations
                             Id = 14,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -405,7 +405,7 @@ namespace ecommerce.Migrations
                             Id = 15,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -413,7 +413,7 @@ namespace ecommerce.Migrations
                             Id = 16,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -421,7 +421,7 @@ namespace ecommerce.Migrations
                             Id = 17,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -429,7 +429,7 @@ namespace ecommerce.Migrations
                             Id = 18,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -437,7 +437,7 @@ namespace ecommerce.Migrations
                             Id = 19,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -445,7 +445,7 @@ namespace ecommerce.Migrations
                             Id = 20,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -453,7 +453,7 @@ namespace ecommerce.Migrations
                             Id = 21,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -461,7 +461,7 @@ namespace ecommerce.Migrations
                             Id = 22,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -469,7 +469,7 @@ namespace ecommerce.Migrations
                             Id = 23,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -477,7 +477,7 @@ namespace ecommerce.Migrations
                             Id = 24,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -485,7 +485,7 @@ namespace ecommerce.Migrations
                             Id = 25,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -493,7 +493,7 @@ namespace ecommerce.Migrations
                             Id = 26,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -501,7 +501,7 @@ namespace ecommerce.Migrations
                             Id = 27,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -509,7 +509,7 @@ namespace ecommerce.Migrations
                             Id = 28,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -517,7 +517,7 @@ namespace ecommerce.Migrations
                             Id = 29,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -525,7 +525,7 @@ namespace ecommerce.Migrations
                             Id = 30,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         });
                 });

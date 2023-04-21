@@ -27,7 +27,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     #endregion
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false");
+        optionsBuilder.UseSqlServer("Server=AHMED-GAFAR; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

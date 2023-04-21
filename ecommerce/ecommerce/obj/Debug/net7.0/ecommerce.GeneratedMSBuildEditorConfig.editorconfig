@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ahmed\Documents\GitHub\MVC_FinalProject\ecommerce\ecommerce
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ahmed/Documents/GitHub/MVC_FinalProject/ecommerce/ecommerce/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ahmed/Documents/GitHub/MVC_FinalProject/ecommerce/ecommerce/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -155,6 +155,49 @@ namespace ecommerce.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("ecommerce.Models.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address_line1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Address_line2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Country_Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Postal_Code")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Region")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Street_Number")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Unit_Number")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Country_Id");
+
+                    b.ToTable("addresses");
+                });
+
             modelBuilder.Entity("ecommerce.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -256,6 +299,23 @@ namespace ecommerce.Migrations
                             Id = 3,
                             Name = "Phone"
                         });
+                });
+
+            modelBuilder.Entity("ecommerce.Models.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Country_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Product", b =>
@@ -2860,6 +2920,22 @@ namespace ecommerce.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ecommerce.Models.User_Address", b =>
+                {
+                    b.Property<int>("Address_Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("User_Id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasIndex("Address_Id");
+
+                    b.HasIndex("User_Id");
+
+                    b.ToTable("user_Addresses");
+                });
+
             modelBuilder.Entity("ecommerce.Models.Variation", b =>
                 {
                     b.Property<int>("Id")
@@ -2995,6 +3071,17 @@ namespace ecommerce.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ecommerce.Models.Address", b =>
+                {
+                    b.HasOne("ecommerce.Models.Country", "Country")
+                        .WithMany("Addresses")
+                        .HasForeignKey("Country_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
             modelBuilder.Entity("ecommerce.Models.Product", b =>
                 {
                     b.HasOne("ecommerce.Models.Category", "Category")
@@ -3036,6 +3123,25 @@ namespace ecommerce.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("ecommerce.Models.User_Address", b =>
+                {
+                    b.HasOne("ecommerce.Models.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("Address_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("User_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Address");
+
+                    b.Navigation("ApplicationUser");
+                });
+
             modelBuilder.Entity("ecommerce.Models.Variation", b =>
                 {
                     b.HasOne("ecommerce.Models.Category", "Category")
@@ -3063,6 +3169,11 @@ namespace ecommerce.Migrations
                     b.Navigation("Products");
 
                     b.Navigation("Variations");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.Country", b =>
+                {
+                    b.Navigation("Addresses");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Product", b =>

@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "QOlWYqaEJRmhBrm1Ze6K7nbfnWAgTMwLjCHn6GuHPFU=",
+=======
+  "Hash": "qW7JtgQEYz0UUxvKNN8RNCqM5LL5LBgFCLjs9usHesA=",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "ecommerce\\wwwroot",
       "Source": "ecommerce",
+<<<<<<< HEAD
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ecommerce.styles.css",
       "SourceId": "ecommerce",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ecommerce.styles.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "ecommerce.styles.css",
       "AssetKind": "All",
@@ -31,6 +46,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ecommerce.styles.css"
     },
     {
@@ -38,6 +54,15 @@
       "SourceId": "ecommerce",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\bundle\\ecommerce.styles.css"
+    },
+    {
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Computed",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "ecommerce.bundle.scp.css",
       "AssetKind": "All",
@@ -48,6 +73,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css"
     },
     {
@@ -106,6 +132,15 @@
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "OriginalItemSpec": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\all.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/all.min.css",
       "AssetKind": "All",
@@ -119,10 +154,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\all.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\animate.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\animate.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/animate.css",
       "AssetKind": "All",
@@ -136,10 +178,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\animate.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\magnific-popup.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\magnific-popup.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/magnific-popup.css",
       "AssetKind": "All",
@@ -153,10 +202,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\magnific-popup.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\main.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\main.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/main.css",
       "AssetKind": "All",
@@ -170,10 +226,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\main.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\meanmenu.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\meanmenu.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/meanmenu.min.css",
       "AssetKind": "All",
@@ -187,10 +250,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\meanmenu.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\owl.carousel.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\owl.carousel.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/owl.carousel.css",
       "AssetKind": "All",
@@ -204,10 +274,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\owl.carousel.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\responsive.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\css1\\responsive.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/css1/responsive.css",
       "AssetKind": "All",
@@ -221,10 +298,17 @@
       "OriginalItemSpec": "wwwroot\\css\\css1\\responsive.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\site.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\css\\site.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -238,10 +322,17 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\favicon.ico",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\favicon.ico",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -255,10 +346,17 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\favicon.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\favicon.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/favicon.png",
       "AssetKind": "All",
@@ -272,10 +370,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\favicon.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\1.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\1.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/1.jpg",
       "AssetKind": "All",
@@ -289,10 +394,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\a.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\a.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/a.jpg",
       "AssetKind": "All",
@@ -306,10 +418,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\a.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\abt.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\abt.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/abt.jpg",
       "AssetKind": "All",
@@ -323,10 +442,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\abt.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar1.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar1.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/avaters/avatar1.png",
       "AssetKind": "All",
@@ -340,10 +466,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\avaters\\avatar1.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar2.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar2.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/avaters/avatar2.png",
       "AssetKind": "All",
@@ -357,10 +490,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\avaters\\avatar2.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar3.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\avaters\\avatar3.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/avaters/avatar3.png",
       "AssetKind": "All",
@@ -374,10 +514,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\avaters\\avatar3.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\breadcrumb-bg.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\breadcrumb-bg.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/breadcrumb-bg.jpg",
       "AssetKind": "All",
@@ -391,10 +538,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\breadcrumb-bg.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\1.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\1.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/company-logos/1.png",
       "AssetKind": "All",
@@ -408,10 +562,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\company-logos\\1.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\2.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\2.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/company-logos/2.png",
       "AssetKind": "All",
@@ -425,10 +586,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\company-logos\\2.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\3.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\3.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/company-logos/3.png",
       "AssetKind": "All",
@@ -442,10 +610,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\company-logos\\3.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\4.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\4.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/company-logos/4.png",
       "AssetKind": "All",
@@ -459,10 +634,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\company-logos\\4.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\5.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\company-logos\\5.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/company-logos/5.png",
       "AssetKind": "All",
@@ -476,10 +658,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\company-logos\\5.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\dd.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\dd.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/dd.jpg",
       "AssetKind": "All",
@@ -493,10 +682,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\dd.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\favicon.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\favicon.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/favicon.png",
       "AssetKind": "All",
@@ -510,10 +706,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\favicon.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\feature-bg.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\feature-bg.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/feature-bg.jpg",
       "AssetKind": "All",
@@ -527,10 +730,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\feature-bg.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/hero-bg.jpg",
       "AssetKind": "All",
@@ -544,10 +754,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\hero-bg.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg1.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg1.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/hero-bg1.jpg",
       "AssetKind": "All",
@@ -561,10 +778,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\hero-bg1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-2.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-2.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/hero-bg-2.jpg",
       "AssetKind": "All",
@@ -578,10 +802,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\hero-bg-2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-3.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\hero-bg-3.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/hero-bg-3.jpg",
       "AssetKind": "All",
@@ -595,10 +826,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\hero-bg-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\homepage-bg-pattern.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\homepage-bg-pattern.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/homepage-bg-pattern.png",
       "AssetKind": "All",
@@ -612,10 +850,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\homepage-bg-pattern.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-1.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-1.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/latest-news/news-bg-1.jpg",
       "AssetKind": "All",
@@ -629,10 +874,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\latest-news\\news-bg-1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-2.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-2.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/latest-news/news-bg-2.jpg",
       "AssetKind": "All",
@@ -646,10 +898,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\latest-news\\news-bg-2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-3.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-3.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/latest-news/news-bg-3.jpg",
       "AssetKind": "All",
@@ -663,10 +922,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\latest-news\\news-bg-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-4.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-4.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/latest-news/news-bg-4.jpg",
       "AssetKind": "All",
@@ -680,10 +946,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\latest-news\\news-bg-4.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-5.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-5.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/latest-news/news-bg-5.jpg",
       "AssetKind": "All",
@@ -697,10 +970,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\latest-news\\news-bg-5.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-6.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\latest-news\\news-bg-6.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/latest-news/news-bg-6.jpg",
       "AssetKind": "All",
@@ -714,10 +994,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\latest-news\\news-bg-6.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\logo.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\logo.png",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/logo.png",
       "AssetKind": "All",
@@ -731,10 +1018,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\logo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-1.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-1.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/products/product-img-1.jpg",
       "AssetKind": "All",
@@ -748,10 +1042,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\products\\product-img-1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-2.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-2.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/products/product-img-2.jpg",
       "AssetKind": "All",
@@ -765,10 +1066,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\products\\product-img-2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-3.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-3.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/products/product-img-3.jpg",
       "AssetKind": "All",
@@ -782,10 +1090,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\products\\product-img-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-4.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-4.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/products/product-img-4.jpg",
       "AssetKind": "All",
@@ -799,10 +1114,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\products\\product-img-4.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-5.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-5.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/products/product-img-5.jpg",
       "AssetKind": "All",
@@ -816,10 +1138,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\products\\product-img-5.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-6.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\products\\product-img-6.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/products/product-img-6.jpg",
       "AssetKind": "All",
@@ -833,10 +1162,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\products\\product-img-6.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-1.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-1.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/team/team-1.jpg",
       "AssetKind": "All",
@@ -850,10 +1186,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\team\\team-1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-2.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-2.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/team/team-2.jpg",
       "AssetKind": "All",
@@ -867,10 +1210,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\team\\team-2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-3.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\img1\\team\\team-3.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/img1/team/team-3.jpg",
       "AssetKind": "All",
@@ -884,10 +1234,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\img1\\team\\team-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\1.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\1.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/Products/1.jpg",
       "AssetKind": "All",
@@ -901,10 +1258,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\Products\\1.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\2.jpg",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\Image\\Products\\2.jpg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "Image/Products/2.jpg",
       "AssetKind": "All",
@@ -918,10 +1282,17 @@
       "OriginalItemSpec": "wwwroot\\Image\\Products\\2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\form-validate.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\form-validate.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/form-validate.js",
       "AssetKind": "All",
@@ -935,10 +1306,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\form-validate.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.countdown.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.countdown.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/jquery.countdown.js",
       "AssetKind": "All",
@@ -952,10 +1330,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\jquery.countdown.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.isotope-3.0.6.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.isotope-3.0.6.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/jquery.isotope-3.0.6.min.js",
       "AssetKind": "All",
@@ -969,10 +1354,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\jquery.isotope-3.0.6.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.magnific-popup.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.magnific-popup.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/jquery.magnific-popup.min.js",
       "AssetKind": "All",
@@ -986,10 +1378,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\jquery.magnific-popup.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.meanmenu.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery.meanmenu.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/jquery.meanmenu.min.js",
       "AssetKind": "All",
@@ -1003,10 +1402,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\jquery.meanmenu.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery-1.11.3.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\jquery-1.11.3.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/jquery-1.11.3.min.js",
       "AssetKind": "All",
@@ -1020,10 +1426,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\jquery-1.11.3.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\main.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\main.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/main.js",
       "AssetKind": "All",
@@ -1037,10 +1450,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\main.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\owl.carousel.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\owl.carousel.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/owl.carousel.min.js",
       "AssetKind": "All",
@@ -1054,10 +1474,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\owl.carousel.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\sticker.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\sticker.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/sticker.js",
       "AssetKind": "All",
@@ -1071,10 +1498,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\sticker.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\waypoints.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\js1\\waypoints.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/js1/waypoints.js",
       "AssetKind": "All",
@@ -1088,10 +1522,17 @@
       "OriginalItemSpec": "wwwroot\\js\\js1\\waypoints.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\site.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\js\\site.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1105,10 +1546,17 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1122,10 +1570,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1139,10 +1594,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1156,10 +1618,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1173,10 +1642,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1190,10 +1666,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1207,10 +1690,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1224,10 +1714,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1241,10 +1738,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1258,10 +1762,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1275,10 +1786,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1292,10 +1810,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1309,10 +1834,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1326,10 +1858,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1343,10 +1882,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1360,10 +1906,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1377,10 +1930,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1394,10 +1954,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1411,10 +1978,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1428,10 +2002,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1445,10 +2026,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1462,10 +2050,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1479,10 +2074,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1496,10 +2098,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1513,10 +2122,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1530,10 +2146,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1547,10 +2170,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1564,10 +2194,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1581,10 +2218,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1598,10 +2242,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1615,10 +2266,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1632,10 +2290,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1649,10 +2314,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1666,10 +2338,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1683,10 +2362,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1700,10 +2386,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1717,10 +2410,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1734,10 +2434,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1751,10 +2458,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1768,10 +2482,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1785,10 +2506,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1802,10 +2530,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1819,10 +2554,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1836,10 +2578,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1853,10 +2602,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1870,10 +2626,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1887,10 +2650,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1904,10 +2674,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1921,10 +2698,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1938,10 +2722,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1955,10 +2746,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1972,10 +2770,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1989,10 +2794,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2006,10 +2818,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2023,10 +2842,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2040,10 +2866,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2057,10 +2890,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ahmed\\Documents\\GitHub\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+=======
+      "Identity": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\wwwroot\\",
+>>>>>>> 2e4c7c3e2e63b7f76b5724f04f9153fbc7b35d2f
       "BasePath": "_content/ecommerce",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

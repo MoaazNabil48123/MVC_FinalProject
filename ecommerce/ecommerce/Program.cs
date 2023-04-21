@@ -18,6 +18,7 @@ namespace ecommerce
                    options.UseSqlServer(builder.Configuration.GetConnectionString("CS1")));
 			// Repo Register
 			builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+			builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
 			#endregion
 
 			var app = builder.Build();

@@ -10,7 +10,7 @@ namespace ecommerce.Models
         [Required]
         public string UserId { get; set; }
 
-        public DateTime OdrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
 
         public int PaymentMethodId { get; set; }
         [ForeignKey(nameof(ShippingAddress))]

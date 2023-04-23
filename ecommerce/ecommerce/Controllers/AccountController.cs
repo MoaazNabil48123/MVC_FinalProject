@@ -78,7 +78,7 @@ namespace ecommerce.Controllers
                     {
                         //cookie
                         await signInManager.SignInAsync(userModel, userVM.RememberMe);
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Order");
                     }
                 }
                 ModelState.AddModelError("", "Login Fail Data wrong");

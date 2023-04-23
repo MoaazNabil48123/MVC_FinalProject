@@ -12,8 +12,8 @@ namespace ecommerce.Models
 
         public int Address_Id { get; set; }
 
-        public virtual Address Address { get; set; }
+        public virtual Address? Address { get; set; }
 
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ApplicationUser? ApplicationUser { get; set; }
     }
 }

@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.Controllers
 {
-    public class UserController : Controller
+    public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
 
 
-        public UserController(UserManager<ApplicationUser> _userManager,
+        public AccountController(UserManager<ApplicationUser> _userManager,
             SignInManager<ApplicationUser> _signInManager)
         {
             userManager = _userManager;
@@ -40,9 +40,9 @@ namespace ecommerce.Controllers
                        await userManager.CreateAsync(userModel, newUser.Password);
                 if (result.Succeeded)
                 {
-                    //        //await userManager.AddClaimAsync(userModel, new Claim("xyz","23"));
+                  
                     //        //await userManager.AddToRoleAsync(userModel, "Admin");
-                    //        //------------------Create Cookie Authora
+                    
                     await signInManager.SignInAsync(userModel, false);//create cookie //create cookie client
                     return RedirectToAction("Index", "Home");
                 }
@@ -56,9 +56,40 @@ namespace ecommerce.Controllers
             }
             return View(newUser);
         }
-        public IActionResult Index()
+
+        public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel userVM)
+        {
+            if (ModelState.IsValid)
+            {
+                //Check Valid User ==>db
+                ApplicationUser userModel =
+                    await userManager.FindByNameAsync(userVM.UserName);
+                if (userModel != null)
+                {
+                    bool found = await userManager.CheckPasswordAsync(userModel, userVM.Password);
+                    if (found)
+                    {
+                        //cookie
+                        await signInManager.SignInAsync(userModel, userVM.RememberMe);
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                ModelState.AddModelError("", "Login Fail Data wrong");
+
+            }
+            return View(userVM);
+        }
+        public async Task<IActionResult> SignOut()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("Login");
         }
     }
 }

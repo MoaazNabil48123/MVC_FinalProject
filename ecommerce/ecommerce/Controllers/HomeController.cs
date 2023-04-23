@@ -1,4 +1,5 @@
 ﻿using ecommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -14,7 +15,7 @@ namespace ecommerce.Controllers
             _logger = logger;
             
         }
-
+      //  [Authorize]
         public IActionResult Index()
         {
             return View();

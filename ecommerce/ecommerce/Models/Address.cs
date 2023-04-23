@@ -34,6 +34,7 @@ namespace ecommerce.Models
         public virtual Country? Country { get; set; }
 
         public virtual List<ShopOrder> ShopOrders { get; set; }
+        public virtual List<ApplicationUser> ApplicationUser { get; set; }
 
     }
 }

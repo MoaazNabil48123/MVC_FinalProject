@@ -10,7 +10,7 @@ namespace ecommerce.Models
         [Required]
         public string UserId { get; set; }
 
-        public DateOnly OdrderDate { get; set; }
+        public DateTime OdrderDate { get; set; }
 
         public int PaymentMethodId { get; set; }
         [ForeignKey(nameof(ShippingAddress))]
@@ -21,7 +21,7 @@ namespace ecommerce.Models
 
         public float OrderTotal { get; set; }
         [ForeignKey(nameof(OrderStatus))]
-        public float OrderStatusId {  get; set; }
+        public int OrderStatusId {  get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual Address ShippingAddress { get; set; }

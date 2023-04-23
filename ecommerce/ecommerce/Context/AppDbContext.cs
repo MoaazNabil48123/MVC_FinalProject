@@ -35,7 +35,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
-        optionsBuilder.UseSqlServer("Server=AHMED-GAFAR; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");   
+        optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");   
 
     }
 
@@ -43,7 +43,11 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         modelBuilder.Entity<ProductConfiguration>().HasKey(entity => new { entity.ProductItemId, entity.VariationOptionsId });
 
-        modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.userId, entity.AddressId });
+        // modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.userId, entity.AddressId });
+         modelBuilder.Entity<User_Address>().HasNoKey();
+
+
+
 
         base.OnModelCreating(modelBuilder);
 

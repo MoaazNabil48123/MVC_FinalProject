@@ -1,15 +1,19 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ecommerce.Models;
-
-public class User_Address
+namespace ecommerce.Models
 {
-    [ForeignKey("ApplicationUser")]
-    public string userId { get; set; }
+    public class User_Address
+    {
+        [ForeignKey("ApplicationUser")]
 
-    [ForeignKey("Address")]
-    public int AddressId { get; set; } 
-    public virtual Address? Address {get; set; }
-    public virtual ApplicationUser? ApplicationUser { get; set; }
+        public string User_Id { get; set; }
+
+        [ForeignKey("Address")]
+
+        public int Address_Id { get; set; }
+
+        public virtual Address Address { get; set; }
+
+        public virtual ApplicationUser ApplicationUser { get; set; }
+    }
 }

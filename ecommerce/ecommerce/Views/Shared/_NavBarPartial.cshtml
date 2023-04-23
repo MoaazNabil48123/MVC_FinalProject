@@ -31,7 +31,7 @@
 									<li><a href="checkout.html">Check Out</a></li>
 									<li><a href="contact.html">Contact</a></li>
 									<li><a href="news.html">News</a></li>
-									<li><a href="shop.html">Shop</a></li>
+									<li><a href="/Product/Index">Shop</a></li>
 								</ul>
 							</li>
 							<li>
@@ -43,7 +43,7 @@
 							</li>
 							<li><a href="contact.html">Contact</a></li>
 							<li>
-								<a href="shop.html">Shop</a>
+								<a href="/Product/Index?CategoryId=1">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="shop.html">Shop</a></li>
 									<li><a href="checkout.html">Check Out</a></li>
@@ -51,12 +51,30 @@
 									<li><a href="cart.html">Cart</a></li>
 								</ul>
 							</li>
-							<li>
-								<div class="header-icons">
-									<a class="shopping-cart" href="/Cart"><i class="fas fa-shopping-cart"></i></a>
-									<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-								</div>
-							</li>
+							@if (User.Identity.IsAuthenticated)
+							{
+								<li>
+									<div class="header-icons">
+										<a class="search-bar-icon" href="#"><i class="fa-solid fa-calendar-check"></i>  Orders</a>
+										<a class="shopping-cart" href="/Cart/Index"><i class="fas fa-shopping-cart"></i>  Cart</a>
+										<a class="shopping-cart" href="/Cart/Index"><i class="fa-solid fa-user"></i></a>
+										<ul class="sub-menu">
+											<li><a href="shop.html">Profile</a></li>
+											<hr style="margin:0px"/>
+											<li><a href="/Account/logout">Log Out</a></li>
+										</ul>
+									</div>
+								</li>
+							}
+							else
+							{
+								<li>
+									<div class="header-icons">
+										<a class="search-bar-icon" href="Account/Login">Sing In</a>
+										<a class="shopping-cart" href="Account/Register">Sign Up</a>
+									</div>
+								</li>
+							}
 						</ul>
 					</nav>
 					<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>

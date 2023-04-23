@@ -195,7 +195,7 @@ namespace ecommerce.Migrations
 
                     b.HasIndex("Country_Id");
 
-                    b.ToTable("addresses");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("ecommerce.Models.ApplicationUser", b =>
@@ -205,10 +205,6 @@ namespace ecommerce.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -267,6 +263,33 @@ namespace ecommerce.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("ecommerce.Models.CartProducts", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProductItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("ProductItemId");
+
+                    b.ToTable("CartProducts");
+                });
+
             modelBuilder.Entity("ecommerce.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -316,6 +339,1109 @@ namespace ecommerce.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Country_Name = "Afghanistan"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Country_Name = "Albania"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Country_Name = "Algeria"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Country_Name = "Andorra"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Country_Name = "Angola"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Country_Name = "Antigua and Barbuda"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Country_Name = "Argentina"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Country_Name = "Armenia"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Country_Name = "Austria"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Country_Name = "Azerbaijan"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Country_Name = "Bahrain"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Country_Name = "Bangladesh"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Country_Name = "Barbados"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Country_Name = "Belarus"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Country_Name = "Belgium"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Country_Name = "Belize"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Country_Name = "Benin"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Country_Name = "Bhutan"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Country_Name = "Bolivia"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Country_Name = "Bosnia and Herzegovina"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Country_Name = "Botswana"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Country_Name = "Brazil"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Country_Name = "Brunei"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Country_Name = "Bulgaria"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Country_Name = "Burkina Faso"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Country_Name = "Burundi"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Country_Name = "Cabo Verde"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Country_Name = "Cambodia"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Country_Name = "Cameroon"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Country_Name = "Canada"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Country_Name = "Central African Republic"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Country_Name = "Chad"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Country_Name = "Channel Islands"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Country_Name = "Chile"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Country_Name = "China"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Country_Name = "Colombia"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Country_Name = "Comoros"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Country_Name = "Congo"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Country_Name = "Costa Rica"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Country_Name = "Côte d'Ivoire"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Country_Name = "Croatia"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Country_Name = "Cuba"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Country_Name = "Cyprus"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Country_Name = "Czech Republic"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Country_Name = "Denmark"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Country_Name = "Djibouti"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Country_Name = "Dominica"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Country_Name = "Dominican Republic"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Country_Name = "DR Congo"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Country_Name = "Ecuador"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Country_Name = "Egypt"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Country_Name = "El Salvador"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Country_Name = "Equatorial Guinea"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Country_Name = "Eritrea"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Country_Name = "Estonia"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Country_Name = "Eswatini"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Country_Name = "Ethiopia"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Country_Name = "Faeroe Islands"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Country_Name = "Finland"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Country_Name = "France"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Country_Name = "French Guiana"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Country_Name = "Gabon"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Country_Name = "Gambia"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Country_Name = "Georgia"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Country_Name = "Germany"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Country_Name = "Ghana"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Country_Name = "Gibraltar"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Country_Name = "Greece"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Country_Name = "Grenada"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            Country_Name = "Guatemala"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            Country_Name = "Guinea"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            Country_Name = "Guinea-Bissau"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            Country_Name = "Guyana"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            Country_Name = "Haiti"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            Country_Name = "Holy See"
+                        },
+                        new
+                        {
+                            Id = 76,
+                            Country_Name = "Honduras"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            Country_Name = "Hong Kong"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            Country_Name = "Hungary"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            Country_Name = "Iceland"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            Country_Name = "India"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            Country_Name = "Indonesia"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            Country_Name = "Iran"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            Country_Name = "Iraq"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            Country_Name = "Ireland"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            Country_Name = "Isle of Man"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Country_Name = "Israel"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Country_Name = "Italy"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Country_Name = "Jamaica"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Country_Name = "Japan"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            Country_Name = "Jordan"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Country_Name = "Kazakhstan"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Country_Name = "Kenya"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Country_Name = "Kuwait"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Country_Name = "Kyrgyzstan"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Country_Name = "Laos"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Country_Name = "Latvia"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Country_Name = "Lebanon"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Country_Name = "Lesotho"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Country_Name = "Liberia"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Country_Name = "Libya"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Country_Name = "Liechtenstein"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Country_Name = "Lithuania"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Country_Name = "Luxembourg"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Country_Name = "Macao"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Country_Name = "Madagascar"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Country_Name = "Malawi"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Country_Name = "Malaysia"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Country_Name = "Maldives"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Country_Name = "Mali"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Country_Name = "Malta"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Country_Name = "Mauritania"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Country_Name = "Mauritius"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Country_Name = "Mayotte"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Country_Name = "Mexico"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Country_Name = "Moldova"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Country_Name = "Monaco"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Country_Name = "Mongolia"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Country_Name = "Montenegro"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Country_Name = "Morocco"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Country_Name = "Mozambique"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Country_Name = "Myanmar"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Country_Name = "Namibia"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Country_Name = "Nepal"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Country_Name = "Netherlands"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Country_Name = "Nicaragua"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Country_Name = "Niger"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Country_Name = "Nigeria"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Country_Name = "North Korea"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Country_Name = "North Macedonia"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Country_Name = "Norway"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Country_Name = "Oman"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Country_Name = "Pakistan"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Country_Name = "Panama"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Country_Name = "Paraguay"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Country_Name = "Peru"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Country_Name = "Philippines"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Country_Name = "Poland"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Country_Name = "Portugal"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Country_Name = "Qatar"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Country_Name = "Réunion"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            Country_Name = "Romania"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            Country_Name = "Russia"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Country_Name = "Rwanda"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Country_Name = "Saint Helena"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            Country_Name = "Saint Kitts and Nevis"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Country_Name = "Saint Lucia"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Country_Name = "Saint Vincent and the Grenadines"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Country_Name = "San Marino"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Country_Name = "Sao Tome & Principe"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Country_Name = "Saudi Arabia"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Country_Name = "Senegal"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Country_Name = "Serbia"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Country_Name = "Seychelles"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Country_Name = "Sierra Leone"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Country_Name = "Singapore"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Country_Name = "Slovakia"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Country_Name = "Slovenia"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Country_Name = "Somalia"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            Country_Name = "South Africa"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Country_Name = "South Korea"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Country_Name = "South Sudan"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Country_Name = "Spain"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            Country_Name = "Sri Lanka"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Country_Name = "State of Palestine"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Country_Name = "Sudan"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Country_Name = "Suriname"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Country_Name = "Sweden"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Country_Name = "Switzerland"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Country_Name = "Syria"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Country_Name = "Taiwan"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Country_Name = "Tajikistan"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Country_Name = "Tanzania"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Country_Name = "Thailand"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Country_Name = "The Bahamas"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Country_Name = "Timor-Leste"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Country_Name = "Togo"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Country_Name = "Trinidad and Tobago"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Country_Name = "Tunisia"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Country_Name = "Turkey"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Country_Name = "Turkmenistan"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Country_Name = "Uganda"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Country_Name = "Ukraine"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Country_Name = "United Arab Emirates"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Country_Name = "United Kingdom"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Country_Name = "United States"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Country_Name = "Uruguay"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Country_Name = "Uzbekistan"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Country_Name = "Venezuela"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Country_Name = "Vietnam"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Country_Name = "Western Sahara"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Country_Name = "Yemen"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Country_Name = "Zambia"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Country_Name = "Zimbabwe"
+                        });
+                });
+
+            modelBuilder.Entity("ecommerce.Models.OrderLine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
+
+                    b.Property<int>("ProductItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Qty")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductItemId");
+
+                    b.ToTable("OrderLines");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.OrderStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OrderStatus");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Status = "Pending"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Status = "Processing"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Status = "Shipped"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Status = "Delivered"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Status = "Returned"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Status = "Cancelled"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Status = "On Hold"
+                        });
+                });
+
+            modelBuilder.Entity("ecommerce.Models.PaymentMethod", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("AccountNumber")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ExpiryDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("PaymentTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Provider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PaymentTypeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PaymentMethods");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.PaymentType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PaymentTypes");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Product", b =>
@@ -2920,20 +4046,102 @@ namespace ecommerce.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ecommerce.Models.User_Address", b =>
+            modelBuilder.Entity("ecommerce.Models.ShippingMethod", b =>
                 {
-                    b.Property<int>("Address_Id")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("User_Id")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShippingMethods");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Regular",
+                            Price = 20f
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Express",
+                            Price = 50f
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Free",
+                            Price = 0f
+                        });
+                });
+
+            modelBuilder.Entity("ecommerce.Models.ShopOrder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("OdrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OrderStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<float>("OrderTotal")
+                        .HasColumnType("real");
+
+                    b.Property<int>("PaymentMethodId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShippingAddressId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShippingMethodId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderStatusId");
+
+                    b.HasIndex("ShippingAddressId");
+
+                    b.HasIndex("ShippingMethodId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ShopOrders");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.User_Address", b =>
+                {
+                    b.Property<string>("User_Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Address_Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("User_Id", "Address_Id");
+
                     b.HasIndex("Address_Id");
 
-                    b.HasIndex("User_Id");
-
-                    b.ToTable("user_Addresses");
+                    b.ToTable("User_Addresses");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Variation", b =>
@@ -3082,6 +4290,63 @@ namespace ecommerce.Migrations
                     b.Navigation("Country");
                 });
 
+            modelBuilder.Entity("ecommerce.Models.CartProducts", b =>
+                {
+                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ProductItem", "ProductItem")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("ProductItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("ProductItem");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.OrderLine", b =>
+                {
+                    b.HasOne("ecommerce.Models.ShopOrder", "ShopOrder")
+                        .WithMany("OrderLines")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ProductItem", "productItem")
+                        .WithMany("OrderLines")
+                        .HasForeignKey("ProductItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ShopOrder");
+
+                    b.Navigation("productItem");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.PaymentMethod", b =>
+                {
+                    b.HasOne("ecommerce.Models.PaymentType", "PaymentType")
+                        .WithMany()
+                        .HasForeignKey("PaymentTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PaymentType");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ecommerce.Models.Product", b =>
                 {
                     b.HasOne("ecommerce.Models.Category", "Category")
@@ -3123,16 +4388,51 @@ namespace ecommerce.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("ecommerce.Models.ShopOrder", b =>
+                {
+                    b.HasOne("ecommerce.Models.OrderStatus", "OrderStatus")
+                        .WithMany()
+                        .HasForeignKey("OrderStatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.Address", "ShippingAddress")
+                        .WithMany("ShopOrders")
+                        .HasForeignKey("ShippingAddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ShippingMethod", "ShippingMethod")
+                        .WithMany()
+                        .HasForeignKey("ShippingMethodId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("ShopOrders")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("OrderStatus");
+
+                    b.Navigation("ShippingAddress");
+
+                    b.Navigation("ShippingMethod");
+                });
+
             modelBuilder.Entity("ecommerce.Models.User_Address", b =>
                 {
                     b.HasOne("ecommerce.Models.Address", "Address")
-                        .WithMany()
+                        .WithMany("User_Addresses")
                         .HasForeignKey("Address_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany()
+                        .WithMany("User_Addresses")
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -3164,6 +4464,22 @@ namespace ecommerce.Migrations
                     b.Navigation("Variation");
                 });
 
+            modelBuilder.Entity("ecommerce.Models.Address", b =>
+                {
+                    b.Navigation("ShopOrders");
+
+                    b.Navigation("User_Addresses");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("CartProducts");
+
+                    b.Navigation("ShopOrders");
+
+                    b.Navigation("User_Addresses");
+                });
+
             modelBuilder.Entity("ecommerce.Models.Category", b =>
                 {
                     b.Navigation("Products");
@@ -3183,7 +4499,16 @@ namespace ecommerce.Migrations
 
             modelBuilder.Entity("ecommerce.Models.ProductItem", b =>
                 {
+                    b.Navigation("CartProducts");
+
+                    b.Navigation("OrderLines");
+
                     b.Navigation("ProductConfigurations");
+                });
+
+            modelBuilder.Entity("ecommerce.Models.ShopOrder", b =>
+                {
+                    b.Navigation("OrderLines");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Variation", b =>

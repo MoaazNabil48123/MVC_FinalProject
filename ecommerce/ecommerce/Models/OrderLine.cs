@@ -6,10 +6,10 @@ namespace ecommerce.Models
     {
         public int Id { get; set; }
         [ForeignKey(nameof(productItem))]
-        public string ProductItemId { get; set; }
+        public int ProductItemId { get; set; }
         [ForeignKey(nameof(ShopOrder))]
 
-        public string OrderId { get; set; }
+        public int OrderId { get; set; }
         public int Qty { get; set; }
 
         public float Price { get; set; }

@@ -1,7 +1,9 @@
 using ecommerce.Context;
 using ecommerce.Models;
 using ecommerce.Repository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Principal;
 
 namespace ecommerce
 {
@@ -19,9 +21,23 @@ namespace ecommerce
 			// Repo Register
 			builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 			builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
-			#endregion
+			builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
-			var app = builder.Build();
+			// auth for register and login
+			builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 5;
+
+            })
+                  .AddEntityFrameworkStores<AppDbContext>();
+          
+            #endregion
+
+            var app = builder.Build();
 
             #region HTTP request pipeline
             if (!app.Environment.IsDevelopment())
@@ -31,6 +47,8 @@ namespace ecommerce
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
+
 
             app.UseAuthorization();
 
@@ -40,6 +58,8 @@ namespace ecommerce
 
             app.Run();
             #endregion
+            
+
         }
     }
 }

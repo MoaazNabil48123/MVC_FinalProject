@@ -1,6 +1,10 @@
-﻿using ecommerce.Models;
+﻿using ecommerce.Context;
+using ecommerce.Models;
+using ecommerce.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace ecommerce.Controllers
@@ -8,16 +12,21 @@ namespace ecommerce.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+		private readonly IRepository<Category> categoryRepo;
+		private readonly AppDbContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger,IRepository<Category> categoryRepo, AppDbContext context)
         {
             _logger = logger;
-            
-        }
+            this.categoryRepo = categoryRepo;
+            this.context = context;
 
+
+		}
+      //  [Authorize]
         public IActionResult Index()
         {
-            return View();
+			return View(categoryRepo.GetAll(c=>c.Products));
         }
         public IActionResult Cart()
         {
@@ -27,16 +36,21 @@ namespace ecommerce.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult test()
         {
-            return View();
+            var x = context.Set<Category>().Include(c => c.Products).ThenInclude(p => p.ProductItems).Include(c=>c.Variations).ThenInclude(v=>v.VariationOptions).ToList();
+			return Json(context.Set<Category>().Include(c => c.Products).ThenInclude(p => p.ProductItems));
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
+
+        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        //public IActionResult Error()
+        //{
+        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //}
     }
 }

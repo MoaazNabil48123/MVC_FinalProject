@@ -30,7 +30,7 @@ public class Repository<T> : IRepository<T> where T : class
         }
         return query.ToList();
     }
-    public List<T> GetAll(params Expression<Func<T, bool>>[] filters)//GetAll with filters
+    public List<T> Get(params Expression<Func<T, bool>>[] filters)//GetAll with filters
     {
         IQueryable<T> query = _context.Set<T>();
         foreach (var filter in filters)

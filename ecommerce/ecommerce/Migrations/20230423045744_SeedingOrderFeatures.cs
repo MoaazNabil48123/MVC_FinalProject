@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ecommerce.Migrations
 {
     /// <inheritdoc />
-    public partial class mig1 : Migration
+    public partial class SeedingOrderFeatures : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,7 +32,6 @@ namespace ecommerce.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -64,6 +63,59 @@ namespace ecommerce.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Countries",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Country_Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Countries", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OrderStatus",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderStatus", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PaymentTypes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Value = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PaymentTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ShippingMethods",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<float>(type: "real", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShippingMethods", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -215,6 +267,62 @@ namespace ecommerce.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Addresses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Unit_Number = table.Column<int>(type: "int", nullable: false),
+                    Street_Number = table.Column<int>(type: "int", nullable: false),
+                    Address_line1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address_line2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Region = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Postal_Code = table.Column<int>(type: "int", nullable: false),
+                    Country_Id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Addresses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Addresses_Countries_Country_Id",
+                        column: x => x.Country_Id,
+                        principalTable: "Countries",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PaymentMethods",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    PaymentTypeId = table.Column<int>(type: "int", nullable: false),
+                    Provider = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AccountNumber = table.Column<double>(type: "float", nullable: false),
+                    ExpiryDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsDefault = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PaymentMethods", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PaymentMethods_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_PaymentMethods_PaymentTypes_PaymentTypeId",
+                        column: x => x.PaymentTypeId,
+                        principalTable: "PaymentTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductItems",
                 columns: table => new
                 {
@@ -258,6 +366,100 @@ namespace ecommerce.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ShopOrders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    OdrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    PaymentMethodId = table.Column<int>(type: "int", nullable: false),
+                    ShippingAddressId = table.Column<int>(type: "int", nullable: false),
+                    ShippingMethodId = table.Column<int>(type: "int", nullable: false),
+                    OrderTotal = table.Column<float>(type: "real", nullable: false),
+                    OrderStatusId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShopOrders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ShopOrders_Addresses_ShippingAddressId",
+                        column: x => x.ShippingAddressId,
+                        principalTable: "Addresses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_ShopOrders_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_ShopOrders_OrderStatus_OrderStatusId",
+                        column: x => x.OrderStatusId,
+                        principalTable: "OrderStatus",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_ShopOrders_ShippingMethods_ShippingMethodId",
+                        column: x => x.ShippingMethodId,
+                        principalTable: "ShippingMethods",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "User_Addresses",
+                columns: table => new
+                {
+                    User_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Address_Id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User_Addresses", x => new { x.User_Id, x.Address_Id });
+                    table.ForeignKey(
+                        name: "FK_User_Addresses_Addresses_Address_Id",
+                        column: x => x.Address_Id,
+                        principalTable: "Addresses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_User_Addresses_AspNetUsers_User_Id",
+                        column: x => x.User_Id,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CartProducts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProductItemId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartProducts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CartProducts_AspNetUsers_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_CartProducts_ProductItems_ProductItemId",
+                        column: x => x.ProductItemId,
+                        principalTable: "ProductItems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductConfigurations",
                 columns: table => new
                 {
@@ -281,6 +483,34 @@ namespace ecommerce.Migrations
                         onDelete: ReferentialAction.NoAction);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "OrderLines",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductItemId = table.Column<int>(type: "int", nullable: false),
+                    OrderId = table.Column<int>(type: "int", nullable: false),
+                    Qty = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<float>(type: "real", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderLines", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderLines_ProductItems_ProductItemId",
+                        column: x => x.ProductItemId,
+                        principalTable: "ProductItems",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_OrderLines_ShopOrders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "ShopOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Id", "Name" },
@@ -292,40 +522,264 @@ namespace ecommerce.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Countries",
+                columns: new[] { "Id", "Country_Name" },
+                values: new object[,]
+                {
+                    { 1, "Afghanistan" },
+                    { 2, "Albania" },
+                    { 3, "Algeria" },
+                    { 4, "Andorra" },
+                    { 5, "Angola" },
+                    { 6, "Antigua and Barbuda" },
+                    { 7, "Argentina" },
+                    { 8, "Armenia" },
+                    { 9, "Austria" },
+                    { 10, "Azerbaijan" },
+                    { 11, "Bahrain" },
+                    { 12, "Bangladesh" },
+                    { 13, "Barbados" },
+                    { 14, "Belarus" },
+                    { 15, "Belgium" },
+                    { 16, "Belize" },
+                    { 17, "Benin" },
+                    { 18, "Bhutan" },
+                    { 19, "Bolivia" },
+                    { 20, "Bosnia and Herzegovina" },
+                    { 21, "Botswana" },
+                    { 22, "Brazil" },
+                    { 23, "Brunei" },
+                    { 24, "Bulgaria" },
+                    { 25, "Burkina Faso" },
+                    { 26, "Burundi" },
+                    { 27, "Cabo Verde" },
+                    { 28, "Cambodia" },
+                    { 29, "Cameroon" },
+                    { 30, "Canada" },
+                    { 31, "Central African Republic" },
+                    { 32, "Chad" },
+                    { 33, "Channel Islands" },
+                    { 34, "Chile" },
+                    { 35, "China" },
+                    { 36, "Colombia" },
+                    { 37, "Comoros" },
+                    { 38, "Congo" },
+                    { 39, "Costa Rica" },
+                    { 40, "Côte d'Ivoire" },
+                    { 41, "Croatia" },
+                    { 42, "Cuba" },
+                    { 43, "Cyprus" },
+                    { 44, "Czech Republic" },
+                    { 45, "Denmark" },
+                    { 46, "Djibouti" },
+                    { 47, "Dominica" },
+                    { 48, "Dominican Republic" },
+                    { 49, "DR Congo" },
+                    { 50, "Ecuador" },
+                    { 51, "Egypt" },
+                    { 52, "El Salvador" },
+                    { 53, "Equatorial Guinea" },
+                    { 54, "Eritrea" },
+                    { 55, "Estonia" },
+                    { 56, "Eswatini" },
+                    { 57, "Ethiopia" },
+                    { 58, "Faeroe Islands" },
+                    { 59, "Finland" },
+                    { 60, "France" },
+                    { 61, "French Guiana" },
+                    { 62, "Gabon" },
+                    { 63, "Gambia" },
+                    { 64, "Georgia" },
+                    { 65, "Germany" },
+                    { 66, "Ghana" },
+                    { 67, "Gibraltar" },
+                    { 68, "Greece" },
+                    { 69, "Grenada" },
+                    { 70, "Guatemala" },
+                    { 71, "Guinea" },
+                    { 72, "Guinea-Bissau" },
+                    { 73, "Guyana" },
+                    { 74, "Haiti" },
+                    { 75, "Holy See" },
+                    { 76, "Honduras" },
+                    { 77, "Hong Kong" },
+                    { 78, "Hungary" },
+                    { 79, "Iceland" },
+                    { 80, "India" },
+                    { 81, "Indonesia" },
+                    { 82, "Iran" },
+                    { 83, "Iraq" },
+                    { 84, "Ireland" },
+                    { 85, "Isle of Man" },
+                    { 86, "Israel" },
+                    { 87, "Italy" },
+                    { 88, "Jamaica" },
+                    { 89, "Japan" },
+                    { 90, "Jordan" },
+                    { 91, "Kazakhstan" },
+                    { 92, "Kenya" },
+                    { 93, "Kuwait" },
+                    { 94, "Kyrgyzstan" },
+                    { 95, "Laos" },
+                    { 96, "Latvia" },
+                    { 97, "Lebanon" },
+                    { 98, "Lesotho" },
+                    { 99, "Liberia" },
+                    { 100, "Libya" },
+                    { 101, "Liechtenstein" },
+                    { 102, "Lithuania" },
+                    { 103, "Luxembourg" },
+                    { 104, "Macao" },
+                    { 105, "Madagascar" },
+                    { 106, "Malawi" },
+                    { 107, "Malaysia" },
+                    { 108, "Maldives" },
+                    { 109, "Mali" },
+                    { 110, "Malta" },
+                    { 111, "Mauritania" },
+                    { 112, "Mauritius" },
+                    { 113, "Mayotte" },
+                    { 114, "Mexico" },
+                    { 115, "Moldova" },
+                    { 116, "Monaco" },
+                    { 117, "Mongolia" },
+                    { 118, "Montenegro" },
+                    { 119, "Morocco" },
+                    { 120, "Mozambique" },
+                    { 121, "Myanmar" },
+                    { 122, "Namibia" },
+                    { 123, "Nepal" },
+                    { 124, "Netherlands" },
+                    { 125, "Nicaragua" },
+                    { 126, "Niger" },
+                    { 127, "Nigeria" },
+                    { 128, "North Korea" },
+                    { 129, "North Macedonia" },
+                    { 130, "Norway" },
+                    { 131, "Oman" },
+                    { 132, "Pakistan" },
+                    { 133, "Panama" },
+                    { 134, "Paraguay" },
+                    { 135, "Peru" },
+                    { 136, "Philippines" },
+                    { 137, "Poland" },
+                    { 138, "Portugal" },
+                    { 139, "Qatar" },
+                    { 140, "Réunion" },
+                    { 141, "Romania" },
+                    { 142, "Russia" },
+                    { 143, "Rwanda" },
+                    { 144, "Saint Helena" },
+                    { 145, "Saint Kitts and Nevis" },
+                    { 146, "Saint Lucia" },
+                    { 147, "Saint Vincent and the Grenadines" },
+                    { 148, "San Marino" },
+                    { 149, "Sao Tome & Principe" },
+                    { 150, "Saudi Arabia" },
+                    { 151, "Senegal" },
+                    { 152, "Serbia" },
+                    { 153, "Seychelles" },
+                    { 154, "Sierra Leone" },
+                    { 155, "Singapore" },
+                    { 156, "Slovakia" },
+                    { 157, "Slovenia" },
+                    { 158, "Somalia" },
+                    { 159, "South Africa" },
+                    { 160, "South Korea" },
+                    { 161, "South Sudan" },
+                    { 162, "Spain" },
+                    { 163, "Sri Lanka" },
+                    { 164, "State of Palestine" },
+                    { 165, "Sudan" },
+                    { 166, "Suriname" },
+                    { 167, "Sweden" },
+                    { 168, "Switzerland" },
+                    { 169, "Syria" },
+                    { 170, "Taiwan" },
+                    { 171, "Tajikistan" },
+                    { 172, "Tanzania" },
+                    { 173, "Thailand" },
+                    { 174, "The Bahamas" },
+                    { 175, "Timor-Leste" },
+                    { 176, "Togo" },
+                    { 177, "Trinidad and Tobago" },
+                    { 178, "Tunisia" },
+                    { 179, "Turkey" },
+                    { 180, "Turkmenistan" },
+                    { 181, "Uganda" },
+                    { 182, "Ukraine" },
+                    { 183, "United Arab Emirates" },
+                    { 184, "United Kingdom" },
+                    { 185, "United States" },
+                    { 186, "Uruguay" },
+                    { 187, "Uzbekistan" },
+                    { 188, "Venezuela" },
+                    { 189, "Vietnam" },
+                    { 190, "Western Sahara" },
+                    { 191, "Yemen" },
+                    { 192, "Zambia" },
+                    { 193, "Zimbabwe" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OrderStatus",
+                columns: new[] { "Id", "Status" },
+                values: new object[,]
+                {
+                    { 1, "Pending" },
+                    { 2, "Processing" },
+                    { 3, "Shipped" },
+                    { 4, "Delivered" },
+                    { 5, "Returned" },
+                    { 6, "Cancelled" },
+                    { 7, "On Hold" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "ShippingMethods",
+                columns: new[] { "Id", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "Regular", 20f },
+                    { 2, "Express", 50f },
+                    { 3, "Free", 0f }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Products",
                 columns: new[] { "Id", "CategoryId", "Description", "Image", "Name" },
                 values: new object[,]
                 {
-                    { 1, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 2, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 3, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 4, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 5, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 6, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 7, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 8, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 9, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 10, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 11, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 12, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 13, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 14, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 15, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 16, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 17, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 18, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 19, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 20, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 21, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 22, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 23, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 24, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 25, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 26, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 27, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 28, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 29, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 30, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" }
+                    { 1, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 2, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 3, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 4, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 5, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 6, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 7, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 8, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 9, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 10, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 11, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 12, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 13, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 14, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 15, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 16, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 17, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 18, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 19, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 20, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 21, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 22, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 23, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 24, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 25, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 26, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 27, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 28, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
+                    { 29, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
+                    { 30, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" }
                 });
 
             migrationBuilder.InsertData(
@@ -723,6 +1177,11 @@ namespace ecommerce.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Addresses_Country_Id",
+                table: "Addresses",
+                column: "Country_Id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -762,6 +1221,36 @@ namespace ecommerce.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_CartProducts_ApplicationUserId",
+                table: "CartProducts",
+                column: "ApplicationUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartProducts_ProductItemId",
+                table: "CartProducts",
+                column: "ProductItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderLines_OrderId",
+                table: "OrderLines",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderLines_ProductItemId",
+                table: "OrderLines",
+                column: "ProductItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PaymentMethods_PaymentTypeId",
+                table: "PaymentMethods",
+                column: "PaymentTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PaymentMethods_UserId",
+                table: "PaymentMethods",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProductConfigurations_VariationOptionsId",
                 table: "ProductConfigurations",
                 column: "VariationOptionsId");
@@ -775,6 +1264,31 @@ namespace ecommerce.Migrations
                 name: "IX_Products_CategoryId",
                 table: "Products",
                 column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShopOrders_OrderStatusId",
+                table: "ShopOrders",
+                column: "OrderStatusId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShopOrders_ShippingAddressId",
+                table: "ShopOrders",
+                column: "ShippingAddressId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShopOrders_ShippingMethodId",
+                table: "ShopOrders",
+                column: "ShippingMethodId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShopOrders_UserId",
+                table: "ShopOrders",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_Addresses_Address_Id",
+                table: "User_Addresses",
+                column: "Address_Id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_VariationOptions_VariationId",
@@ -806,13 +1320,28 @@ namespace ecommerce.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "CartProducts");
+
+            migrationBuilder.DropTable(
+                name: "OrderLines");
+
+            migrationBuilder.DropTable(
+                name: "PaymentMethods");
+
+            migrationBuilder.DropTable(
                 name: "ProductConfigurations");
+
+            migrationBuilder.DropTable(
+                name: "User_Addresses");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "ShopOrders");
+
+            migrationBuilder.DropTable(
+                name: "PaymentTypes");
 
             migrationBuilder.DropTable(
                 name: "ProductItems");
@@ -821,10 +1350,25 @@ namespace ecommerce.Migrations
                 name: "VariationOptions");
 
             migrationBuilder.DropTable(
+                name: "Addresses");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "OrderStatus");
+
+            migrationBuilder.DropTable(
+                name: "ShippingMethods");
+
+            migrationBuilder.DropTable(
                 name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Variations");
+
+            migrationBuilder.DropTable(
+                name: "Countries");
 
             migrationBuilder.DropTable(
                 name: "Categories");

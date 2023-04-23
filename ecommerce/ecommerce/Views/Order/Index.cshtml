@@ -18,119 +18,185 @@
 	</div>
 </div>
 <!-- end breadcrumb section -->
-<!-- check out section -->
-<div class="checkout-section mt-150 mb-150">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8">
-				<div class="checkout-accordion-wrap">
-					<div class="accordion" id="accordionExample">
-						<div class="card single-accordion">
-							<div class="card-header" id="headingOne">
-								<h5 class="mb-0">
-									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										Billing Address
-									</button>
-								</h5>
-							</div>
-
-							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-								<div class="card-body">
-									<div class="billing-address-form">
-										<form action="index.html">
-											<p><input type="text" placeholder="Name"></p>
-											<p><input type="email" placeholder="Email"></p>
-											<p><input type="text" placeholder="Address"></p>
-											<p><input type="tel" placeholder="Phone"></p>
-											<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card single-accordion">
-							<div class="card-header" id="headingTwo">
-								<h5 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										Shipping Address
-									</button>
-								</h5>
-							</div>
-							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-								<div class="card-body">
-									<div class="shipping-address-form">
-										<p>Your shipping address form is here.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card single-accordion">
-							<div class="card-header" id="headingThree">
-								<h5 class="mb-0">
-									<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										Card Details
-									</button>
-								</h5>
-							</div>
-							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-								<div class="card-body">
-									<div class="card-details">
-										<p>Your card details goes here.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="col-lg-4">
-				<div class="order-details-wrap">
-					<table class="order-details">
-						<thead>
-							<tr>
-								<th>Your order Details</th>
-								<th>Price</th>
-							</tr>
-						</thead>
-						<tbody class="order-details-body">
-							<tr>
-								<td>Product</td>
-								<td>Total</td>
-							</tr>
-							<tr>
-								<td>Strawberry</td>
-								<td>$85.00</td>
-							</tr>
-							<tr>
-								<td>Berry</td>
-								<td>$70.00</td>
-							</tr>
-							<tr>
-								<td>Lemon</td>
-								<td>$35.00</td>
-							</tr>
-						</tbody>
-						<tbody class="checkout-details">
-							<tr>
-								<td>Subtotal</td>
-								<td>$190</td>
-							</tr>
-							<tr>
-								<td>Shipping</td>
-								<td>$50</td>
-							</tr>
-							<tr>
-								<td>Total</td>
-								<td>$240</td>
-							</tr>
-						</tbody>
-					</table>
-					<a href="#" class="boxed-btn">Place Order</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- Checkout Start -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-lg-8">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Billing Address</span></h5>
+            <div class="bg-light p-30 mb-5">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label>First Name</label>
+                        <input class="form-control" type="text" placeholder="John">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Last Name</label>
+                        <input class="form-control" type="text" placeholder="Doe">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>E-mail</label>
+                        <input class="form-control" type="text" placeholder="example@email.com">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Mobile No</label>
+                        <input class="form-control" type="text" placeholder="+123 456 789">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Address Line 1</label>
+                        <input class="form-control" type="text" placeholder="123 Street">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Address Line 2</label>
+                        <input class="form-control" type="text" placeholder="123 Street">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Country</label>
+                        <select class="custom-select">
+                            <option selected>United States</option>
+                            <option>Afghanistan</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>City</label>
+                        <input class="form-control" type="text" placeholder="New York">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>State</label>
+                        <input class="form-control" type="text" placeholder="New York">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>ZIP Code</label>
+                        <input class="form-control" type="text" placeholder="123">
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="newaccount">
+                            <label class="custom-control-label" for="newaccount">Create an account</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="shipto">
+                            <label class="custom-control-label" for="shipto" data-toggle="collapse" data-target="#shipping-address">Ship to different address</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse mb-5" id="shipping-address">
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Shipping Address</span></h5>
+                <div class="bg-light p-30">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label>First Name</label>
+                            <input class="form-control" type="text" placeholder="John">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Last Name</label>
+                            <input class="form-control" type="text" placeholder="Doe">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>E-mail</label>
+                            <input class="form-control" type="text" placeholder="example@email.com">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Mobile No</label>
+                            <input class="form-control" type="text" placeholder="+123 456 789">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Address Line 1</label>
+                            <input class="form-control" type="text" placeholder="123 Street">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Address Line 2</label>
+                            <input class="form-control" type="text" placeholder="123 Street">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Country</label>
+                            <select class="custom-select">
+                                <option selected>United States</option>
+                                <option>Afghanistan</option>
+                                <option>Albania</option>
+                                <option>Algeria</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>City</label>
+                            <input class="form-control" type="text" placeholder="New York">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>State</label>
+                            <input class="form-control" type="text" placeholder="New York">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>ZIP Code</label>
+                            <input class="form-control" type="text" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Order Total</span></h5>
+            <div class="bg-light p-30 mb-5">
+                <div class="border-bottom">
+                    <h6 class="mb-3">Products</h6>
+                    <div class="d-flex justify-content-between">
+                        <p>Product Name 1</p>
+                        <p>$150</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p>Product Name 2</p>
+                        <p>$150</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p>Product Name 3</p>
+                        <p>$150</p>
+                    </div>
+                </div>
+                <div class="border-bottom pt-3 pb-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h6>Subtotal</h6>
+                        <h6>$150</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-medium">Shipping</h6>
+                        <h6 class="font-weight-medium">$10</h6>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <div class="d-flex justify-content-between mt-2">
+                        <h5>Total</h5>
+                        <h5>$160</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Payment</span></h5>
+                <div class="bg-light p-30">
+                    <div class="form-group">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="payment" id="paypal">
+                            <label class="custom-control-label" for="paypal">Paypal</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="payment" id="directcheck">
+                            <label class="custom-control-label" for="directcheck">Direct Check</label>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" name="payment" id="banktransfer">
+                            <label class="custom-control-label" for="banktransfer">Bank Transfer</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-primary font-weight-bold py-3">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- end check out section -->
+<!-- Checkout End -->

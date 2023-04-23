@@ -35,16 +35,20 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach (var item in Model)
+							@if (Model != null)
 							{
-								<tr class="table-body-row">
-									<td class="product-remove"><button onclick="DeleteProduct(@item.Id)"><i class="far fa-window-close text-danger"></i></button></td>
-									<td class="product-image"><img src="@item.ProductItem.Image" alt=""></td>
-									<td class="product-name">@item.ProductItem.Product.Name</td>
-									<td class="product-price">$@item.ProductItem.Price</td>
-									<td class="product-quantity"><input type="number" value="@item.Quantity"></td>
-									<td class="product-total">@item.ProductItem.Price*@item.Quantity</td>
-								</tr>
+								@foreach (var item in Model)
+								{
+									<tr class="table-body-row">
+										<td class="product-remove"><button onclick="DeleteProduct(@item.Id)"><i class="far fa-window-close text-danger"></i></button></td>
+										<td class="product-image"><img src="@item.ProductItem.Image" alt=""></td>
+										<td class="product-name">@item.ProductItem.Product.Name</td>
+										<td class="product-price">$@item.ProductItem.Price</td>
+										<td class="product-quantity"><input type="number" value="@item.Quantity"></td>
+										<td class="product-total">@item.ProductItem.Price*@item.Quantity</td>
+									</tr>
+								}
+
 							}
 						</tbody>
 					</table>

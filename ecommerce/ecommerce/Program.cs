@@ -21,9 +21,11 @@ namespace ecommerce
 			// Repo Register
 			builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 			builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
+			builder.Services.AddScoped<IRepository<ShopOrder>, Repository<ShopOrder>>();
 
-            // auth for register and login
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+
+			// auth for register and login
+			builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequireLowercase = true;
                 options.Password.RequireNonAlphanumeric = false;

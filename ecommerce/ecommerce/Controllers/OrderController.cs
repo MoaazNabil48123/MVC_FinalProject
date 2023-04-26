@@ -12,26 +12,22 @@ namespace ecommerce.Controllers
         private UserManager<ApplicationUser> userManager;
 
         private IRepository<ShopOrder> OrderRepo;
-        public OrderController(IRepository<ShopOrder> OrderRepo)
+        public OrderController(IRepository<ShopOrder> OrderRepo, UserManager<ApplicationUser> userManager)
         {
             this.OrderRepo = OrderRepo;
+            this.userManager = userManager;
         }
-        [Authorize]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Index()
-        {
-			ApplicationUser appUser = await userManager.GetUserAsync(User);
-            ShopOrder shopOrder = new ShopOrder()
-            {
+		[Authorize]
+		public async Task<IActionResult> Index()
+		{
+			ApplicationUser appUser = await userManager.FindByNameAsync(User.Identity.Name);
+            ShopOrder shopOrder= new ShopOrder() { 
                 UserId = appUser.Id,
                 OrderDate = DateTime.Now,
-                ShippingAddressId = appUser.User_Addresses.First(/*c=>c.IsDefault==true*/).Address_Id,
+                PaymentMethodId = 1,
 
-				OrderStatusId = 1,
-			};
-            OrderRepo.Add(shopOrder);
-
+            };
 			return View(shopOrder);
-        }
-    }
+		}
+	}
 }

@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="~/css/css1/meanmenu.min.css" />
     <link rel="stylesheet" href="~/css/css1/main.css" />
     <link rel="stylesheet" href="~/css/css1/responsive.css" />
-
+    @*toaster*@
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     @*MVC*@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ecommerce.styles.css" asp-append-version="true" />
@@ -34,7 +35,8 @@
     <partial name="_NavBarPartial"></partial>
     @*NavBar End*@
     @*Body Start*@
-        @RenderBody()
+    <partial name="_NotificationPartial" />
+    @RenderBody()
     @*Body End
     @*Footer Start*@
     <partial name="_FooterPartial"></partial>
@@ -54,6 +56,8 @@
     <script src="~/js/js1/jquery.magnific-popup.min.js"></script>
     <script src="~/js/js1/jquery.meanmenu.min.js"></script>
     <script src="~/js/js1/sticker.js"></script>
+    @*SweetAlert*@
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @await RenderSectionAsync("Scripts", required: false)
     @*Scripts End*@
 </body>

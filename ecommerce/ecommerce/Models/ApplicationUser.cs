@@ -4,13 +4,12 @@ namespace ecommerce.Models
 {
     public class ApplicationUser : IdentityUser
     {
-		// public string Address { get; set; }
-		//Navigational Properties
+        // public string Address { get; set; }
+        //Navigational Properties
 
-		public virtual List<User_Address> User_Addresses { get; set; }
-
-		public List<CartProducts>? CartProducts { get; set; }
-        public List<ShopOrder> ShopOrders { get; set; }
+        public virtual List<Address> Addresses { get; set; } = new List<Address>();
+        public List<CartProducts>? CartProducts { get; set; } = new List<CartProducts>();
+        public List<ShopOrder> ShopOrders { get; set; } = new List<ShopOrder>();
 
     }
 }

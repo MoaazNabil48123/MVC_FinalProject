@@ -13,7 +13,8 @@
 					<!-- logo -->
 					<!-- menu start -->
 					<nav class="main-menu">
-						<ul>
+						<ul style="display:flex;justify-content:space-between;">
+							<div>
 							<li class="current-list-item">
 								<a href="/Home/Index">Home</a>
 								<ul class="sub-menu">
@@ -51,27 +52,32 @@
 									<li><a href="cart.html">Cart</a></li>
 								</ul>
 							</li>
-							@if (User.Identity.IsAuthenticated)
+							</div>
+							@if (!User.Identity.IsAuthenticated)
 							{
+							<div style="display:flex;align-items:center;">
 								<li>
-									<div class="header-icons">
-										<a class="search-bar-icon" href="#"><i class="fa-solid fa-calendar-check"></i>  Orders</a>
-										<a class="shopping-cart" href="/Cart/Index"><i class="fas fa-shopping-cart"></i>  Cart</a>
-										<a class="shopping-cart" href="/Cart/Index"><i class="fa-solid fa-user"></i></a>
-										<ul class="sub-menu">
-											<li><a href="shop.html">Profile</a></li>
-											<hr style="margin:0px"/>
-											<li><a href="/Account/logout">Log Out</a></li>
-										</ul>
-									</div>
+									<a class="search-bar-icon header-icons" href="#"><i class="fa-solid fa-calendar-check"></i>  Orders</a>
 								</li>
+								<li>
+									<a class="shopping-cart header-icons" href="/Cart/Index"><i class="fas fa-shopping-cart"></i>  Cart</a>
+								</li>
+								<li>
+									<a class="shopping-cart" href="#"><i class="fa-solid fa-user"></i></a>
+									<ul class="sub-menu">
+										<li><a href="/User/Update">Profile</a></li>
+										<hr style="margin:0px" />
+										<li><a href="/Account/logout">Log Out</a></li>
+									</ul>
+								</li>
+							</div>
 							}
 							else
 							{
 								<li>
 									<div class="header-icons">
-										<a class="search-bar-icon" href="Account/Login">Sing In</a>
-										<a class="shopping-cart" href="Account/Register">Sign Up</a>
+										<a class="search-bar-icon" href="/Account/Login">Sing In</a>
+										<a class="shopping-cart" href="/Account/Register">Sign Up</a>
 									</div>
 								</li>
 							}

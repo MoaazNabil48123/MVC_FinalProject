@@ -42,7 +42,7 @@ public class Repository<T> : IRepository<T> where T : class
 
     public T GetById(int id)
     {
-        return _context.Set<T>().ToList().First(r => (int)r.GetType().GetProperty("ID").GetValue(r) == id);
+        return _context.Set<T>().ToList().First(r => (int)r.GetType().GetProperty("Id").GetValue(r) == id);
     }
     public T GetById(int id, params Expression<Func<T, object>>[] includes)
     {

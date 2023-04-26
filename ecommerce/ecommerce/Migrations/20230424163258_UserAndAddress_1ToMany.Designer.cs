@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ecommerce.Context;
 
@@ -11,9 +12,11 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230424163258_UserAndAddress_1ToMany")]
+    partial class UserAndAddress_1ToMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -172,6 +175,7 @@ namespace ecommerce.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ApplicationUserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("City")
@@ -180,9 +184,6 @@ namespace ecommerce.Migrations
 
                     b.Property<int>("Country_Id")
                         .HasColumnType("int");
-
-                    b.Property<bool>("IsDefault")
-                        .HasColumnType("bit");
 
                     b.Property<int>("Postal_Code")
                         .HasColumnType("int");
@@ -4276,7 +4277,9 @@ namespace ecommerce.Migrations
                 {
                     b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("Addresses")
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ecommerce.Models.Country", "Country")
                         .WithMany("Addresses")

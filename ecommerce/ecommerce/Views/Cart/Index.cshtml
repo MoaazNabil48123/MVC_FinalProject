@@ -1,6 +1,7 @@
 ﻿@model List<CartProducts>
 @{
 	ViewData["Title"] = "Cart";
+	float cartSubTotal = 0;
 }
 
 <!-- breadcrumb-section -->
@@ -29,22 +30,41 @@
 								<th class="product-remove"></th>
 								<th class="product-image">Product Image</th>
 								<th class="product-name">Name</th>
-								<th class="product-price">Price</th>
+								<th class="product-price">Price($)</th>
 								<th class="product-quantity">Quantity</th>
-								<th class="product-total">Total</th>
+								<th class="product-total">Total($)</th>
 							</tr>
 						</thead>
 						<tbody>
-							@foreach (var item in Model)
+							@if (Model != null)
 							{
-								<tr class="table-body-row">
-									<td class="product-remove"><button onclick="DeleteProduct(@item.Id)"><i class="far fa-window-close text-danger"></i></button></td>
-									<td class="product-image"><img src="@item.ProductItem.Image" alt=""></td>
-									<td class="product-name">@item.ProductItem.Product.Name</td>
-									<td class="product-price">@item.ProductItem.Price.ToString("c")</td>
-									<td class="product-quantity"><input type="number" id="quantity" value="@item.Quantity" onchange="ChangeTotalPrice(@item.ProductItem.Price)"></td>
-									<td class="product-total" id="totPrice">@item.ProductItem.Price</td>
-								</tr>
+								int i = 1;
+								@foreach (var CartProduct in Model)
+								{
+									<tr class="table-body-row">
+										<td class="product-remove">@*remove*@
+											<a onclick="DeleteProduct(@CartProduct.Id)"><i class="far fa-window-close text-danger"></i></a>
+										</td>
+										<td class="product-image">@*image*@
+											<img src="@CartProduct.ProductItem.Product.Image" alt="">
+										</td>
+										<td class="product-name">@*Name*@
+											@CartProduct.ProductItem.Product.Name
+										</td>
+										<td class="product-price" id="@("itemPrice"+i)">@*price*@
+											@CartProduct.ProductItem.Price
+										</td>
+										<td class="product-quantity">@*Quantity*@
+											<input type="number" min="1" value="@CartProduct.Quantity" onchange="ChangeQuantity(@CartProduct.Id, @i, @Model.Count)" id="@("quantity"+i)">
+										</td>
+										<td class="product-total" id="@("totalPrice"+i)">@*totalPrice*@
+											@(CartProduct.ProductItem.Price*CartProduct.Quantity)
+										</td>
+									</tr>
+									i++;
+									cartSubTotal += CartProduct.Quantity * CartProduct.ProductItem.Price;
+								}
+
 							}
 						</tbody>
 					</table>
@@ -57,39 +77,43 @@
 						<thead class="total-table-head">
 							<tr class="table-total-row">
 								<th>Total</th>
-								<th>Price</th>
+								<th>Price($)</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr class="total-data">
 								<td><strong>Subtotal: </strong></td>
-								<td>$500</td>
+								<td id="cartSubTotal">@cartSubTotal</td>
 							</tr>
 							<tr class="total-data">
-								<td><strong>Shipping: </strong></td>
-								<td>$45</td>
+								<td><strong>Coupon: </strong></td>
+								<td id="cartCoupon">0</td>
 							</tr>
 							<tr class="total-data">
 								<td><strong>Total: </strong></td>
-								<td>$545</td>
+								<td id="cartTotal">@cartSubTotal</td>
 							</tr>
 						</tbody>
 					</table>
-					<div class="cart-buttons">
-						<a href="cart.html" class="boxed-btn black">Update Cart</a>
-						<a href="/Home/Checkout" class="boxed-btn black">Check Out</a>
+					@*coupon section*@
+					<div class="coupon-section">
+						<div class="coupon-form-wrap">
+							<form>
+								<p style="display:inline-block; width:80%"><input type="text" placeholder="Apply Coupon"></p>
+								<p style ="display:inline-block"><a onclick="ApplyCoupon()" class="btn btn-outline-warning">Apply</a></p>
+							</form>
+						</div>
 					</div>
+					@*Proceed to buy*@
+					@if (Model.Count > 0)
+					{
+						<div class="cart-buttons">
+							<a href="/Home/Checkout" class="bordered-btn black">Check Out</a>
+						</div>
+					}
 				</div>
 
-				<div class="coupon-section">
-					<h3>Apply Coupon</h3>
-					<div class="coupon-form-wrap">
-						<form action="index.html">
-							<p><input type="text" placeholder="Coupon"></p>
-							<p><input type="submit" value="Apply"></p>
-						</form>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	</div>
@@ -97,16 +121,60 @@
 <!-- end cart -->
 @section Scripts{
 	<script>
-		function DeleteProduct(int id) {
-			var check = confirm("Are You Sure?")
-			if (check) {
-				window.location.href = "/Cart/DeleteProduct/" + id;
+		function DeleteProduct(id) {
+			Swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Yes, delete it!'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					window.location.href = "/Cart/DeleteProduct/" + id;
+				}
+			})
+		}
+
+		function ChangeQuantity(cartProducId, rowNum, totRows) {
+			//change the total price of one product
+			var newQuantity = document.getElementById(`quantity${rowNum}`).valueAsNumber;
+			var itemPrice = parseFloat(document.getElementById(`itemPrice${rowNum}`).innerText);
+			document.getElementById(`totalPrice${rowNum}`).innerText = newQuantity * itemPrice;
+			//change the subTotal price of the cart
+			var cartSubTotal = 0;
+			for (i = 0; i < totRows; i++) {
+				console.log(i);
+				var x = document.getElementById(`totalPrice${i+1}`);
+				cartSubTotal = cartSubTotal + parseFloat(x.innerText);
 			}
+			document.getElementById('cartSubTotal').innerText = cartSubTotal;
+			//change the total price of the cart
+			document.getElementById('cartTotal').innerText = cartSubTotal -
+				parseFloat(document.getElementById('cartCoupon').innerText);
+			//change the quantity in the data base
+			$.ajax({
+			url:"/Cart/ChangeQuantity",
+			type:"POST",
+			data:{
+					cartProductId: cartProducId,
+					newQuantity: newQuantity
+			},
+			success:function (response){
+				console.log(response);
+			},
+			error: function (xhr, textStatus, errorThrown) {
+				console.log(xhr.responseText);
+			}
+			});
+
 		}
-		function ChangeTotalPrice(float price){
-			var quantity = document.getElementById("quantity").value;
-			document.getElementById("totPrice").innerText = quantity * price;
+		function ApllyCoupon(){
+
 		}
+
 	</script>
+
 }
 

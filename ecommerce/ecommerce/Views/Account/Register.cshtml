@@ -1,16 +1,27 @@
-﻿@model ecommerce.ViewModel.RegisterViewModel
+﻿@model RegisterViewModel
 
 @{
     ViewData["Title"] = "Register";
 }
-
-<h1>Register</h1>
-
-<h4>RegisterViewModel</h4>
-<hr />
+<!-- Text area Start-->
+<div class="hero-area hero-bg" style="height:50%">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        @*<p class="subtitle">User Profile</p>*@
+                        <h1 style="margin:9rem 0 0 0">Sign Up</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Text area End -->
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Register">
+        <form action="/Login/Register" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>

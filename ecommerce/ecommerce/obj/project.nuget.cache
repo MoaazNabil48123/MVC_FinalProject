@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yalimqGp03U4N3lWvbIA1ird2dsfUlumXuKIhicWVEyPnhjBpqQQF73IHxwCvgkgVagu53Od56fn1CJzMHsLqg==",
+  "dgSpecHash": "wQ0TItnHtSLzabXa3m3RgZ+2xc6XxduaeSrIMXQmopDO4kZUtapsnvcEvpuy1PD51LZRYC7+N5IxV7ybhnWtAg==",
   "success": true,
   "projectFilePath": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\moaaz\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\moaaz\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\7.0.5\\microsoft.aspnetcore.authentication.facebook.7.0.5.nupkg.sha512",
+    "C:\\Users\\moaaz\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.5\\microsoft.aspnetcore.authentication.google.7.0.5.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.5.nupkg.sha512",

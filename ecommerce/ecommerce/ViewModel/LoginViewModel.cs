@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Authentication;
+using System.ComponentModel.DataAnnotations;
 
 namespace ecommerce.ViewModel
 {
@@ -8,7 +9,8 @@ namespace ecommerce.ViewModel
 
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
         public bool RememberMe { get; set; }
-    }
+        public string ReturnUrl { get; set; }
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+	}
 }

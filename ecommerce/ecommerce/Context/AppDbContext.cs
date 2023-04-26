@@ -22,14 +22,10 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	public DbSet<Variation> Variations { get; set; }
 	public DbSet<VariationOptions> VariationOptions { get; set; }
 	public DbSet<ProductConfiguration> ProductConfigurations { get; set; }
-	public DbSet<User_Address> User_Addresses { get; set; }
-
+	//public DbSet<User_Address> User_Addresses { get; set; }
 	public DbSet<Address> Addresses { get; set; }
-
 	public DbSet<Country> Countries { get; set; }
-
 	public DbSet<CartProducts> CartProducts { get; set; }
-
 	public DbSet<ShopOrder> ShopOrders { get; set; }
 	public DbSet<OrderStatus> OrderStatus { get; set; }
 	public DbSet<ShippingMethod> ShippingMethods { get; set; }
@@ -48,7 +44,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	{
 		modelBuilder.Entity<ProductConfiguration>().HasKey(entity => new { entity.ProductItemId, entity.VariationOptionsId });
 
-		modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.User_Id, entity.Address_Id });
+		//modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.User_Id, entity.Address_Id });
 		//modelBuilder.Entity<User_Address>().HasNoKey();
 
 

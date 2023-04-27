@@ -40,7 +40,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
 
-		optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
+		optionsBuilder.UseSqlServer("Server=AHMED-GAFAR; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
 
 	}
 

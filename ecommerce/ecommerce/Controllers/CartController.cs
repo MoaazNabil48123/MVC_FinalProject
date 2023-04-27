@@ -11,11 +11,15 @@ namespace ecommerce.Controllers
 		#region Constructor
 		private UserManager<ApplicationUser> userManager;
 		private IRepository<CartProducts> cartProductsRepo;
+		private IRepository<Coupon> couponRepo;
 
-		public CartController(UserManager<ApplicationUser> userManager, IRepository<CartProducts> cartProductsRepo)
+		public CartController(UserManager<ApplicationUser> userManager,
+			IRepository<CartProducts> cartProductsRepo,
+			IRepository<Coupon> couponRepo)
 		{
 			this.userManager = userManager;
 			this.cartProductsRepo = cartProductsRepo;
+			this.couponRepo = couponRepo;
 		}
 		#endregion
 
@@ -52,6 +56,35 @@ namespace ecommerce.Controllers
 			cartProduct.Quantity = newQuantity;
 			cartProductsRepo.Update(cartProduct);
 			return Json(true);
+		}
+		#endregion
+
+		#region Check Coupon
+		public IActionResult CheckCoupon(string couponName)
+		{
+			Coupon coupon = couponRepo.Get(coupon => coupon.Name == couponName.Normalize()).FirstOrDefault();
+			if (coupon is null)
+			{
+				return Json(new
+				{
+					status = false,
+					message = "Not Valid Coupon"
+				});
+			}
+			if (coupon.ExpirationDate > DateTime.Now)
+			{
+				return Json(new
+				{
+					status = true,
+					message = $"you got {Math.Round(coupon.Reduction * 100)}% off",
+					reduction = Math.Round(coupon.Reduction,2)
+				});
+			}
+			return Json(new
+			{
+				status = false,
+				message = "Expired Coupon"
+			});
 		}
 		#endregion
 	}

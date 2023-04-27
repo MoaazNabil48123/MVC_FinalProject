@@ -22,6 +22,21 @@ namespace ecommerce.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("ApplicationUserProduct", b =>
+                {
+                    b.Property<string>("ApplicationUsersId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ApplicationUsersId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("ApplicationUserProduct");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -341,7 +356,6 @@ namespace ecommerce.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Country_Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -1316,6 +1330,42 @@ namespace ecommerce.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ecommerce.Models.Coupon", b =>
+                {
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("ExpirationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<float>("Reduction")
+                        .HasColumnType("real");
+
+                    b.HasKey("Name");
+
+                    b.ToTable("Coupons");
+
+                    b.HasData(
+                        new
+                        {
+                            Name = "FREESHIPPING",
+                            ExpirationDate = new DateTime(2025, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Reduction = 0.3f
+                        },
+                        new
+                        {
+                            Name = "SPOOKY15",
+                            ExpirationDate = new DateTime(2025, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Reduction = 0.15f
+                        },
+                        new
+                        {
+                            Name = "BIGTREAT",
+                            ExpirationDate = new DateTime(2022, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Reduction = 0.25f
+                        });
+                });
+
             modelBuilder.Entity("ecommerce.Models.OrderLine", b =>
                 {
                     b.Property<int>("Id")
@@ -1487,7 +1537,7 @@ namespace ecommerce.Migrations
                             Id = 1,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1495,7 +1545,7 @@ namespace ecommerce.Migrations
                             Id = 2,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1503,7 +1553,7 @@ namespace ecommerce.Migrations
                             Id = 3,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1511,7 +1561,7 @@ namespace ecommerce.Migrations
                             Id = 4,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1519,7 +1569,7 @@ namespace ecommerce.Migrations
                             Id = 5,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1527,7 +1577,7 @@ namespace ecommerce.Migrations
                             Id = 6,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1535,7 +1585,7 @@ namespace ecommerce.Migrations
                             Id = 7,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1543,7 +1593,7 @@ namespace ecommerce.Migrations
                             Id = 8,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1551,7 +1601,7 @@ namespace ecommerce.Migrations
                             Id = 9,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1559,7 +1609,7 @@ namespace ecommerce.Migrations
                             Id = 10,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1567,7 +1617,7 @@ namespace ecommerce.Migrations
                             Id = 11,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1575,7 +1625,7 @@ namespace ecommerce.Migrations
                             Id = 12,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1583,7 +1633,7 @@ namespace ecommerce.Migrations
                             Id = 13,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1591,7 +1641,7 @@ namespace ecommerce.Migrations
                             Id = 14,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1599,7 +1649,7 @@ namespace ecommerce.Migrations
                             Id = 15,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1607,7 +1657,7 @@ namespace ecommerce.Migrations
                             Id = 16,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1615,7 +1665,7 @@ namespace ecommerce.Migrations
                             Id = 17,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1623,7 +1673,7 @@ namespace ecommerce.Migrations
                             Id = 18,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1631,7 +1681,7 @@ namespace ecommerce.Migrations
                             Id = 19,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1639,7 +1689,7 @@ namespace ecommerce.Migrations
                             Id = 20,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1647,7 +1697,7 @@ namespace ecommerce.Migrations
                             Id = 21,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1655,7 +1705,7 @@ namespace ecommerce.Migrations
                             Id = 22,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1663,7 +1713,7 @@ namespace ecommerce.Migrations
                             Id = 23,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1671,7 +1721,7 @@ namespace ecommerce.Migrations
                             Id = 24,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1679,7 +1729,7 @@ namespace ecommerce.Migrations
                             Id = 25,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1687,7 +1737,7 @@ namespace ecommerce.Migrations
                             Id = 26,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1695,7 +1745,7 @@ namespace ecommerce.Migrations
                             Id = 27,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1703,7 +1753,7 @@ namespace ecommerce.Migrations
                             Id = 28,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         },
                         new
@@ -1711,7 +1761,7 @@ namespace ecommerce.Migrations
                             Id = 29,
                             CategoryId = 1,
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Name = "American Eagle"
                         },
                         new
@@ -1719,7 +1769,7 @@ namespace ecommerce.Migrations
                             Id = 30,
                             CategoryId = 1,
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.png",
+                            Image = "/Image/Products/2.jpg",
                             Name = "Knight"
                         });
                 });
@@ -2975,7 +3025,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 1,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 1,
                             SKU = "AmericanEagle-L-Red",
@@ -2984,7 +3034,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 2,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 1,
                             SKU = "AmericanEagle-XL-Red",
@@ -2993,7 +3043,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 3,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 1,
                             SKU = "AmericanEagle-L-Blue",
@@ -3002,7 +3052,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 4,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 1,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3011,7 +3061,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 5,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 2,
                             SKU = "Knight-L-Red",
@@ -3020,7 +3070,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 6,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 2,
                             SKU = "Knight-XL-Red",
@@ -3029,7 +3079,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 7,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 2,
                             SKU = "Knight-L-Blue",
@@ -3038,7 +3088,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 8,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 2,
                             SKU = "Knight-XL-Blue",
@@ -3047,7 +3097,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 9,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 3,
                             SKU = "AmericanEagle-L-Red",
@@ -3056,7 +3106,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 10,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 3,
                             SKU = "AmericanEagle-XL-Red",
@@ -3065,7 +3115,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 11,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 3,
                             SKU = "AmericanEagle-L-Blue",
@@ -3074,7 +3124,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 12,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 3,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3083,7 +3133,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 13,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 4,
                             SKU = "Knight-L-Red",
@@ -3092,7 +3142,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 14,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 4,
                             SKU = "Knight-XL-Red",
@@ -3101,7 +3151,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 15,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 4,
                             SKU = "Knight-L-Blue",
@@ -3110,7 +3160,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 16,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 4,
                             SKU = "Knight-XL-Blue",
@@ -3119,7 +3169,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 17,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 5,
                             SKU = "AmericanEagle-L-Red",
@@ -3128,7 +3178,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 18,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 5,
                             SKU = "AmericanEagle-XL-Red",
@@ -3137,7 +3187,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 19,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 5,
                             SKU = "AmericanEagle-L-Blue",
@@ -3146,7 +3196,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 20,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 5,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3155,7 +3205,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 21,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 6,
                             SKU = "Knight-L-Red",
@@ -3164,7 +3214,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 22,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 6,
                             SKU = "Knight-XL-Red",
@@ -3173,7 +3223,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 23,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 6,
                             SKU = "Knight-L-Blue",
@@ -3182,7 +3232,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 24,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 6,
                             SKU = "Knight-XL-Blue",
@@ -3191,7 +3241,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 25,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 7,
                             SKU = "AmericanEagle-L-Red",
@@ -3200,7 +3250,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 26,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 7,
                             SKU = "AmericanEagle-XL-Red",
@@ -3209,7 +3259,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 27,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 7,
                             SKU = "AmericanEagle-L-Blue",
@@ -3218,7 +3268,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 28,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 7,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3227,7 +3277,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 29,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 8,
                             SKU = "Knight-L-Red",
@@ -3236,7 +3286,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 30,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 8,
                             SKU = "Knight-XL-Red",
@@ -3245,7 +3295,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 31,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 8,
                             SKU = "Knight-L-Blue",
@@ -3254,7 +3304,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 32,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 8,
                             SKU = "Knight-XL-Blue",
@@ -3263,7 +3313,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 33,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 9,
                             SKU = "AmericanEagle-L-Red",
@@ -3272,7 +3322,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 34,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 9,
                             SKU = "AmericanEagle-XL-Red",
@@ -3281,7 +3331,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 35,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 9,
                             SKU = "AmericanEagle-L-Blue",
@@ -3290,7 +3340,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 36,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 9,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3299,7 +3349,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 37,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 10,
                             SKU = "Knight-L-Red",
@@ -3308,7 +3358,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 38,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 10,
                             SKU = "Knight-XL-Red",
@@ -3317,7 +3367,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 39,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 10,
                             SKU = "Knight-L-Blue",
@@ -3326,7 +3376,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 40,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 10,
                             SKU = "Knight-XL-Blue",
@@ -3335,7 +3385,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 41,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 11,
                             SKU = "AmericanEagle-L-Red",
@@ -3344,7 +3394,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 42,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 11,
                             SKU = "AmericanEagle-XL-Red",
@@ -3353,7 +3403,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 43,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 11,
                             SKU = "AmericanEagle-L-Blue",
@@ -3362,7 +3412,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 44,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 11,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3371,7 +3421,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 45,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 12,
                             SKU = "Knight-L-Red",
@@ -3380,7 +3430,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 46,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 12,
                             SKU = "Knight-XL-Red",
@@ -3389,7 +3439,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 47,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 12,
                             SKU = "Knight-L-Blue",
@@ -3398,7 +3448,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 48,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 12,
                             SKU = "Knight-XL-Blue",
@@ -3407,7 +3457,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 49,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 13,
                             SKU = "AmericanEagle-L-Red",
@@ -3416,7 +3466,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 50,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 13,
                             SKU = "AmericanEagle-XL-Red",
@@ -3425,7 +3475,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 51,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 13,
                             SKU = "AmericanEagle-L-Blue",
@@ -3434,7 +3484,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 52,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 13,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3443,7 +3493,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 53,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 14,
                             SKU = "Knight-L-Red",
@@ -3452,7 +3502,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 54,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 14,
                             SKU = "Knight-XL-Red",
@@ -3461,7 +3511,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 55,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 14,
                             SKU = "Knight-L-Blue",
@@ -3470,7 +3520,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 56,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 14,
                             SKU = "Knight-XL-Blue",
@@ -3479,7 +3529,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 57,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 15,
                             SKU = "AmericanEagle-L-Red",
@@ -3488,7 +3538,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 58,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 15,
                             SKU = "AmericanEagle-XL-Red",
@@ -3497,7 +3547,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 59,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 15,
                             SKU = "AmericanEagle-L-Blue",
@@ -3506,7 +3556,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 60,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 15,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3515,7 +3565,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 61,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 16,
                             SKU = "Knight-L-Red",
@@ -3524,7 +3574,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 62,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 16,
                             SKU = "Knight-XL-Red",
@@ -3533,7 +3583,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 63,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 16,
                             SKU = "Knight-L-Blue",
@@ -3542,7 +3592,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 64,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 16,
                             SKU = "Knight-XL-Blue",
@@ -3551,7 +3601,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 65,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 17,
                             SKU = "AmericanEagle-L-Red",
@@ -3560,7 +3610,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 66,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 17,
                             SKU = "AmericanEagle-XL-Red",
@@ -3569,7 +3619,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 67,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 17,
                             SKU = "AmericanEagle-L-Blue",
@@ -3578,7 +3628,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 68,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 17,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3587,7 +3637,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 69,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 18,
                             SKU = "Knight-L-Red",
@@ -3596,7 +3646,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 70,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 18,
                             SKU = "Knight-XL-Red",
@@ -3605,7 +3655,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 71,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 18,
                             SKU = "Knight-L-Blue",
@@ -3614,7 +3664,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 72,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 18,
                             SKU = "Knight-XL-Blue",
@@ -3623,7 +3673,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 73,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 19,
                             SKU = "AmericanEagle-L-Red",
@@ -3632,7 +3682,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 74,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 19,
                             SKU = "AmericanEagle-XL-Red",
@@ -3641,7 +3691,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 75,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 19,
                             SKU = "AmericanEagle-L-Blue",
@@ -3650,7 +3700,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 76,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 19,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3659,7 +3709,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 77,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 20,
                             SKU = "Knight-L-Red",
@@ -3668,7 +3718,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 78,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 20,
                             SKU = "Knight-XL-Red",
@@ -3677,7 +3727,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 79,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 20,
                             SKU = "Knight-L-Blue",
@@ -3686,7 +3736,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 80,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 20,
                             SKU = "Knight-XL-Blue",
@@ -3695,7 +3745,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 81,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 21,
                             SKU = "AmericanEagle-L-Red",
@@ -3704,7 +3754,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 82,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 21,
                             SKU = "AmericanEagle-XL-Red",
@@ -3713,7 +3763,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 83,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 21,
                             SKU = "AmericanEagle-L-Blue",
@@ -3722,7 +3772,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 84,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 21,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3731,7 +3781,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 85,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 22,
                             SKU = "Knight-L-Red",
@@ -3740,7 +3790,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 86,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 22,
                             SKU = "Knight-XL-Red",
@@ -3749,7 +3799,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 87,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 22,
                             SKU = "Knight-L-Blue",
@@ -3758,7 +3808,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 88,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 22,
                             SKU = "Knight-XL-Blue",
@@ -3767,7 +3817,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 89,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 23,
                             SKU = "AmericanEagle-L-Red",
@@ -3776,7 +3826,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 90,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 23,
                             SKU = "AmericanEagle-XL-Red",
@@ -3785,7 +3835,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 91,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 23,
                             SKU = "AmericanEagle-L-Blue",
@@ -3794,7 +3844,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 92,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 23,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3803,7 +3853,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 93,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 24,
                             SKU = "Knight-L-Red",
@@ -3812,7 +3862,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 94,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 24,
                             SKU = "Knight-XL-Red",
@@ -3821,7 +3871,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 95,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 24,
                             SKU = "Knight-L-Blue",
@@ -3830,7 +3880,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 96,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 24,
                             SKU = "Knight-XL-Blue",
@@ -3839,7 +3889,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 97,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 25,
                             SKU = "AmericanEagle-L-Red",
@@ -3848,7 +3898,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 98,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 25,
                             SKU = "AmericanEagle-XL-Red",
@@ -3857,7 +3907,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 99,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 25,
                             SKU = "AmericanEagle-L-Blue",
@@ -3866,7 +3916,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 100,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 25,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3875,7 +3925,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 101,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 26,
                             SKU = "Knight-L-Red",
@@ -3884,7 +3934,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 102,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 26,
                             SKU = "Knight-XL-Red",
@@ -3893,7 +3943,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 103,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 26,
                             SKU = "Knight-L-Blue",
@@ -3902,7 +3952,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 104,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 26,
                             SKU = "Knight-XL-Blue",
@@ -3911,7 +3961,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 105,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 27,
                             SKU = "AmericanEagle-L-Red",
@@ -3920,7 +3970,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 106,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 27,
                             SKU = "AmericanEagle-XL-Red",
@@ -3929,7 +3979,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 107,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 27,
                             SKU = "AmericanEagle-L-Blue",
@@ -3938,7 +3988,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 108,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 27,
                             SKU = "AmericanEagle-XL-Blue",
@@ -3947,7 +3997,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 109,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 28,
                             SKU = "Knight-L-Red",
@@ -3956,7 +4006,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 110,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 28,
                             SKU = "Knight-XL-Red",
@@ -3965,7 +4015,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 111,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 28,
                             SKU = "Knight-L-Blue",
@@ -3974,7 +4024,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 112,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 28,
                             SKU = "Knight-XL-Blue",
@@ -3983,7 +4033,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 113,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 29,
                             SKU = "AmericanEagle-L-Red",
@@ -3992,7 +4042,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 114,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 29,
                             SKU = "AmericanEagle-XL-Red",
@@ -4001,7 +4051,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 115,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 29,
                             SKU = "AmericanEagle-L-Blue",
@@ -4010,7 +4060,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 116,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 29,
                             SKU = "AmericanEagle-XL-Blue",
@@ -4019,7 +4069,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 117,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 120f,
                             ProductId = 30,
                             SKU = "Knight-L-Red",
@@ -4028,7 +4078,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 118,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 100f,
                             ProductId = 30,
                             SKU = "Knight-XL-Red",
@@ -4037,7 +4087,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 119,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/1.jpg",
                             Price = 80f,
                             ProductId = 30,
                             SKU = "Knight-L-Blue",
@@ -4046,7 +4096,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 120,
-                            Image = "/Image/Products/1.png",
+                            Image = "/Image/Products/2.jpg",
                             Price = 200f,
                             ProductId = 30,
                             SKU = "Knight-XL-Blue",
@@ -4219,6 +4269,21 @@ namespace ecommerce.Migrations
                             Value = "XL",
                             VariationId = 2
                         });
+                });
+
+            modelBuilder.Entity("ApplicationUserProduct", b =>
+                {
+                    b.HasOne("ecommerce.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("ApplicationUsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

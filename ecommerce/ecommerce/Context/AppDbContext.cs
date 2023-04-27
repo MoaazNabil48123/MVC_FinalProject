@@ -32,12 +32,12 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	public DbSet<OrderLine> OrderLines { get; set; }
 	public DbSet<PaymentMethod> PaymentMethods { get; set; }
 	public DbSet<PaymentType> PaymentTypes { get; set; }
+	public DbSet<Coupon> Coupons { get; set; }
 	#endregion
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
 
 		optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
-
 	}
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,9 +46,6 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 
 		//modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.User_Id, entity.Address_Id });
 		//modelBuilder.Entity<User_Address>().HasNoKey();
-
-
-
 
 		base.OnModelCreating(modelBuilder);
 
@@ -219,6 +216,22 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 			modelBuilder.Entity<Country>().HasData(CountryList);
 			#endregion
 
+			#region CouponSeeding
+			worksheet = package.Workbook.Worksheets[9];
+			rows = worksheet.Cells.Select(cell => cell.Start.Row).Distinct().OrderBy(row => row);
+			var couponList = new List<Coupon>();
+			foreach (var row in rows.Skip(1))
+			{
+				var entity = new Coupon
+				{
+					Name = worksheet.Cells[row, 1].Value.ToString(),
+					Reduction = float.Parse(worksheet.Cells[row, 2].Value.ToString()),
+					ExpirationDate = DateTime.FromOADate(double.Parse(worksheet.Cells[row, 3].Value.ToString()))
+				};
+				couponList.Add(entity);
+			}
+			modelBuilder.Entity<Coupon>().HasData(couponList);
+			#endregion
 		}
 
 		#endregion

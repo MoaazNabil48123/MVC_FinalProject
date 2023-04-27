@@ -8,9 +8,10 @@ namespace ecommerce.Models
         //Navigational Properties
 
         public virtual List<Address> Addresses { get; set; } = new List<Address>();
-        public List<CartProducts>? CartProducts { get; set; } = new List<CartProducts>();
+        public List<CartProducts>? CartProducts { get; set; } = new List<CartProducts>();// to add user cart feature
         public List<ShopOrder> ShopOrders { get; set; } = new List<ShopOrder>();
+        public List<Product> Products { get; set; } = new List<Product>();//to add the favorites of the user
 
-    }
+	}
 }
  

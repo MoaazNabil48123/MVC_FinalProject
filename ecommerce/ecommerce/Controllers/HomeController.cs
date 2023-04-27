@@ -20,10 +20,7 @@ namespace ecommerce.Controllers
             _logger = logger;
             this.categoryRepo = categoryRepo;
             this.context = context;
-
-
 		}
-      //  [Authorize]
         public IActionResult Index()
         {
 			return View(categoryRepo.GetAll(c=>c.Products));
@@ -35,11 +32,6 @@ namespace ecommerce.Controllers
         public IActionResult Checkout()
         {
             return View();
-        }
-        public IActionResult test()
-        {
-            var x = context.Set<Category>().Include(c => c.Products).ThenInclude(p => p.ProductItems).Include(c=>c.Variations).ThenInclude(v=>v.VariationOptions).ToList();
-			return Json(context.Set<Category>().Include(c => c.Products).ThenInclude(p => p.ProductItems));
         }
 
         //public IActionResult Privacy()

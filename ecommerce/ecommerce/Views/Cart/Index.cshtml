@@ -36,7 +36,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							@if (Model != null)
+							@if (Model.Count > 0)
 							{
 								int i = 1;
 								@foreach (var CartProduct in Model)
@@ -66,6 +66,17 @@
 								}
 
 							}
+							else
+							{
+								<tr>
+									<td colspan="6" >
+										<h5 style="color:#F28123">
+											Your Cart is empty
+										</h5>
+
+									</td>
+								</tr>
+							}
 						</tbody>
 					</table>
 				</div>
@@ -87,7 +98,7 @@
 							</tr>
 							<tr class="total-data">
 								<td><strong>Coupon: </strong></td>
-								<td id="cartCoupon">0</td>
+								<td id="couponReductionDiv" data-reduction="">0</td>
 							</tr>
 							<tr class="total-data">
 								<td><strong>Total: </strong></td>
@@ -99,10 +110,11 @@
 					<div class="coupon-section">
 						<div class="coupon-form-wrap">
 							<form>
-								<p style="display:inline-block; width:80%"><input type="text" placeholder="Apply Coupon"></p>
+								<p style="display:inline-block; width:80%"><input id="couponName" type="text" placeholder="Apply Coupon"></p>
 								<p style ="display:inline-block"><a onclick="ApplyCoupon()" class="btn btn-outline-warning">Apply</a></p>
 							</form>
 						</div>
+						<div class="ms-4" id="couponTextDiv" hidden></div>
 					</div>
 					@*Proceed to buy*@
 					@if (Model.Count > 0)
@@ -136,7 +148,6 @@
 				}
 			})
 		}
-
 		function ChangeQuantity(cartProducId, rowNum, totRows) {
 			//change the total price of one product
 			var newQuantity = document.getElementById(`quantity${rowNum}`).valueAsNumber;
@@ -145,14 +156,16 @@
 			//change the subTotal price of the cart
 			var cartSubTotal = 0;
 			for (i = 0; i < totRows; i++) {
-				console.log(i);
 				var x = document.getElementById(`totalPrice${i+1}`);
 				cartSubTotal = cartSubTotal + parseFloat(x.innerText);
 			}
 			document.getElementById('cartSubTotal').innerText = cartSubTotal;
+			//change coupon reduction
+			var div = document.getElementById('couponReductionDiv');
+			div.innerText =- parseFloat(cartSubTotal) * parseFloat(div.dataset.reduction);
 			//change the total price of the cart
 			document.getElementById('cartTotal').innerText = cartSubTotal -
-				parseFloat(document.getElementById('cartCoupon').innerText);
+				parseFloat(document.getElementById('couponReductionDiv').innerText);
 			//change the quantity in the data base
 			$.ajax({
 			url:"/Cart/ChangeQuantity",
@@ -162,7 +175,6 @@
 					newQuantity: newQuantity
 			},
 			success:function (response){
-				console.log(response);
 			},
 			error: function (xhr, textStatus, errorThrown) {
 				console.log(xhr.responseText);
@@ -170,7 +182,44 @@
 			});
 
 		}
-		function ApllyCoupon(){
+		function ApplyCoupon() {
+			//get coupon value
+			var couponName = document.getElementById("couponName").value;
+			//get div where the message will be typed in
+			var couponTextDiv = document.getElementById("couponTextDiv");
+			//get div where the reduction of the coupon will be typed in
+			var couponReductionDiv = document.getElementById("couponReductionDiv");
+			//check if the coupon is valid
+			$.ajax({
+				url: "/Cart/CheckCoupon",
+				type: "POST",
+				data: {
+					couponName: couponName
+				},
+				success: function (response) {
+					couponTextDiv.classList.remove('text-success');
+					couponTextDiv.classList.remove('text-danger');
+					if (response.status) {
+						couponTextDiv.classList.add('text-success');
+						var cartSubtotal = parseFloat(document.getElementById('cartSubTotal').innerText);
+						document.getElementById('cartTotal').innerText = Math.ceil(cartSubtotal * (1 - response.reduction));
+						document.getElementById('couponReductionDiv').innerText = - (cartSubtotal * response.reduction);
+						document.getElementById('couponReductionDiv').classList.add('text-success');
+						document.getElementById('couponReductionDiv').dataset.reduction= response.reduction;
+					}
+					else {
+						couponTextDiv.classList.add('text-danger');
+					}
+					couponTextDiv.innerText = response.message;
+					couponTextDiv.hidden =false;
+				},
+				error: function (xhr, textStatus, errorThrown) {
+					console.log(xhr.responseText);
+				}
+			});
+
+
+
 
 		}
 

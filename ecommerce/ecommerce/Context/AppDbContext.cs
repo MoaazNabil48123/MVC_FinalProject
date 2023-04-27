@@ -36,7 +36,6 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	#endregion
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-
 		optionsBuilder.UseSqlServer("Server=DESKTOP-SSM4AF1\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
 	}
 

@@ -10,7 +10,7 @@ namespace ecommerce.ViewModel
         [DataType(DataType.Password)]
         public string Password { get; set; }
         public bool RememberMe { get; set; }
-        public string ReturnUrl { get; set; }
-        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+        public string? ReturnUrl { get; set; }
+        public IList<AuthenticationScheme>? ExternalLogins { get; set; }
 	}
 }

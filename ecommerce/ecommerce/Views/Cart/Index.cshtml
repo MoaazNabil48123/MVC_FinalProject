@@ -3,7 +3,18 @@
 	ViewData["Title"] = "Cart";
 	float cartSubTotal = 0;
 }
+<style>
+	.btn-outline-warning {
+		color: #F28123;
+		border-color: #F28123;
+	}
 
+		.btn-outline-warning:hover {
+			color: #000;
+			background-color: #F28123;
+			border-color: #F28123;
+		}
+</style>
 <!-- breadcrumb-section -->
 <div class="breadcrumb-section breadcrumb-bg">
 	<div class="container">
@@ -111,7 +122,7 @@
 						<div class="coupon-form-wrap">
 							<form>
 								<p style="display:inline-block; width:80%"><input id="couponName" type="text" placeholder="Apply Coupon"></p>
-								<p style ="display:inline-block"><a onclick="ApplyCoupon()" class="btn btn-outline-warning">Apply</a></p>
+								<p style="display:inline-block"><a style="padding: 16px 20px;" onclick="ApplyCoupon()" class="btn btn-outline-warning">Apply</a></p>
 							</form>
 						</div>
 						<div class="ms-4" id="couponTextDiv" hidden></div>

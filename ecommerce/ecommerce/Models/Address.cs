@@ -27,14 +27,17 @@ namespace ecommerce.Models
 
         public int Postal_Code { get; set; }
 
-
+        public bool IsDefault { get; set; }
         [ForeignKey("Country")]
         public int Country_Id { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
 
         public virtual Country? Country { get; set; }
 
         public virtual List<ShopOrder> ShopOrders { get; set; }
-        public virtual List<User_Address> User_Addresses { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
     }
 }

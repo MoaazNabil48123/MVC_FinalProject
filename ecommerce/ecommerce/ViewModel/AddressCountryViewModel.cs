@@ -21,6 +21,7 @@ namespace ecommerce.ViewModel
         public int Country_Id { get; set; }
         
         public List<Country>? CountriesList { get; set; }
+        public string previousUrl { get; set; }
 
     }
 }

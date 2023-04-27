@@ -22,7 +22,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	public DbSet<Variation> Variations { get; set; }
 	public DbSet<VariationOptions> VariationOptions { get; set; }
 	public DbSet<ProductConfiguration> ProductConfigurations { get; set; }
-	public DbSet<User_Address> User_Addresses { get; set; }
+	//public DbSet<User_Address> User_Addresses { get; set; }
 
 	public DbSet<Address> Addresses { get; set; }
 
@@ -40,7 +40,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
 
-		optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
+		optionsBuilder.UseSqlServer("Server=.; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
 
 	}
 
@@ -48,7 +48,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	{
 		modelBuilder.Entity<ProductConfiguration>().HasKey(entity => new { entity.ProductItemId, entity.VariationOptionsId });
 
-		modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.User_Id, entity.Address_Id });
+		//modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.User_Id, entity.Address_Id });
 		//modelBuilder.Entity<User_Address>().HasNoKey();
 
 
@@ -222,6 +222,8 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 			}
 			modelBuilder.Entity<Country>().HasData(CountryList);
 			#endregion
+
+
 
 		}
 

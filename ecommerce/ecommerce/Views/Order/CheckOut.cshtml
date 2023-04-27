@@ -1,0 +1,208 @@
+﻿@using ecommerce.ViewModel;
+@using Microsoft.Extensions.Options;
+@inject IOptions<StripeSettings> stripe;
+@model OrderViewModel
+@{
+    ViewData["Title"] = "CheckOut";
+    float subTotal = 100.99f;
+    Model.subTotal = subTotal;
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="breadcrumb-text">
+          <p>Secure & Reliable</p>
+          <h1>CheckOut Products</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end breadcrumb section -->
+<!-- Checkout Start -->
+<form asp-controller="Order" asp-action="CheckOut" method="post">
+    <input asp-for="UserId" hidden />
+    <input asp-for="CartProducts" hidden />
+
+
+<div class="container-fluid">
+  <div class="row px-xl-5">
+    <div class="col-lg-8">
+      <h5 class="section-title position-relative text-uppercase mb-3">
+        <span class="bg-secondary pr-3">Billing Addresses</span>
+      </h5>
+      @if (Model.Addresses.Count > 0) 
+        { int i =0; 
+            foreach (var item in Model.Addresses) 
+            { i++;
+            <div class="d-flex">
+            <input
+              type="radio"
+              asp-for="AddressId"
+              value="@item.Id"
+              />
+              
+            <div class="card">
+              <div class="card-body">
+                <div class="bg-light p-30">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <label>First Name: </label>
+                      <label>@Model.User.UserName</label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label>Last Name: </label>
+                      <label>@Model.User.UserName</label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label>E-mail: </label>
+                      <label>@Model.User.Email</label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label>Mobile No.: </label>
+                      <label>@Model.User.PhoneNumber</label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label>Address Line 1: </label>
+                      <label>@item.Address_line1</label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label>Address Line 2: </label>
+                      <label>@item.Address_line2</label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <label>Country: </label>
+                      <label>@item.Country.Country_Name</label>
+                    </div>
+                  <div class="col-md-6 form-group">
+                    <label>City: </label>
+                    <label>@item.City</label>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label>Region: </label>
+                    <label>@item.Region</label>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label>Postal Code: </label>
+                    <label>@item.Postal_Code</label>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                        </div>
+                    } 
+
+                }
+                else
+                {
+                    <h6 class="mb-3 text-danger">You Don't have Any Addresses.</h6>
+
+                }
+                <br>
+    <a asp-action="Address" asp-controller="Account" class="btn btn-primary">Add Address</a>
+
+    </div>
+
+    <div class="col-lg-4">
+      <h5 class="section-title position-relative text-uppercase mb-3">
+        <span class="bg-secondary pr-3">Order Total</span>
+      </h5>
+      <div class="bg-light p-30 mb-5">
+        <div class="border-bottom">
+          <h6 class="mb-3">Products</h6>
+          @foreach(var cartProduct in Model.CartProducts) {
+          <div class="d-flex justify-content-between">
+            <p>@cartProduct.ProductItem.Product.Name</p>
+            <p>$@cartProduct.ProductItem.Price</p>
+          </div>
+          subTotal += cartProduct.ProductItem.Price; }
+        </div>
+        <div class="border-bottom pt-3 pb-2">
+          <div class="d-flex justify-content-between mb-3">
+            <h6>Subtotal</h6>
+            <h6>$@subTotal</h6>
+          </div>
+          <h6 class="font-weight-medium">Shipping</h6>
+
+          @foreach(var shippingMethod in Model.ShippingMethods) {
+          <div class="form-group">
+            <div class="custom-control custom-radio">
+              <div class="d-flex mb-3">
+                <input
+                  type="radio"
+                  id="@shippingMethod.Price"
+                  asp-for="ShippingMethodId"
+                  value="@shippingMethod.Id"
+                  onchange="updateLabelValue()"
+                />
+                <label class="font-weight-medium">@shippingMethod.Name</label>
+
+                <label class="font-weight-medium ms-auto"
+                  >$@shippingMethod.Price</label
+                >
+              </div>
+            </div>
+          </div>
+
+          }
+        </div>
+        <div class="pt-2">
+          <div class="d-flex justify-content-between mt-2">
+            <h5>Total</h5>
+            <h5 id="Total">$@subTotal </h5>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5">
+        <h5 class="section-title position-relative text-uppercase mb-3">
+          <span class="bg-secondary pr-3">Payment</span>
+        </h5>
+        <div class="bg-light p-30">
+           @*@foreach(var paymentMethod in Model.PaymentMethods) {
+          <div class="form-group">
+            <div class="custom-control custom-radio">
+              <div class="d-flex mb-3">
+                <input
+                  type="radio"
+                  asp-for="PaymentMethodId"
+                  value="PaymentMethodId"
+                />
+
+                <label class="font-weight-medium">@paymentMethod.Name</label>
+                >
+              </div>
+            </div>
+          </div>
+
+          }*@
+          <input type="submit" value="Place Order" class="btn btn-block btn-primary font-weight-bold py-3"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+<!-- Checkout End -->
+@section Scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script>
+  function updateLabelValue() {
+          var radioValue = document.querySelector('input[name="ShippingMethodId"]:checked');
+          var totalPrice = parseFloat(radioValue.id)+@subTotal;
+      var label = document.getElementById('Total');
+      label.innerText =  '$' + totalPrice;
+  }
+        $(document).ready(
+            function () {
+                $('input:radio:first-child').attr('checked', true);
+            }
+        );
+</script>
+    
+}

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ecommerce.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedingOrderFeatures : Migration
+    public partial class PaymentGetway : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,7 +71,7 @@ namespace ecommerce.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Country_Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Country_Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -279,11 +279,19 @@ namespace ecommerce.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Region = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Postal_Code = table.Column<int>(type: "int", nullable: false),
-                    Country_Id = table.Column<int>(type: "int", nullable: false)
+                    IsDefault = table.Column<bool>(type: "bit", nullable: false),
+                    Country_Id = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Addresses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Addresses_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Addresses_Countries_Country_Id",
                         column: x => x.Country_Id,
@@ -372,12 +380,13 @@ namespace ecommerce.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    OdrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PaymentMethodId = table.Column<int>(type: "int", nullable: false),
+                    OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ShippingAddressId = table.Column<int>(type: "int", nullable: false),
                     ShippingMethodId = table.Column<int>(type: "int", nullable: false),
                     OrderTotal = table.Column<float>(type: "real", nullable: false),
-                    OrderStatusId = table.Column<int>(type: "int", nullable: false)
+                    OrderStatusId = table.Column<int>(type: "int", nullable: false),
+                    SessionId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    paymentIntentId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -404,30 +413,6 @@ namespace ecommerce.Migrations
                         name: "FK_ShopOrders_ShippingMethods_ShippingMethodId",
                         column: x => x.ShippingMethodId,
                         principalTable: "ShippingMethods",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "User_Addresses",
-                columns: table => new
-                {
-                    User_Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Address_Id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_User_Addresses", x => new { x.User_Id, x.Address_Id });
-                    table.ForeignKey(
-                        name: "FK_User_Addresses_Addresses_Address_Id",
-                        column: x => x.Address_Id,
-                        principalTable: "Addresses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_User_Addresses_AspNetUsers_User_Id",
-                        column: x => x.User_Id,
-                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 });
@@ -1182,6 +1167,11 @@ namespace ecommerce.Migrations
                 column: "Country_Id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Addresses_UserId",
+                table: "Addresses",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -1286,11 +1276,6 @@ namespace ecommerce.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_User_Addresses_Address_Id",
-                table: "User_Addresses",
-                column: "Address_Id");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_VariationOptions_VariationId",
                 table: "VariationOptions",
                 column: "VariationId");
@@ -1332,9 +1317,6 @@ namespace ecommerce.Migrations
                 name: "ProductConfigurations");
 
             migrationBuilder.DropTable(
-                name: "User_Addresses");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
@@ -1353,9 +1335,6 @@ namespace ecommerce.Migrations
                 name: "Addresses");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
                 name: "OrderStatus");
 
             migrationBuilder.DropTable(
@@ -1366,6 +1345,9 @@ namespace ecommerce.Migrations
 
             migrationBuilder.DropTable(
                 name: "Variations");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "Countries");

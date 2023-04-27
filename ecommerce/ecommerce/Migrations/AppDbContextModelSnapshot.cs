@@ -178,6 +178,9 @@ namespace ecommerce.Migrations
                     b.Property<int>("Country_Id")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Postal_Code")
                         .HasColumnType("int");
 
@@ -191,9 +194,15 @@ namespace ecommerce.Migrations
                     b.Property<int>("Unit_Number")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Country_Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Addresses");
                 });
@@ -333,7 +342,6 @@ namespace ecommerce.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Country_Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -4094,7 +4102,7 @@ namespace ecommerce.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("OdrderDate")
+                    b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("OrderStatusId")
@@ -4103,8 +4111,9 @@ namespace ecommerce.Migrations
                     b.Property<float>("OrderTotal")
                         .HasColumnType("real");
 
-                    b.Property<int>("PaymentMethodId")
-                        .HasColumnType("int");
+                    b.Property<string>("SessionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ShippingAddressId")
                         .HasColumnType("int");
@@ -4115,6 +4124,10 @@ namespace ecommerce.Migrations
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("paymentIntentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -4127,21 +4140,6 @@ namespace ecommerce.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("ShopOrders");
-                });
-
-            modelBuilder.Entity("ecommerce.Models.User_Address", b =>
-                {
-                    b.Property<string>("User_Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("Address_Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("User_Id", "Address_Id");
-
-                    b.HasIndex("Address_Id");
-
-                    b.ToTable("User_Addresses");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Variation", b =>
@@ -4287,6 +4285,14 @@ namespace ecommerce.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("Addresses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
                     b.Navigation("Country");
                 });
 
@@ -4423,25 +4429,6 @@ namespace ecommerce.Migrations
                     b.Navigation("ShippingMethod");
                 });
 
-            modelBuilder.Entity("ecommerce.Models.User_Address", b =>
-                {
-                    b.HasOne("ecommerce.Models.Address", "Address")
-                        .WithMany("User_Addresses")
-                        .HasForeignKey("Address_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("User_Addresses")
-                        .HasForeignKey("User_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
-
-                    b.Navigation("ApplicationUser");
-                });
-
             modelBuilder.Entity("ecommerce.Models.Variation", b =>
                 {
                     b.HasOne("ecommerce.Models.Category", "Category")
@@ -4467,17 +4454,15 @@ namespace ecommerce.Migrations
             modelBuilder.Entity("ecommerce.Models.Address", b =>
                 {
                     b.Navigation("ShopOrders");
-
-                    b.Navigation("User_Addresses");
                 });
 
             modelBuilder.Entity("ecommerce.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("Addresses");
+
                     b.Navigation("CartProducts");
 
                     b.Navigation("ShopOrders");
-
-                    b.Navigation("User_Addresses");
                 });
 
             modelBuilder.Entity("ecommerce.Models.Category", b =>

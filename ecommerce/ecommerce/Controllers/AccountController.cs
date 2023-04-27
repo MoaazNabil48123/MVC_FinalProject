@@ -12,19 +12,20 @@ namespace ecommerce.Controllers
         private readonly SignInManager<ApplicationUser> signInManager;
         IRepository<Address> AddressRepo;
         IRepository<Country> CountryRepo;
-
+        IRepository<ApplicationUser> ApplicationUserRepo;
 
         public AccountController(UserManager<ApplicationUser> _userManager,
             SignInManager<ApplicationUser> _signInManager
             , IRepository<Address> AddressRepo
             , IRepository<Country> CountryRepo
+            , IRepository<ApplicationUser> ApplicationUserRepo
             )
         {
             userManager = _userManager;
             signInManager = _signInManager;
             this.AddressRepo = AddressRepo;
             this.CountryRepo = CountryRepo;
-
+            this.ApplicationUserRepo = ApplicationUserRepo;
         }
         #region Regiser
         public IActionResult Register()
@@ -108,24 +109,27 @@ namespace ecommerce.Controllers
         #endregion
 
         #region Address
-
-        public IActionResult Address()
+        public async Task<IActionResult> Address()
         {
             AddressCountryViewModel ACVM = new AddressCountryViewModel();
             List<Country> CounteryList = CountryRepo.GetAll();
             ACVM.CountriesList = CounteryList;
+            ACVM.previousUrl = HttpContext.Request.Headers["Referer"].ToString();
+
             return View(ACVM);
         }
         [HttpPost]
        
-        public  IActionResult Address(AddressCountryViewModel ACVM)
+        public async Task<IActionResult> Address(AddressCountryViewModel ACVM)
         {
+            ApplicationUser appUser = await userManager.FindByNameAsync(User.Identity.Name);
+
             if (ModelState.IsValid)
             {
                 Address userModel = new Address();
 
-
                 userModel.Id = ACVM.Id;
+                userModel.UserId = appUser.Id;
                 userModel.Unit_Number = ACVM.Unit_Number;
                 userModel.Street_Number = ACVM.Street_Number;
                 userModel.Address_line1 = ACVM.Address_line1;
@@ -137,8 +141,9 @@ namespace ecommerce.Controllers
 
 
                AddressRepo.Add(userModel);
+                return Redirect(ACVM.previousUrl);
 
-                return RedirectToAction("Index", "Home");
+                // return RedirectToAction("Index", "Home");
 
                 //save db
                 //IdentityResult result =

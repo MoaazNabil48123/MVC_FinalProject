@@ -5,16 +5,18 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Stripe;
 using Address = ecommerce.Models.Address;
+using Coupon = ecommerce.Models.Coupon;
 using PaymentMethod = ecommerce.Models.PaymentMethod;
 using Product = ecommerce.Models.Product;
 
-namespace ecommerce
+
+namespace ecommerce;
+
+public class Program
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+	public static void Main(string[] args)
+	{
+		var builder = WebApplication.CreateBuilder(args);
 
             #region Services
             builder.Services.AddControllersWithViews();
@@ -33,34 +35,54 @@ namespace ecommerce
             builder.Services.AddScoped<IRepository<ApplicationUser>, Repository<ApplicationUser>>();
             builder.Services.AddScoped<IRepository<ShippingMethod>, Repository<ShippingMethod>>();
             builder.Services.AddScoped<IRepository<OrderStatus>, Repository<OrderStatus>>();
+            builder.Services.AddScoped<IRepository<Coupon>, Repository<Coupon>>();
+            builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
 
 
 
 
+        // auth for register and login
+        builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+		{
+			options.Password.RequireLowercase = true;
+			options.Password.RequireNonAlphanumeric = false;
+			options.Password.RequireUppercase = false;
+			options.Password.RequireDigit = true;
+			options.Password.RequiredLength = 5;
 
-            // auth for register and login
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-                {
-                    options.Password.RequireLowercase = true;
-                    options.Password.RequireNonAlphanumeric = false;
-                    options.Password.RequireUppercase = false;
-                    options.Password.RequireDigit = true;
-                    options.Password.RequiredLength = 5;
 
-                })
-                      .AddEntityFrameworkStores<AppDbContext>();
+		})
+			  .AddEntityFrameworkStores<AppDbContext>();
+		//External identity providers(Google)
+		builder.Services.AddAuthentication().AddGoogle(options =>
+			{
+				IConfigurationSection googleAuthNSection =
+					builder.Configuration.GetSection("Authentication:Google");
+
+				options.ClientId = googleAuthNSection["ClientId"];
+				options.ClientSecret = googleAuthNSection["ClientSecret"];
+			});
+            builder.Services.AddAuthentication().AddFacebook(options =>
+            {
+                IConfigurationSection facebookAuthNSection =
+                    builder.Configuration.GetSection("Authentication:Facebook");
+
+                options.ClientId = facebookAuthNSection["ClientId"];
+                options.ClientSecret = facebookAuthNSection["ClientSecret"];
+            });
+
 
             #endregion
 
-            var app = builder.Build();
+        var app = builder.Build();
 
-            #region HTTP request pipeline
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-            app.UseStaticFiles();
+		#region HTTP request pipeline
+		if (!app.Environment.IsDevelopment())
+		{
+			app.UseExceptionHandler("/Home/Error");
+		}
+		app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -68,16 +90,17 @@ namespace ecommerce
             app.UseAuthentication();
 
 
-            app.UseAuthorization();
+		app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+		app.MapControllerRoute(
+			name: "default",
+			pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
             #endregion
 
 
-        }
     }
+
+
 }

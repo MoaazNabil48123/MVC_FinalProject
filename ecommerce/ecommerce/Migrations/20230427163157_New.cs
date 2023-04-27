@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ecommerce.Migrations
 {
     /// <inheritdoc />
-    public partial class PaymentGetway : Migration
+    public partial class New : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -76,6 +76,19 @@ namespace ecommerce.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Countries", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Coupons",
+                columns: table => new
+                {
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Reduction = table.Column<float>(type: "real", nullable: false),
+                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Coupons", x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -326,6 +339,30 @@ namespace ecommerce.Migrations
                         name: "FK_PaymentMethods_PaymentTypes_PaymentTypeId",
                         column: x => x.PaymentTypeId,
                         principalTable: "PaymentTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ApplicationUserProduct",
+                columns: table => new
+                {
+                    ApplicationUsersId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ProductsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ApplicationUserProduct", x => new { x.ApplicationUsersId, x.ProductsId });
+                    table.ForeignKey(
+                        name: "FK_ApplicationUserProduct_AspNetUsers_ApplicationUsersId",
+                        column: x => x.ApplicationUsersId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_ApplicationUserProduct_Products_ProductsId",
+                        column: x => x.ProductsId,
+                        principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 });
@@ -707,6 +744,16 @@ namespace ecommerce.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Coupons",
+                columns: new[] { "Name", "ExpirationDate", "Reduction" },
+                values: new object[,]
+                {
+                    { "BIGTREAT", new DateTime(2022, 12, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), 0.25f },
+                    { "FREESHIPPING", new DateTime(2025, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 0.3f },
+                    { "SPOOKY15", new DateTime(2025, 12, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 0.15f }
+                });
+
+            migrationBuilder.InsertData(
                 table: "OrderStatus",
                 columns: new[] { "Id", "Status" },
                 values: new object[,]
@@ -735,36 +782,36 @@ namespace ecommerce.Migrations
                 columns: new[] { "Id", "CategoryId", "Description", "Image", "Name" },
                 values: new object[,]
                 {
-                    { 1, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 2, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 3, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 4, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 5, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 6, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 7, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 8, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 9, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 10, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 11, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 12, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 13, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 14, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 15, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 16, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 17, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 18, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 19, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 20, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 21, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 22, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 23, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 24, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 25, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 26, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 27, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 28, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" },
-                    { 29, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.png", "American Eagle" },
-                    { 30, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.png", "Knight" }
+                    { 1, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 2, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 3, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 4, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 5, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 6, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 7, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 8, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 9, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 10, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 11, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 12, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 13, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 14, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 15, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 16, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 17, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 18, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 19, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 20, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 21, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 22, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 23, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 24, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 25, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 26, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 27, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 28, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
+                    { 29, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
+                    { 30, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" }
                 });
 
             migrationBuilder.InsertData(
@@ -781,126 +828,126 @@ namespace ecommerce.Migrations
                 columns: new[] { "Id", "Image", "Price", "ProductId", "SKU", "StockQty" },
                 values: new object[,]
                 {
-                    { 1, "/Image/Products/1.png", 120f, 1, "AmericanEagle-L-Red", 100 },
-                    { 2, "/Image/Products/1.png", 100f, 1, "AmericanEagle-XL-Red", 50 },
-                    { 3, "/Image/Products/1.png", 80f, 1, "AmericanEagle-L-Blue", 20 },
-                    { 4, "/Image/Products/1.png", 200f, 1, "AmericanEagle-XL-Blue", 0 },
-                    { 5, "/Image/Products/1.png", 120f, 2, "Knight-L-Red", 200 },
-                    { 6, "/Image/Products/1.png", 100f, 2, "Knight-XL-Red", 300 },
-                    { 7, "/Image/Products/1.png", 80f, 2, "Knight-L-Blue", 10 },
-                    { 8, "/Image/Products/1.png", 200f, 2, "Knight-XL-Blue", 60 },
-                    { 9, "/Image/Products/1.png", 120f, 3, "AmericanEagle-L-Red", 100 },
-                    { 10, "/Image/Products/1.png", 100f, 3, "AmericanEagle-XL-Red", 50 },
-                    { 11, "/Image/Products/1.png", 80f, 3, "AmericanEagle-L-Blue", 20 },
-                    { 12, "/Image/Products/1.png", 200f, 3, "AmericanEagle-XL-Blue", 0 },
-                    { 13, "/Image/Products/1.png", 120f, 4, "Knight-L-Red", 200 },
-                    { 14, "/Image/Products/1.png", 100f, 4, "Knight-XL-Red", 300 },
-                    { 15, "/Image/Products/1.png", 80f, 4, "Knight-L-Blue", 10 },
-                    { 16, "/Image/Products/1.png", 200f, 4, "Knight-XL-Blue", 60 },
-                    { 17, "/Image/Products/1.png", 120f, 5, "AmericanEagle-L-Red", 100 },
-                    { 18, "/Image/Products/1.png", 100f, 5, "AmericanEagle-XL-Red", 50 },
-                    { 19, "/Image/Products/1.png", 80f, 5, "AmericanEagle-L-Blue", 20 },
-                    { 20, "/Image/Products/1.png", 200f, 5, "AmericanEagle-XL-Blue", 0 },
-                    { 21, "/Image/Products/1.png", 120f, 6, "Knight-L-Red", 200 },
-                    { 22, "/Image/Products/1.png", 100f, 6, "Knight-XL-Red", 300 },
-                    { 23, "/Image/Products/1.png", 80f, 6, "Knight-L-Blue", 10 },
-                    { 24, "/Image/Products/1.png", 200f, 6, "Knight-XL-Blue", 60 },
-                    { 25, "/Image/Products/1.png", 120f, 7, "AmericanEagle-L-Red", 100 },
-                    { 26, "/Image/Products/1.png", 100f, 7, "AmericanEagle-XL-Red", 50 },
-                    { 27, "/Image/Products/1.png", 80f, 7, "AmericanEagle-L-Blue", 20 },
-                    { 28, "/Image/Products/1.png", 200f, 7, "AmericanEagle-XL-Blue", 0 },
-                    { 29, "/Image/Products/1.png", 120f, 8, "Knight-L-Red", 200 },
-                    { 30, "/Image/Products/1.png", 100f, 8, "Knight-XL-Red", 300 },
-                    { 31, "/Image/Products/1.png", 80f, 8, "Knight-L-Blue", 10 },
-                    { 32, "/Image/Products/1.png", 200f, 8, "Knight-XL-Blue", 60 },
-                    { 33, "/Image/Products/1.png", 120f, 9, "AmericanEagle-L-Red", 100 },
-                    { 34, "/Image/Products/1.png", 100f, 9, "AmericanEagle-XL-Red", 50 },
-                    { 35, "/Image/Products/1.png", 80f, 9, "AmericanEagle-L-Blue", 20 },
-                    { 36, "/Image/Products/1.png", 200f, 9, "AmericanEagle-XL-Blue", 0 },
-                    { 37, "/Image/Products/1.png", 120f, 10, "Knight-L-Red", 200 },
-                    { 38, "/Image/Products/1.png", 100f, 10, "Knight-XL-Red", 300 },
-                    { 39, "/Image/Products/1.png", 80f, 10, "Knight-L-Blue", 10 },
-                    { 40, "/Image/Products/1.png", 200f, 10, "Knight-XL-Blue", 60 },
-                    { 41, "/Image/Products/1.png", 120f, 11, "AmericanEagle-L-Red", 100 },
-                    { 42, "/Image/Products/1.png", 100f, 11, "AmericanEagle-XL-Red", 50 },
-                    { 43, "/Image/Products/1.png", 80f, 11, "AmericanEagle-L-Blue", 20 },
-                    { 44, "/Image/Products/1.png", 200f, 11, "AmericanEagle-XL-Blue", 0 },
-                    { 45, "/Image/Products/1.png", 120f, 12, "Knight-L-Red", 200 },
-                    { 46, "/Image/Products/1.png", 100f, 12, "Knight-XL-Red", 300 },
-                    { 47, "/Image/Products/1.png", 80f, 12, "Knight-L-Blue", 10 },
-                    { 48, "/Image/Products/1.png", 200f, 12, "Knight-XL-Blue", 60 },
-                    { 49, "/Image/Products/1.png", 120f, 13, "AmericanEagle-L-Red", 100 },
-                    { 50, "/Image/Products/1.png", 100f, 13, "AmericanEagle-XL-Red", 50 },
-                    { 51, "/Image/Products/1.png", 80f, 13, "AmericanEagle-L-Blue", 20 },
-                    { 52, "/Image/Products/1.png", 200f, 13, "AmericanEagle-XL-Blue", 0 },
-                    { 53, "/Image/Products/1.png", 120f, 14, "Knight-L-Red", 200 },
-                    { 54, "/Image/Products/1.png", 100f, 14, "Knight-XL-Red", 300 },
-                    { 55, "/Image/Products/1.png", 80f, 14, "Knight-L-Blue", 10 },
-                    { 56, "/Image/Products/1.png", 200f, 14, "Knight-XL-Blue", 60 },
-                    { 57, "/Image/Products/1.png", 120f, 15, "AmericanEagle-L-Red", 100 },
-                    { 58, "/Image/Products/1.png", 100f, 15, "AmericanEagle-XL-Red", 50 },
-                    { 59, "/Image/Products/1.png", 80f, 15, "AmericanEagle-L-Blue", 20 },
-                    { 60, "/Image/Products/1.png", 200f, 15, "AmericanEagle-XL-Blue", 0 },
-                    { 61, "/Image/Products/1.png", 120f, 16, "Knight-L-Red", 200 },
-                    { 62, "/Image/Products/1.png", 100f, 16, "Knight-XL-Red", 300 },
-                    { 63, "/Image/Products/1.png", 80f, 16, "Knight-L-Blue", 10 },
-                    { 64, "/Image/Products/1.png", 200f, 16, "Knight-XL-Blue", 60 },
-                    { 65, "/Image/Products/1.png", 120f, 17, "AmericanEagle-L-Red", 100 },
-                    { 66, "/Image/Products/1.png", 100f, 17, "AmericanEagle-XL-Red", 50 },
-                    { 67, "/Image/Products/1.png", 80f, 17, "AmericanEagle-L-Blue", 20 },
-                    { 68, "/Image/Products/1.png", 200f, 17, "AmericanEagle-XL-Blue", 0 },
-                    { 69, "/Image/Products/1.png", 120f, 18, "Knight-L-Red", 200 },
-                    { 70, "/Image/Products/1.png", 100f, 18, "Knight-XL-Red", 300 },
-                    { 71, "/Image/Products/1.png", 80f, 18, "Knight-L-Blue", 10 },
-                    { 72, "/Image/Products/1.png", 200f, 18, "Knight-XL-Blue", 60 },
-                    { 73, "/Image/Products/1.png", 120f, 19, "AmericanEagle-L-Red", 100 },
-                    { 74, "/Image/Products/1.png", 100f, 19, "AmericanEagle-XL-Red", 50 },
-                    { 75, "/Image/Products/1.png", 80f, 19, "AmericanEagle-L-Blue", 20 },
-                    { 76, "/Image/Products/1.png", 200f, 19, "AmericanEagle-XL-Blue", 0 },
-                    { 77, "/Image/Products/1.png", 120f, 20, "Knight-L-Red", 200 },
-                    { 78, "/Image/Products/1.png", 100f, 20, "Knight-XL-Red", 300 },
-                    { 79, "/Image/Products/1.png", 80f, 20, "Knight-L-Blue", 10 },
-                    { 80, "/Image/Products/1.png", 200f, 20, "Knight-XL-Blue", 60 },
-                    { 81, "/Image/Products/1.png", 120f, 21, "AmericanEagle-L-Red", 100 },
-                    { 82, "/Image/Products/1.png", 100f, 21, "AmericanEagle-XL-Red", 50 },
-                    { 83, "/Image/Products/1.png", 80f, 21, "AmericanEagle-L-Blue", 20 },
-                    { 84, "/Image/Products/1.png", 200f, 21, "AmericanEagle-XL-Blue", 0 },
-                    { 85, "/Image/Products/1.png", 120f, 22, "Knight-L-Red", 200 },
-                    { 86, "/Image/Products/1.png", 100f, 22, "Knight-XL-Red", 300 },
-                    { 87, "/Image/Products/1.png", 80f, 22, "Knight-L-Blue", 10 },
-                    { 88, "/Image/Products/1.png", 200f, 22, "Knight-XL-Blue", 60 },
-                    { 89, "/Image/Products/1.png", 120f, 23, "AmericanEagle-L-Red", 100 },
-                    { 90, "/Image/Products/1.png", 100f, 23, "AmericanEagle-XL-Red", 50 },
-                    { 91, "/Image/Products/1.png", 80f, 23, "AmericanEagle-L-Blue", 20 },
-                    { 92, "/Image/Products/1.png", 200f, 23, "AmericanEagle-XL-Blue", 0 },
-                    { 93, "/Image/Products/1.png", 120f, 24, "Knight-L-Red", 200 },
-                    { 94, "/Image/Products/1.png", 100f, 24, "Knight-XL-Red", 300 },
-                    { 95, "/Image/Products/1.png", 80f, 24, "Knight-L-Blue", 10 },
-                    { 96, "/Image/Products/1.png", 200f, 24, "Knight-XL-Blue", 60 },
-                    { 97, "/Image/Products/1.png", 120f, 25, "AmericanEagle-L-Red", 100 },
-                    { 98, "/Image/Products/1.png", 100f, 25, "AmericanEagle-XL-Red", 50 },
-                    { 99, "/Image/Products/1.png", 80f, 25, "AmericanEagle-L-Blue", 20 },
-                    { 100, "/Image/Products/1.png", 200f, 25, "AmericanEagle-XL-Blue", 0 },
-                    { 101, "/Image/Products/1.png", 120f, 26, "Knight-L-Red", 200 },
-                    { 102, "/Image/Products/1.png", 100f, 26, "Knight-XL-Red", 300 },
-                    { 103, "/Image/Products/1.png", 80f, 26, "Knight-L-Blue", 10 },
-                    { 104, "/Image/Products/1.png", 200f, 26, "Knight-XL-Blue", 60 },
-                    { 105, "/Image/Products/1.png", 120f, 27, "AmericanEagle-L-Red", 100 },
-                    { 106, "/Image/Products/1.png", 100f, 27, "AmericanEagle-XL-Red", 50 },
-                    { 107, "/Image/Products/1.png", 80f, 27, "AmericanEagle-L-Blue", 20 },
-                    { 108, "/Image/Products/1.png", 200f, 27, "AmericanEagle-XL-Blue", 0 },
-                    { 109, "/Image/Products/1.png", 120f, 28, "Knight-L-Red", 200 },
-                    { 110, "/Image/Products/1.png", 100f, 28, "Knight-XL-Red", 300 },
-                    { 111, "/Image/Products/1.png", 80f, 28, "Knight-L-Blue", 10 },
-                    { 112, "/Image/Products/1.png", 200f, 28, "Knight-XL-Blue", 60 },
-                    { 113, "/Image/Products/1.png", 120f, 29, "AmericanEagle-L-Red", 100 },
-                    { 114, "/Image/Products/1.png", 100f, 29, "AmericanEagle-XL-Red", 50 },
-                    { 115, "/Image/Products/1.png", 80f, 29, "AmericanEagle-L-Blue", 20 },
-                    { 116, "/Image/Products/1.png", 200f, 29, "AmericanEagle-XL-Blue", 0 },
-                    { 117, "/Image/Products/1.png", 120f, 30, "Knight-L-Red", 200 },
-                    { 118, "/Image/Products/1.png", 100f, 30, "Knight-XL-Red", 300 },
-                    { 119, "/Image/Products/1.png", 80f, 30, "Knight-L-Blue", 10 },
-                    { 120, "/Image/Products/1.png", 200f, 30, "Knight-XL-Blue", 60 }
+                    { 1, "/Image/Products/1.jpg", 120f, 1, "AmericanEagle-L-Red", 100 },
+                    { 2, "/Image/Products/2.jpg", 100f, 1, "AmericanEagle-XL-Red", 50 },
+                    { 3, "/Image/Products/1.jpg", 80f, 1, "AmericanEagle-L-Blue", 20 },
+                    { 4, "/Image/Products/2.jpg", 200f, 1, "AmericanEagle-XL-Blue", 0 },
+                    { 5, "/Image/Products/1.jpg", 120f, 2, "Knight-L-Red", 200 },
+                    { 6, "/Image/Products/2.jpg", 100f, 2, "Knight-XL-Red", 300 },
+                    { 7, "/Image/Products/1.jpg", 80f, 2, "Knight-L-Blue", 10 },
+                    { 8, "/Image/Products/2.jpg", 200f, 2, "Knight-XL-Blue", 60 },
+                    { 9, "/Image/Products/1.jpg", 120f, 3, "AmericanEagle-L-Red", 100 },
+                    { 10, "/Image/Products/2.jpg", 100f, 3, "AmericanEagle-XL-Red", 50 },
+                    { 11, "/Image/Products/1.jpg", 80f, 3, "AmericanEagle-L-Blue", 20 },
+                    { 12, "/Image/Products/2.jpg", 200f, 3, "AmericanEagle-XL-Blue", 0 },
+                    { 13, "/Image/Products/1.jpg", 120f, 4, "Knight-L-Red", 200 },
+                    { 14, "/Image/Products/2.jpg", 100f, 4, "Knight-XL-Red", 300 },
+                    { 15, "/Image/Products/1.jpg", 80f, 4, "Knight-L-Blue", 10 },
+                    { 16, "/Image/Products/2.jpg", 200f, 4, "Knight-XL-Blue", 60 },
+                    { 17, "/Image/Products/1.jpg", 120f, 5, "AmericanEagle-L-Red", 100 },
+                    { 18, "/Image/Products/2.jpg", 100f, 5, "AmericanEagle-XL-Red", 50 },
+                    { 19, "/Image/Products/1.jpg", 80f, 5, "AmericanEagle-L-Blue", 20 },
+                    { 20, "/Image/Products/2.jpg", 200f, 5, "AmericanEagle-XL-Blue", 0 },
+                    { 21, "/Image/Products/1.jpg", 120f, 6, "Knight-L-Red", 200 },
+                    { 22, "/Image/Products/2.jpg", 100f, 6, "Knight-XL-Red", 300 },
+                    { 23, "/Image/Products/1.jpg", 80f, 6, "Knight-L-Blue", 10 },
+                    { 24, "/Image/Products/2.jpg", 200f, 6, "Knight-XL-Blue", 60 },
+                    { 25, "/Image/Products/1.jpg", 120f, 7, "AmericanEagle-L-Red", 100 },
+                    { 26, "/Image/Products/2.jpg", 100f, 7, "AmericanEagle-XL-Red", 50 },
+                    { 27, "/Image/Products/1.jpg", 80f, 7, "AmericanEagle-L-Blue", 20 },
+                    { 28, "/Image/Products/2.jpg", 200f, 7, "AmericanEagle-XL-Blue", 0 },
+                    { 29, "/Image/Products/1.jpg", 120f, 8, "Knight-L-Red", 200 },
+                    { 30, "/Image/Products/2.jpg", 100f, 8, "Knight-XL-Red", 300 },
+                    { 31, "/Image/Products/1.jpg", 80f, 8, "Knight-L-Blue", 10 },
+                    { 32, "/Image/Products/2.jpg", 200f, 8, "Knight-XL-Blue", 60 },
+                    { 33, "/Image/Products/1.jpg", 120f, 9, "AmericanEagle-L-Red", 100 },
+                    { 34, "/Image/Products/2.jpg", 100f, 9, "AmericanEagle-XL-Red", 50 },
+                    { 35, "/Image/Products/1.jpg", 80f, 9, "AmericanEagle-L-Blue", 20 },
+                    { 36, "/Image/Products/2.jpg", 200f, 9, "AmericanEagle-XL-Blue", 0 },
+                    { 37, "/Image/Products/1.jpg", 120f, 10, "Knight-L-Red", 200 },
+                    { 38, "/Image/Products/2.jpg", 100f, 10, "Knight-XL-Red", 300 },
+                    { 39, "/Image/Products/1.jpg", 80f, 10, "Knight-L-Blue", 10 },
+                    { 40, "/Image/Products/2.jpg", 200f, 10, "Knight-XL-Blue", 60 },
+                    { 41, "/Image/Products/1.jpg", 120f, 11, "AmericanEagle-L-Red", 100 },
+                    { 42, "/Image/Products/2.jpg", 100f, 11, "AmericanEagle-XL-Red", 50 },
+                    { 43, "/Image/Products/1.jpg", 80f, 11, "AmericanEagle-L-Blue", 20 },
+                    { 44, "/Image/Products/2.jpg", 200f, 11, "AmericanEagle-XL-Blue", 0 },
+                    { 45, "/Image/Products/1.jpg", 120f, 12, "Knight-L-Red", 200 },
+                    { 46, "/Image/Products/2.jpg", 100f, 12, "Knight-XL-Red", 300 },
+                    { 47, "/Image/Products/1.jpg", 80f, 12, "Knight-L-Blue", 10 },
+                    { 48, "/Image/Products/2.jpg", 200f, 12, "Knight-XL-Blue", 60 },
+                    { 49, "/Image/Products/1.jpg", 120f, 13, "AmericanEagle-L-Red", 100 },
+                    { 50, "/Image/Products/2.jpg", 100f, 13, "AmericanEagle-XL-Red", 50 },
+                    { 51, "/Image/Products/1.jpg", 80f, 13, "AmericanEagle-L-Blue", 20 },
+                    { 52, "/Image/Products/2.jpg", 200f, 13, "AmericanEagle-XL-Blue", 0 },
+                    { 53, "/Image/Products/1.jpg", 120f, 14, "Knight-L-Red", 200 },
+                    { 54, "/Image/Products/2.jpg", 100f, 14, "Knight-XL-Red", 300 },
+                    { 55, "/Image/Products/1.jpg", 80f, 14, "Knight-L-Blue", 10 },
+                    { 56, "/Image/Products/2.jpg", 200f, 14, "Knight-XL-Blue", 60 },
+                    { 57, "/Image/Products/1.jpg", 120f, 15, "AmericanEagle-L-Red", 100 },
+                    { 58, "/Image/Products/2.jpg", 100f, 15, "AmericanEagle-XL-Red", 50 },
+                    { 59, "/Image/Products/1.jpg", 80f, 15, "AmericanEagle-L-Blue", 20 },
+                    { 60, "/Image/Products/2.jpg", 200f, 15, "AmericanEagle-XL-Blue", 0 },
+                    { 61, "/Image/Products/1.jpg", 120f, 16, "Knight-L-Red", 200 },
+                    { 62, "/Image/Products/2.jpg", 100f, 16, "Knight-XL-Red", 300 },
+                    { 63, "/Image/Products/1.jpg", 80f, 16, "Knight-L-Blue", 10 },
+                    { 64, "/Image/Products/2.jpg", 200f, 16, "Knight-XL-Blue", 60 },
+                    { 65, "/Image/Products/1.jpg", 120f, 17, "AmericanEagle-L-Red", 100 },
+                    { 66, "/Image/Products/2.jpg", 100f, 17, "AmericanEagle-XL-Red", 50 },
+                    { 67, "/Image/Products/1.jpg", 80f, 17, "AmericanEagle-L-Blue", 20 },
+                    { 68, "/Image/Products/2.jpg", 200f, 17, "AmericanEagle-XL-Blue", 0 },
+                    { 69, "/Image/Products/1.jpg", 120f, 18, "Knight-L-Red", 200 },
+                    { 70, "/Image/Products/2.jpg", 100f, 18, "Knight-XL-Red", 300 },
+                    { 71, "/Image/Products/1.jpg", 80f, 18, "Knight-L-Blue", 10 },
+                    { 72, "/Image/Products/2.jpg", 200f, 18, "Knight-XL-Blue", 60 },
+                    { 73, "/Image/Products/1.jpg", 120f, 19, "AmericanEagle-L-Red", 100 },
+                    { 74, "/Image/Products/2.jpg", 100f, 19, "AmericanEagle-XL-Red", 50 },
+                    { 75, "/Image/Products/1.jpg", 80f, 19, "AmericanEagle-L-Blue", 20 },
+                    { 76, "/Image/Products/2.jpg", 200f, 19, "AmericanEagle-XL-Blue", 0 },
+                    { 77, "/Image/Products/1.jpg", 120f, 20, "Knight-L-Red", 200 },
+                    { 78, "/Image/Products/2.jpg", 100f, 20, "Knight-XL-Red", 300 },
+                    { 79, "/Image/Products/1.jpg", 80f, 20, "Knight-L-Blue", 10 },
+                    { 80, "/Image/Products/2.jpg", 200f, 20, "Knight-XL-Blue", 60 },
+                    { 81, "/Image/Products/1.jpg", 120f, 21, "AmericanEagle-L-Red", 100 },
+                    { 82, "/Image/Products/2.jpg", 100f, 21, "AmericanEagle-XL-Red", 50 },
+                    { 83, "/Image/Products/1.jpg", 80f, 21, "AmericanEagle-L-Blue", 20 },
+                    { 84, "/Image/Products/2.jpg", 200f, 21, "AmericanEagle-XL-Blue", 0 },
+                    { 85, "/Image/Products/1.jpg", 120f, 22, "Knight-L-Red", 200 },
+                    { 86, "/Image/Products/2.jpg", 100f, 22, "Knight-XL-Red", 300 },
+                    { 87, "/Image/Products/1.jpg", 80f, 22, "Knight-L-Blue", 10 },
+                    { 88, "/Image/Products/2.jpg", 200f, 22, "Knight-XL-Blue", 60 },
+                    { 89, "/Image/Products/1.jpg", 120f, 23, "AmericanEagle-L-Red", 100 },
+                    { 90, "/Image/Products/2.jpg", 100f, 23, "AmericanEagle-XL-Red", 50 },
+                    { 91, "/Image/Products/1.jpg", 80f, 23, "AmericanEagle-L-Blue", 20 },
+                    { 92, "/Image/Products/2.jpg", 200f, 23, "AmericanEagle-XL-Blue", 0 },
+                    { 93, "/Image/Products/1.jpg", 120f, 24, "Knight-L-Red", 200 },
+                    { 94, "/Image/Products/2.jpg", 100f, 24, "Knight-XL-Red", 300 },
+                    { 95, "/Image/Products/1.jpg", 80f, 24, "Knight-L-Blue", 10 },
+                    { 96, "/Image/Products/2.jpg", 200f, 24, "Knight-XL-Blue", 60 },
+                    { 97, "/Image/Products/1.jpg", 120f, 25, "AmericanEagle-L-Red", 100 },
+                    { 98, "/Image/Products/2.jpg", 100f, 25, "AmericanEagle-XL-Red", 50 },
+                    { 99, "/Image/Products/1.jpg", 80f, 25, "AmericanEagle-L-Blue", 20 },
+                    { 100, "/Image/Products/2.jpg", 200f, 25, "AmericanEagle-XL-Blue", 0 },
+                    { 101, "/Image/Products/1.jpg", 120f, 26, "Knight-L-Red", 200 },
+                    { 102, "/Image/Products/2.jpg", 100f, 26, "Knight-XL-Red", 300 },
+                    { 103, "/Image/Products/1.jpg", 80f, 26, "Knight-L-Blue", 10 },
+                    { 104, "/Image/Products/2.jpg", 200f, 26, "Knight-XL-Blue", 60 },
+                    { 105, "/Image/Products/1.jpg", 120f, 27, "AmericanEagle-L-Red", 100 },
+                    { 106, "/Image/Products/2.jpg", 100f, 27, "AmericanEagle-XL-Red", 50 },
+                    { 107, "/Image/Products/1.jpg", 80f, 27, "AmericanEagle-L-Blue", 20 },
+                    { 108, "/Image/Products/2.jpg", 200f, 27, "AmericanEagle-XL-Blue", 0 },
+                    { 109, "/Image/Products/1.jpg", 120f, 28, "Knight-L-Red", 200 },
+                    { 110, "/Image/Products/2.jpg", 100f, 28, "Knight-XL-Red", 300 },
+                    { 111, "/Image/Products/1.jpg", 80f, 28, "Knight-L-Blue", 10 },
+                    { 112, "/Image/Products/2.jpg", 200f, 28, "Knight-XL-Blue", 60 },
+                    { 113, "/Image/Products/1.jpg", 120f, 29, "AmericanEagle-L-Red", 100 },
+                    { 114, "/Image/Products/2.jpg", 100f, 29, "AmericanEagle-XL-Red", 50 },
+                    { 115, "/Image/Products/1.jpg", 80f, 29, "AmericanEagle-L-Blue", 20 },
+                    { 116, "/Image/Products/2.jpg", 200f, 29, "AmericanEagle-XL-Blue", 0 },
+                    { 117, "/Image/Products/1.jpg", 120f, 30, "Knight-L-Red", 200 },
+                    { 118, "/Image/Products/2.jpg", 100f, 30, "Knight-XL-Red", 300 },
+                    { 119, "/Image/Products/1.jpg", 80f, 30, "Knight-L-Blue", 10 },
+                    { 120, "/Image/Products/2.jpg", 200f, 30, "Knight-XL-Blue", 60 }
                 });
 
             migrationBuilder.InsertData(
@@ -1172,6 +1219,11 @@ namespace ecommerce.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ApplicationUserProduct_ProductsId",
+                table: "ApplicationUserProduct",
+                column: "ProductsId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
                 column: "RoleId");
@@ -1290,6 +1342,9 @@ namespace ecommerce.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "ApplicationUserProduct");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -1306,6 +1361,9 @@ namespace ecommerce.Migrations
 
             migrationBuilder.DropTable(
                 name: "CartProducts");
+
+            migrationBuilder.DropTable(
+                name: "Coupons");
 
             migrationBuilder.DropTable(
                 name: "OrderLines");

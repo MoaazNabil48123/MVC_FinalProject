@@ -179,8 +179,16 @@
           </div>
 
           }*@
-          <input type="submit" value="Place Order" class="btn btn-block btn-primary font-weight-bold py-3"/>
-        </div>
+         @if (Model.Addresses.Count==0)
+         {
+            <input type="submit" value="Place Order" class="btn btn-block btn-primary font-weight-bold py-3" disabled />
+
+         }
+         else
+         {
+             <input type="submit" value="Place Order" class="btn btn-block btn-primary font-weight-bold py-3" />
+         }
+                    </div>
       </div>
     </div>
   </div>

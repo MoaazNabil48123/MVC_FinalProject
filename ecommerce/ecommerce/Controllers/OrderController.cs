@@ -13,13 +13,9 @@ using PaymentMethod = ecommerce.Models.PaymentMethod;
 
 namespace ecommerce.Controllers
 {
+
     public class OrderController : Controller
     {
-
-        private int ShopOrderId { get; set; }
-
-
-
 
         private ApplicationUser appUser;
         private UserManager<ApplicationUser> userManager;
@@ -47,6 +43,14 @@ namespace ecommerce.Controllers
             this.shippingMethodRepo = shippingMethodRepo;
             this.shopOrderRepo = shopOrderRepo;
             this.orderStatusRepo = orderStatusRepo;
+        }
+        [Authorize]
+        public async Task<IActionResult> Index()
+        {
+            appUser = await userManager.FindByNameAsync(User.Identity.Name);
+            List<ShopOrder> shopOrders = shopOrderRepo.Get(s => s.UserId == appUser.Id);
+            return View(shopOrders);
+
         }
         [Authorize]
         [HttpGet]

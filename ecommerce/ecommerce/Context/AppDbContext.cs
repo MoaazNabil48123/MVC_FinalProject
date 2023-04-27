@@ -22,20 +22,16 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	public DbSet<Variation> Variations { get; set; }
 	public DbSet<VariationOptions> VariationOptions { get; set; }
 	public DbSet<ProductConfiguration> ProductConfigurations { get; set; }
-	//public DbSet<User_Address> User_Addresses { get; set; }
-
 	public DbSet<Address> Addresses { get; set; }
-
 	public DbSet<Country> Countries { get; set; }
-
 	public DbSet<CartProducts> CartProducts { get; set; }
-
 	public DbSet<ShopOrder> ShopOrders { get; set; }
 	public DbSet<OrderStatus> OrderStatus { get; set; }
 	public DbSet<ShippingMethod> ShippingMethods { get; set; }
 	public DbSet<OrderLine> OrderLines { get; set; }
 	public DbSet<PaymentMethod> PaymentMethods { get; set; }
 	public DbSet<PaymentType> PaymentTypes { get; set; }
+	public DbSet<Coupon> Coupons { get; set; }
 	#endregion
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
@@ -50,9 +46,6 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 
 		//modelBuilder.Entity<User_Address>().HasKey(entity => new { entity.User_Id, entity.Address_Id });
 		//modelBuilder.Entity<User_Address>().HasNoKey();
-
-
-
 
 		base.OnModelCreating(modelBuilder);
 
@@ -223,8 +216,22 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 			modelBuilder.Entity<Country>().HasData(CountryList);
 			#endregion
 
-
-
+			#region CouponSeeding
+			worksheet = package.Workbook.Worksheets[9];
+			rows = worksheet.Cells.Select(cell => cell.Start.Row).Distinct().OrderBy(row => row);
+			var couponList = new List<Coupon>();
+			foreach (var row in rows.Skip(1))
+			{
+				var entity = new Coupon
+				{
+					Name = worksheet.Cells[row, 1].Value.ToString(),
+					Reduction = float.Parse(worksheet.Cells[row, 2].Value.ToString()),
+					ExpirationDate = DateTime.FromOADate(double.Parse(worksheet.Cells[row, 3].Value.ToString()))
+				};
+				couponList.Add(entity);
+			}
+			modelBuilder.Entity<Coupon>().HasData(couponList);
+			#endregion
 		}
 
 		#endregion

@@ -8,7 +8,7 @@ public interface IRepository<T>
     List<T> GetAll();
     List<T> GetAll(params Expression<Func<T, object>>[] includes);
     List<T> GetAllThenInclude<T1, T2>(Expression<Func<T, T1>> include, Expression<Func<T1, T2>> thenInclude);
-    List<T> GetAll(params Expression<Func<T, bool>>[] filters);
+    List<T> Get(params Expression<Func<T, bool>>[] filters);
     T GetById(int id);
     T GetById(int id, params Expression<Func<T, object>>[] includes);
     void Update(T element);

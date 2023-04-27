@@ -1,57 +1,93 @@
-﻿@model ecommerce.ViewModel.RegisterViewModel
+﻿@model RegisterViewModel
 
 @{
     ViewData["Title"] = "Register";
+    Layout = "_MyLayout";
 }
 
-<h1>Register</h1>
+<!-- CSS Here -->
+@section Links{
+    <link rel="stylesheet" href="~/css/css_Account/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/flaticon.css" />
+    <link rel="stylesheet" href="~/css/css_Account/slicknav.css" />
+    <link rel="stylesheet" href="~/css/css_Account/animate.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/magnific-popup.css" />
+    <link rel="stylesheet" href="~/css/css_Account/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/themify-icons.css" />
+    <link rel="stylesheet" href="~/css/css_Account/slick.css" />
+    <link rel="stylesheet" href="~/css/css_Account/nice-select.css" />
+    <link rel="stylesheet" href="~/css/css_Account/style.css" />
+}
 
-<h4>RegisterViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Secure & Reliable</p>
+                    <h1>Register</h1>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmPassword" class="control-label"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EmailAddress" class="control-label"></label>
-                <input asp-for="EmailAddress" class="form-control" />
-                <span asp-validation-for="EmailAddress" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
+<!-- end breadcrumb section -->
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<!-- <================> SignUp_part Start <=================> -->
+<section class="login_part section_padding ">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>Welcome to our E-Commerce Site !</h2>
+                        <p>Thank you for joining us. Please register by completing this information</p>
+                        <img style="margin-top: 40px;" src="~/Image/Register/ECommerce.png" width="250px" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>Please Sign up now</h3>
+                        <form class="row contact_form" action="/Account/Register" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="col-md-12 form-group p_star">                               
+                                <input asp-for="UserName" type="text" class="form-control"  placeholder="Name" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">                              
+                                <input asp-for="Password" class="form-control" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">                               
+                                <input asp-for="ConfirmPassword"  class="form-control" placeholder="Confirm Password" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">                               
+                                <input asp-for="EmailAddress" class="form-control" placeholder="Email" />
+                                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group p_star">                               
+                                <input asp-for="PhoneNumber" type="text" class="form-control" placeholder="Phone" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="btn_3">
+                                    Sign up
+                                </button>
+                                <a style="text-decoration: underline" class="text-primary" href="/Account/Login">Already have an Account?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <================> SignUp_part End <=================> -->
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

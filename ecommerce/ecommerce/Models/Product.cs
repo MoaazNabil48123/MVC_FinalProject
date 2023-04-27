@@ -12,5 +12,6 @@ public class Product
 	public int CategoryId { get; set; }
 	//Navigational Properties
 	public Category? Category { get; set; }
-	public List<ProductItem>? ProductItems { get; set; }
+	public List<ProductItem>? ProductItems { get; set; } = new List<ProductItem>();
+	public List<ApplicationUser>? ApplicationUsers { get; set; } = new List<ApplicationUser>();
 }

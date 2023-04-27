@@ -1,0 +1,10 @@
+1- add separated data (first and last names, email, etc) to Address.
+2- remove ShopOrder entity from database if the user close payment getwag page.
+3- link IsDefault property with checked address radio button on checkout
+4- handling refunding and cancelation of payment
+5- redirect address and login actions to previous page. ##(DONE)##
+6- empty cart after payment confirmation.
+7- searching functionalities
+8- areas
+9-seeding orderlines
+10-add reviews

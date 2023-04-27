@@ -8,8 +8,9 @@ namespace ecommerce.ViewModel
 
     public class AddressCountryViewModel
     {
-
+        
         public int Id { get; set; }
+        public string UserId { get; set; }
         public int Unit_Number { get; set; }  
         public int Street_Number { get; set; }   
         public string Address_line1 { get; set; }

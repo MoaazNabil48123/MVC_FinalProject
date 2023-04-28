@@ -1,0 +1,127 @@
+﻿@model Address
+@{
+    ViewData["Title"] = "User Address";
+    SelectList countrySelectList = new SelectList(ViewBag.countryList, "Id", "Country_Name");
+}
+@section Links{
+    <link rel="stylesheet" href="/css/User/UpsertAddress.css" />
+}
+
+<div class="row bachground">
+    <div class="E-martContent">
+        @if (Model.Id == 0)
+        {
+            <h3 class="text-center mb-5" style="color:#F28123">Add Address</h3>
+        }
+        else
+        {
+            <h3 class="text-center mb-5" style="color:#F28123">Edit Address</h3>
+        }
+        <form method="post" action="/User/UpsertAddress">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" class="form-control" hidden />
+            <input asp-for="UserId" class="form-control" hidden />
+            <div class="form-group row mb-3">
+                <label asp-for="Unit_Number" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Unit_Number" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Unit_Number" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="Street_Number" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Street_Number" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Street_Number" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="Address_line1" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Address_line1" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Address_line1" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="Address_line2" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Address_line2" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Address_line2" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="Region" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Region" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Region" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="City" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="City" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="City" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="Postal_Code" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Postal_Code" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Postal_Code" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-4">
+                <label asp-for="Country_Id" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <select asp-for="Country_Id" class="E-martSelect form-control" asp-items="countrySelectList">
+                        <option selected disabled>----------- Required -----------</option>
+                    </select>
+
+                    <span asp-validation-for="Country_Id" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                @if (Model.Id == 0)
+                {
+                    <input type="submit" value="Create" class="E-martButton mb-3" />
+                    <a href="/User/UpsertAddress/0" class="E-martButton">Clear</a>
+                }
+                else
+                {
+                    <input type="submit" value="Update" class="E-martButton mb-3" />
+                    <a href="/Home" class="E-martButton">Cancel</a>
+                }
+                
+            </div>
+        </form>
+        <div class="hr"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

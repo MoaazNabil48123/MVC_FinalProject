@@ -1,5 +1,9 @@
-﻿@{
+﻿@model List<Category>
+@{
     ViewData["Title"] = "Home Page";
+}
+@section Links{
+	<link rel="stylesheet" href="~/css/css_Shop/style.css" />
 }
 
 <!-- Text area Start-->
@@ -12,7 +16,7 @@
 						<p class="subtitle">Secure & Reliable</p>
 						<h1>The next generation of Ecommerce</h1>
 						<div class="hero-btns">
-							<a href="shop.html" class="boxed-btn">Sign In</a>
+							<a href="/Account/login" class="boxed-btn">Sign In</a>
 							<a href="contact.html" class="bordered-btn">Contact Us</a>
 						</div>
 					</div>
@@ -72,44 +76,38 @@
 			<div class="col-lg-8 offset-lg-2 text-center">
 				<div class="section-title">
 					<h3><span class="orange-text">Select</span> a Category</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="Image/img1/products/product-img-1.jpg" alt=""></a>
+		<section class="popular-items latest-padding">
+			<div class="'container">
+				<div class="tab-content" id="nav-tabContent">
+					<!-- card -->
+					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+						<div class="row">
+							@foreach (Category category in Model)
+							{
+								<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+									<div class="single-popular-items mb-50 text-center">
+										<div class="popular-img">
+											<img style="height:400px" src="/Image/Products/1.jpg" alt="">
+											@*<img style="height:400px" src="@category.Products[0].Image" alt="">*@
+											<div class="img-cap">
+												<span>Show Products</span>
+											</div>
+										</div>
+										<div class="popular-caption">
+											<h3><a href="/Product/Index?categoryId=@category.Id">@category.Name</a></h3>
+										</div>
+									</div>
+								</div>
+							}
+						</div>
 					</div>
-					<h3>Strawberry</h3>
-					<p class="product-price"><span>Per Kg</span> 85$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="Image/img1/products/product-img-2.jpg" alt=""></a>
-					</div>
-					<h3>Berry</h3>
-					<p class="product-price"><span>Per Kg</span> 70$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
-				<div class="single-product-item">    public List<T> GetAll(params Expression<Func<T, object>>[] includes)
-
-					<div class="product-image">
-						<a href="single-product.html"><img src="Image/img1/products/product-img-3.jpg" alt=""></a>
-					</div>
-					<h3>Lemon</h3>
-					<p class="product-price"><span>Per Kg</span> 35$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
-		</div>
+		</section>
 	</div>
 </div>
 <!-- Category section End -->

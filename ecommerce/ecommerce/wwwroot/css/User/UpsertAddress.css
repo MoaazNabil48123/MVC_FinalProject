@@ -1,0 +1,118 @@
+﻿body {
+    margin: 0;
+    color: #6a6f8c;
+    background: #c8c8c8;
+    font: 600 16px/18px 'Open Sans',sans-serif;
+}
+
+.bachground {
+    background: url(../../Image/img1/hero-bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.E-martContent {
+    margin: 100px auto;
+    padding: 30px 40px 30px 40px;
+    height: 600px;
+    width: 680px;
+    background: rgba(0, 0, 0,0.38);
+    border-radius: 42px;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,1);
+}
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: rgba(255,255,255,.5);
+}
+/*#region  E-martButton start*/
+input[type=submit].E-martButton, a.E-martButton {
+    color: #F28123;
+    border: 1px solid #F28123;
+    border-radius: 0px;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0,0.35);
+    text-align: center;
+    font-weight: 800;
+}
+
+    input[type=submit].E-martButton:hover, a.E-martButton:hover {
+        cursor: pointer;
+        /*box-shadow: 0 0px 8px 3px rgba(242, 129, 35, 1);*/
+        animation: jelly 0.8s;
+    }
+
+@keyframes jelly {
+    0%, 100% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.95, 1.05);
+    }
+
+    50% {
+        transform: scale(1.05, 0.95);
+    }
+
+    75% {
+        transform: scale(0.98, 1.02);
+    }
+}
+/*#endregion*/
+
+/*#region E-martInputText Start*/
+div.E-martInputText {
+    position: relative;
+}
+
+input.E-martInputText {
+    color: white;
+    background: rgba(0,0,0,.35);
+    border: none;
+}
+
+    input.E-martInputText:focus {
+        color: white;
+        background: rgba(0,0,0,.35);
+        border-color: transparent;
+        outline: none;
+        box-shadow: none;
+    }
+
+
+span.E-martInputText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #F28123;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.7s ease;
+}
+
+input.E-martInputText:focus ~ span.E-martInputText {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+
+/*#endregion E-martInputText Start*/
+
+/*#region E-martSelect Start*/
+.E-martSelect {
+    background:rgba(0,0,0,0.3);
+    color:white;
+    border:none;
+}
+.E-martSelect:focus {
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+}
+/*#endregion*/
+
+

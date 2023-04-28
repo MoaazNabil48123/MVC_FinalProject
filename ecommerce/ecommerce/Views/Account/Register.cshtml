@@ -1,58 +1,86 @@
-﻿@model ecommerce.ViewModel.RegisterViewModel
+﻿@model RegisterViewModel
 
 @{
     ViewData["Title"] = "Register";
+    Layout = "_MyLayout";
 }
 
-<h1>Register</h1>
+<!-- CSS Here -->
+@section Links{
+    <link rel="stylesheet" href="/css/User/ChangePassword.css" />
+}
 
-<h4>RegisterViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register">
+<div class="row bachground">
+    <div class="E-martContent">
+        <h3 class="text-center mb-5" style="color:#F28123">Sign up</h3>
+        <form method="post" action="/Account/Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
+            <div class="form-group row mb-4">
+                <label asp-for="UserName" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="UserName" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="UserName" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>            
+            <div class="form-group row mb-4">
+                <label asp-for="Password" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Password" class="E-martInputText form-control" />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger col-8 align-content-end"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+            <div class="form-group row mb-4">
+                <label asp-for="ConfirmPassword" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="ConfirmPassword" class="E-martInputText form-control" />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div> 
+            <div class="form-group row mb-4">
+                <label asp-for="EmailAddress" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="EmailAddress" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="EmailAddress" class="text-danger col-8 align-content-end"></span>
+                </div>
             </div>
+            <div class="form-group row mb-4">
+                <label asp-for="PhoneNumber" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="PhoneNumber" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="PhoneNumber" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>          
             <div class="form-group">
-                <label asp-for="ConfirmPassword" class="control-label"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                <input type="submit" value="Sign up" class="E-martButton mb-3 w-100" />
             </div>
-            <div class="form-group">
-                <label asp-for="EmailAddress" class="control-label"></label>
-                <input asp-for="EmailAddress" class="form-control" />
-                <span asp-validation-for="EmailAddress" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </form>           
+        <a style="text-decoration: underline" class="text-uppercase mb-4" href="/Account/Login">Already have an Account?</a>
+        <div class="hr"></div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+
+
+
+
+

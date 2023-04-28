@@ -27,14 +27,14 @@ namespace ecommerce.Controllers
 		//[Authorize]
 		public IActionResult Index()
 		{
-			//ApplicationUser user = userManager.Users.Include(user => user.CartProducts)
-			//    .ThenInclude(cartProduct => cartProduct.ProductItem)
-			//    .ThenInclude(productItem => productItem.Product)
-			//    .First(user => user.UserName == User.Identity.Name);
 			ApplicationUser user = userManager.Users.Include(user => user.CartProducts)
 				.ThenInclude(cartProduct => cartProduct.ProductItem)
 				.ThenInclude(productItem => productItem.Product)
-				.First(user => user.UserName == "moaaz");
+				.First(user => user.UserName == User.Identity.Name);
+			//ApplicationUser user = userManager.Users.Include(user => user.CartProducts)
+			//	.ThenInclude(cartProduct => cartProduct.ProductItem)
+			//	.ThenInclude(productItem => productItem.Product)
+			//	.First(user => user.UserName == "moaaz");
 			return View(user.CartProducts);
 		}
 		#endregion

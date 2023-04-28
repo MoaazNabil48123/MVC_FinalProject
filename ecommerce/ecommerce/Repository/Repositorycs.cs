@@ -30,6 +30,13 @@ public class Repository<T> : IRepository<T> where T : class
         }
         return query.ToList();
     }
+    public List<T> GetAllThenInclude<T1,T2>(Expression<Func<T, T1>> include, Expression<Func<T1,T2>> thenInclude)//GetAll with include(join with another table)
+    {
+        IQueryable<T> query = _context.Set<T>();
+        query = query.Include(include).ThenInclude(thenInclude);
+        
+        return query.ToList();
+    }
     public List<T> Get(params Expression<Func<T, bool>>[] filters)//GetAll with filters
     {
         IQueryable<T> query = _context.Set<T>();

@@ -52,26 +52,26 @@
                 <div class="login_part_form">
                     <div class="login_part_form_iner">
                         <h3>Please Sign up now</h3>
-                        <form class="row contact_form" action="/Account/Register" method="post" novalidate="novalidate">
+                        <form class="row contact_form" action="/Account/Register" method="post">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="col-md-12 form-group p_star">                               
-                                <input asp-for="UserName" type="text" class="form-control" id="name" name="name" value="" placeholder="Name" />
+                                <input asp-for="UserName" type="text" class="form-control"  placeholder="Name" />
                                 <span asp-validation-for="UserName" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group p_star">                              
-                                <input asp-for="Password" type="password" class="form-control" id="password" name="password" value="" placeholder="Password" />
+                                <input asp-for="Password" class="form-control" placeholder="Password" />
                                 <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group p_star">                               
-                                <input asp-for="ConfirmPassword" type="password" class="form-control" id="confirm_password" name="confirm_password" value="" placeholder="Confirm Password" />
+                                <input asp-for="ConfirmPassword"  class="form-control" placeholder="Confirm Password" />
                                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group p_star">                               
-                                <input asp-for="EmailAddress" type="email" class="form-control" id="email" name="email" value="" placeholder="Email" />
+                                <input asp-for="EmailAddress" class="form-control" placeholder="Email" />
                                 <span asp-validation-for="EmailAddress" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group p_star">                               
-                                <input asp-for="PhoneNumber" type="text" class="form-control" id="phone" name="phone" value="" placeholder="Phone" />
+                                <input asp-for="PhoneNumber" type="text" class="form-control" placeholder="Phone" />
                                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group">

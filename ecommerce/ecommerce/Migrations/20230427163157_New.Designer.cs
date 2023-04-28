@@ -12,8 +12,8 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230427133922_CouponAndFavorites")]
-    partial class CouponAndFavorites
+    [Migration("20230427163157_New")]
+    partial class New
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -189,9 +189,6 @@ namespace ecommerce.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -215,11 +212,15 @@ namespace ecommerce.Migrations
                     b.Property<int>("Unit_Number")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
-
                     b.HasIndex("Country_Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Addresses");
                 });
@@ -4164,8 +4165,8 @@ namespace ecommerce.Migrations
                     b.Property<float>("OrderTotal")
                         .HasColumnType("real");
 
-                    b.Property<int>("PaymentMethodId")
-                        .HasColumnType("int");
+                    b.Property<string>("SessionId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ShippingAddressId")
                         .HasColumnType("int");
@@ -4176,6 +4177,9 @@ namespace ecommerce.Migrations
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("paymentIntentId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -4342,13 +4346,15 @@ namespace ecommerce.Migrations
 
             modelBuilder.Entity("ecommerce.Models.Address", b =>
                 {
-                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("Addresses")
-                        .HasForeignKey("ApplicationUserId");
-
                     b.HasOne("ecommerce.Models.Country", "Country")
                         .WithMany("Addresses")
                         .HasForeignKey("Country_Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("Addresses")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

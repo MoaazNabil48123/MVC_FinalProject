@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Stripe.Checkout;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ecommerce.Models
@@ -12,7 +13,6 @@ namespace ecommerce.Models
 
         public DateTime OrderDate { get; set; }
 
-        public int PaymentMethodId { get; set; }
         [ForeignKey(nameof(ShippingAddress))]
         public int ShippingAddressId { get; set; }
         [ForeignKey(nameof(ShippingMethod))]
@@ -23,10 +23,14 @@ namespace ecommerce.Models
         [ForeignKey(nameof(OrderStatus))]
         public int OrderStatusId {  get; set; }
 
+        public string? SessionId { get; set; }
+        public string? paymentIntentId { get; set; }
+
         public virtual ApplicationUser ApplicationUser { get; set; }
         public virtual Address ShippingAddress { get; set; }
         public virtual ShippingMethod ShippingMethod { get; set; }
         public virtual OrderStatus OrderStatus { get; set; }
         public virtual List<OrderLine> OrderLines { get; set; }
+
     }
 }

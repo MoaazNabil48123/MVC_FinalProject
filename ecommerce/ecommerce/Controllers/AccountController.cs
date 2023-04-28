@@ -1,6 +1,7 @@
 ﻿using ecommerce.Models;
 using ecommerce.Repository;
 using ecommerce.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -21,6 +22,7 @@ public class AccountController : Controller
         , IRepository<Country> CountryRepo
         )
     {
+      
         userManager = _userManager;
         signInManager = _signInManager;
         this.AddressRepo = AddressRepo;
@@ -71,7 +73,8 @@ public class AccountController : Controller
     {
         LoginViewModel model = new LoginViewModel
         {
-            ReturnUrl = returnUrl,
+        previousUrl = HttpContext.Request.Headers["Referer"].ToString(),
+        ReturnUrl = returnUrl,
             ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList()
         };
         return View(model);
@@ -93,13 +96,15 @@ public class AccountController : Controller
                 {
                     //cookie
                     await signInManager.SignInAsync(userModel, userVM.RememberMe);
-                    return RedirectToAction("Index", "Home");
+
+                    return Redirect(userVM.previousUrl);
                 }
             }
             ModelState.AddModelError("", "Login Fail Data wrong");
 
         }
-        return View(userVM);
+  
+        return RedirectToAction("Login");
     }
     #endregion
 
@@ -209,17 +214,21 @@ public class AccountController : Controller
     #endregion
 
     #region Address
-
-    public IActionResult Address()
+    [Authorize]
+    public async Task<IActionResult> Address()
     {
+        ApplicationUser appUser = await userManager.FindByNameAsync(User.Identity.Name);
         AddressCountryViewModel ACVM = new AddressCountryViewModel();
+        ACVM.UserId = appUser.Id;
         List<Country> CounteryList = CountryRepo.GetAll();
         ACVM.CountriesList = CounteryList;
+        ACVM.previousUrl = HttpContext.Request.Headers["Referer"].ToString();
+
         return View(ACVM);
     }
     [HttpPost]
-   
-    public  IActionResult Address(AddressCountryViewModel ACVM)
+    
+    public async Task<IActionResult> Address(AddressCountryViewModel ACVM)
     {
         if (ModelState.IsValid)
         {
@@ -227,6 +236,7 @@ public class AccountController : Controller
 
 
             userModel.Id = ACVM.Id;
+            userModel.UserId = ACVM.UserId;
             userModel.Unit_Number = ACVM.Unit_Number;
             userModel.Street_Number = ACVM.Street_Number;
             userModel.Address_line1 = ACVM.Address_line1;
@@ -239,7 +249,7 @@ public class AccountController : Controller
 
            AddressRepo.Add(userModel);
 
-            return RedirectToAction("Index", "Home");
+            return Redirect(ACVM.previousUrl);
 
             //save db
             //IdentityResult result =

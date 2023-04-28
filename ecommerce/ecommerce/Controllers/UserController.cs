@@ -26,13 +26,13 @@ public class UserController : Controller
     #endregion
 
     #region Update Profile Data
-    //[Authorize]
+    [Authorize]
     public IActionResult Update()
     {
-        //ApplicationUser user = userManager.Users.Include(e => e.Addresses)
-        //.ThenInclude(address=> address.Country).First(e => e.UserName == User.Identity.Name);
-        ApplicationUser user = userManager.Users.Include(appUser => appUser.Addresses)
-            .ThenInclude(address => address.Country).First(e => e.UserName == "moaaz");
+        ApplicationUser user = userManager.Users.Include(e => e.Addresses)
+        .ThenInclude(address => address.Country).First(e => e.UserName == User.Identity.Name);
+        //ApplicationUser user = userManager.Users.Include(appUser => appUser.Addresses)
+        //    .ThenInclude(address => address.Country).First(e => e.UserName == "moaaz");
         UserProfil_VM model = new UserProfil_VM
         {
             UserName = user.UserName,
@@ -43,13 +43,13 @@ public class UserController : Controller
         return View(model);
     }
     [HttpPost]
-    //[Authorize]
+    [Authorize]
     public async Task<IActionResult> Update(UserProfil_VM updatedUser)
     {
-        //ApplicationUser user = userManager.Users.Include(e => e.Addresses)
-        //.ThenInclude(address=> address.Country).First(e => e.UserName == User.Identity.Name);
-        ApplicationUser user = userManager.Users.Include(appUser => appUser.Addresses)
-            .ThenInclude(address => address.Country).First(e => e.UserName == "moaaz");
+        ApplicationUser user = userManager.Users.Include(e => e.Addresses)
+        .ThenInclude(address => address.Country).First(e => e.UserName == User.Identity.Name);
+        //ApplicationUser user = userManager.Users.Include(appUser => appUser.Addresses)
+        //    .ThenInclude(address => address.Country).First(e => e.UserName == "moaaz");
         if (ModelState.IsValid)
         {
             user.UserName = updatedUser.UserName;
@@ -88,7 +88,7 @@ public class UserController : Controller
         return View(model);
     }
     [HttpPost]
-    //[Authorize]
+    [Authorize]
     public async Task<IActionResult> UpsertAddress(Address newAddress)
     {
 
@@ -96,8 +96,8 @@ public class UserController : Controller
         {
             if (newAddress.Id == 0) // add new address
             {
-                //ApplicationUser user = userManager.FindByNameAsync(User.Identity.Name);
-                ApplicationUser user = await userManager.FindByNameAsync("moaaz");
+                ApplicationUser user  = await  userManager.FindByNameAsync(User.Identity.Name);
+                //ApplicationUser user = await userManager.FindByNameAsync("moaaz");
                 user.Addresses.Add(newAddress);
                 var result = await userManager.UpdateAsync(user);
                 if (!result.Succeeded)
@@ -136,13 +136,13 @@ public class UserController : Controller
     #endregion
 
     #region Set Address as default
-    //[Authorize]
+    [Authorize]
     public async Task<IActionResult> SetAsDefault(int id)
     {
-        //ApplicationUser user = userManager.Users.Include(e => e.Addresses)
-        //.First(e => e.UserName == User.Identity.Name);
-        ApplicationUser user = userManager.Users.Include(appUser => appUser.Addresses)
-            .First(e => e.UserName == "moaaz");
+        ApplicationUser user = userManager.Users.Include(e => e.Addresses)
+        .First(e => e.UserName == User.Identity.Name);
+        //ApplicationUser user = userManager.Users.Include(appUser => appUser.Addresses)
+        //    .First(e => e.UserName == "moaaz");
         foreach (Address address in user.Addresses)
         {
             if (address.Id == id)
@@ -178,14 +178,14 @@ public class UserController : Controller
     {
         return View();
     }
-    //[Authorize]
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> ChangePassword(ChangePassword_VM changePassword)
     {
         if (ModelState.IsValid)
         {
-            //ApplicationUser user =await userManager.FindByNameAsync(User.Identity.Name);
-            ApplicationUser user = await userManager.FindByNameAsync("moaaz");
+            ApplicationUser user =await userManager.FindByNameAsync(User.Identity.Name);
+           // ApplicationUser user = await userManager.FindByNameAsync("moaaz");
             var result = await userManager.ChangePasswordAsync(user, changePassword.OldPassword, changePassword.NewPassword);
             if (!result.Succeeded)
             {

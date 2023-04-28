@@ -3,6 +3,11 @@ using ecommerce.Models;
 using ecommerce.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
+using Address = ecommerce.Models.Address;
+using Coupon = ecommerce.Models.Coupon;
+using PaymentMethod = ecommerce.Models.PaymentMethod;
+using Product = ecommerce.Models.Product;
 
 
 namespace ecommerce;
@@ -13,28 +18,39 @@ public class Program
 	{
 		var builder = WebApplication.CreateBuilder(args);
 
-		#region Services
-		builder.Services.AddControllersWithViews();
-		// Context register
-		builder.Services.AddDbContext<AppDbContext>(options =>
-			   options.UseSqlServer(builder.Configuration.GetConnectionString("CS1")));
-		// Repo Register
-		builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
-		builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
-		builder.Services.AddScoped<IRepository<ShopOrder>, Repository<ShopOrder>>();
-		builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
-		builder.Services.AddScoped<IRepository<Country>, Repository<Country>>();
-		builder.Services.AddScoped<IRepository<Address>, Repository<Address>>();
-		builder.Services.AddScoped<IRepository<Coupon>, Repository<Coupon>>();
+        #region Services
+            builder.Services.AddControllersWithViews();
+            // Context register
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                   options.UseSqlServer(builder.Configuration.GetConnectionString("CS1")));
+            //mapping stripe settings
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+            // Repo Register
+            builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+            builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
+            builder.Services.AddScoped<IRepository<ShopOrder>, Repository<ShopOrder>>();
+            builder.Services.AddScoped<IRepository<Address>, Repository<Address>>();
+            builder.Services.AddScoped<IRepository<Country>, Repository<Country>>();
+            builder.Services.AddScoped<IRepository<PaymentMethod>, Repository<PaymentMethod>>();
+            builder.Services.AddScoped<IRepository<ApplicationUser>, Repository<ApplicationUser>>();
+            builder.Services.AddScoped<IRepository<ShippingMethod>, Repository<ShippingMethod>>();
+            builder.Services.AddScoped<IRepository<OrderStatus>, Repository<OrderStatus>>();
+            builder.Services.AddScoped<IRepository<Coupon>, Repository<Coupon>>();
+            builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 
-		// auth for register and login
-		builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+
+
+
+
+        // auth for register and login
+        builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 		{
 			options.Password.RequireLowercase = true;
 			options.Password.RequireNonAlphanumeric = false;
 			options.Password.RequireUppercase = false;
 			options.Password.RequireDigit = true;
 			options.Password.RequiredLength = 5;
+
 
 		})
 			  .AddEntityFrameworkStores<AppDbContext>();
@@ -68,8 +84,10 @@ public class Program
 		}
 		app.UseStaticFiles();
 
-		app.UseRouting();
-		app.UseAuthentication();
+            app.UseRouting();
+
+            StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+            app.UseAuthentication();
 
 
 		app.UseAuthorization();
@@ -78,8 +96,9 @@ public class Program
 			name: "default",
 			pattern: "{controller=Home}/{action=Index}/{id?}");
 
-		app.Run();
-        #endregion
+            app.Run();
+            #endregion
+
 
     }
 

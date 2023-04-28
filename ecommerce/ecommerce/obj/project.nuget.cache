@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wQ0TItnHtSLzabXa3m3RgZ+2xc6XxduaeSrIMXQmopDO4kZUtapsnvcEvpuy1PD51LZRYC7+N5IxV7ybhnWtAg==",
+  "dgSpecHash": "t+E3i3LUo7S2OA6Nqz07l4h7pwlrPf+oa0xdm0HqGb7zMS2KMqqmBEepw4ejzbRS+lh8bnJI60CCidqJxZK5Kg==",
   "success": true,
   "projectFilePath": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
   "expectedPackageFiles": [
@@ -116,6 +116,7 @@
     "C:\\Users\\moaaz\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\moaaz\\.nuget\\packages\\stripe.net\\41.13.0\\stripe.net.41.13.0.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\moaaz\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",

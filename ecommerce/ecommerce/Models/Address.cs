@@ -31,15 +31,15 @@ namespace ecommerce.Models
         public int Postal_Code { get; set; }
         public bool IsDefault { get; set; }
 
-
         [ForeignKey("Country")]
         public int Country_Id { get; set; }
 
-        //Navigational Properties
-        public Country? Country { get; set; }
-        public string? ApplicationUserId { get; set; }
-        public List<ShopOrder>? ShopOrders { get; set; }
-        public ApplicationUser? ApplicationUser { get; set; }
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
 
+        public virtual Country? Country { get; set; }
+
+        public virtual List<ShopOrder> ShopOrders { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

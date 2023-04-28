@@ -53,17 +53,17 @@
 								</ul>
 							</li>
 							</div>
-							@if (!User.Identity.IsAuthenticated)
+							@if (User.Identity.IsAuthenticated)
 							{
 							<div style="display:flex;align-items:center;">
 								<li>
-									<a class="search-bar-icon header-icons" href="#"><i class="fa-solid fa-calendar-check"></i>  Orders</a>
+									<a class="search-bar-icon header-icons"asp-controller="Order" asp-action="Index"><i class="fa-solid fa-calendar-check"></i>  Orders</a>
 								</li>
 								<li>
-									<a class="shopping-cart header-icons" href="/Cart/Index"><i class="fas fa-shopping-cart"></i>  Cart</a>
+									<a class="shopping-cart header-icons" asp-controller="Cart" asp-action="Index"><i class="fas fa-shopping-cart"></i>  Cart</a>
 								</li>
 								<li>
-									<a class="shopping-cart" href="#"><i class="fa-solid fa-user"></i></a>
+									<a class="shopping-cart" asp-controller="User" asp-action="Update"><i class="fa-solid fa-user"></i></a>
 									<ul class="sub-menu">
 								<li><a href="/User/Update"><i class="fa-solid fa-id-card"></i>   Profile</a></li>
 								<li><a href="/User/ChangePassword"><i class="fa-solid fa-lock"></i>   Change password</a></li>

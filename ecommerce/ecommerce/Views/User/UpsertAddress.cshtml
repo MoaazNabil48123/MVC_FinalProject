@@ -3,122 +3,119 @@
     ViewData["Title"] = "User Address";
     SelectList countrySelectList = new SelectList(ViewBag.countryList, "Id", "Country_Name");
 }
-
 @section Links{
-    <link rel="stylesheet" href="/css/UserViews.css" />
+    <link rel="stylesheet" href="/css/User/UpsertAddress.css" />
 }
-<!-- Text area Start-->
-<div class="hero-area hero-bg" style="max-height:35%">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 offset-lg-2 text-center">
-                <div class="hero-text">
-                    <div class="hero-text-tablecell">
-                        @*<p class="subtitle">User Profile</p>*@
-                        <h1 style="margin:9rem 0 0 0"><span style="color:#F28123">Hello</span> Moaaz</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Text area End -->
-<div class="row userProfile">
-    <div class="col-3 SideBar">
-        <ul>
-            <li>
-                <a asp-action="Update"><i class="fa-solid fa-id-card"></i>Profile</a>
-            </li>
-            <li class="active">
-                <a asp-action="ChangePassword"><i class="fa-solid fa-lock"></i>Change Password</a>
-            </li>
-            <li>
-                <a asp-action="UpsertAddress"><i class="fa-solid fa-location-dot"></i>@(Model.Id ==0? "Add Address":"Edit Address")</a>
-            </li>
-        </ul>
-    </div>
-    <div class="col-9" id="changableContent">
-       
-        <form action="/User/UpsertAddress" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-@*            <div class="form-group row align-items-center">
-                <label asp-for="Id" class="control-label col-3"></label>
-                <div class="col-3">
-                    <input asp-for="Id" class="form-control" />
-                    <input asp-for="ApplicationUserId" class="form-control" />
-                    <span asp-validation-for="Id" class="text-danger"></span>
-                </div>
-            </div>*@
-             <input asp-for="Id" class="form-control" hidden/>
-             <input asp-for="ApplicationUserId" class="form-control" hidden/>
 
-             <div class="form-group row align-items-center">
-                <label asp-for="Unit_Number" class="control-label col-3"></label>
-                <div class="col-3">
-                    <input asp-for="Unit_Number" class="form-control" />
-                    <span asp-validation-for="Unit_Number" class="text-danger"></span>
+<div class="row bachground">
+    <div class="E-martContent">
+        @if (Model.Id == 0)
+        {
+            <h3 class="text-center mb-5" style="color:#F28123">Add Address</h3>
+        }
+        else
+        {
+            <h3 class="text-center mb-5" style="color:#F28123">Edit Address</h3>
+        }
+        <form method="post" action="/User/UpsertAddress">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Id" class="form-control" hidden />
+            <input asp-for="ApplicationUserId" class="form-control" hidden />
+            <div class="form-group row mb-3">
+                <label asp-for="Unit_Number" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Unit_Number" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Unit_Number" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="Street_Number" class="control-label col-3"></label>
-                <div class="col-3">
-                    <input asp-for="Street_Number" class="form-control" />
-                    <span asp-validation-for="Street_Number" class="text-danger"></span>
+            <div class="form-group row mb-3">
+                <label asp-for="Street_Number" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Street_Number" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Street_Number" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="Address_line1" class="control-label col-3"></label>
-                <div class="col-9">
-                    <input asp-for="Address_line1" class="form-control" />
-                    <span asp-validation-for="Address_line1" class="text-danger"></span>
+            <div class="form-group row mb-3">
+                <label asp-for="Address_line1" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Address_line1" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Address_line1" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="Address_line2" class="control-label col-3"></label>
-                <div class="col-9">
-                    <input asp-for="Address_line2" class="form-control" />
-                    <span asp-validation-for="Address_line2" class="text-danger"></span>
+            <div class="form-group row mb-3">
+                <label asp-for="Address_line2" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Address_line2" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Address_line2" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="Region" class="control-label col-3"></label>
-                <div class="col-9">
-                    <input asp-for="Region" class="form-control" />
-                    <span asp-validation-for="Region" class="text-danger"></span>
+            <div class="form-group row mb-3">
+                <label asp-for="Region" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Region" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Region" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="City" class="control-label col-3"></label>
-                <div class="col-3">
-                    <input asp-for="City" class="form-control" />
-                    <span asp-validation-for="City" class="text-danger"></span>
+            <div class="form-group row mb-3">
+                <label asp-for="City" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="City" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="City" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="Postal_Code" class="control-label col-3"></label>
-                <div class="col-3">
-                    <input asp-for="Postal_Code" class="form-control" />
-                    <span asp-validation-for="Postal_Code" class="text-danger"></span>
+            <div class="form-group row mb-3">
+                <label asp-for="Postal_Code" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Postal_Code" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="Postal_Code" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
-            <div class="form-group row align-items-center">
-                <label asp-for="Country_Id" class="control-label col-3"></label>
-                <div class="col-3">
-                    <select asp-for="Country_Id" class="form-control" asp-items="countrySelectList">
-                        <option selected disabled><<<<<<<<<< Required >>>>>>>>>></></option>
+            <div class="form-group row mb-4">
+                <label asp-for="Country_Id" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <select asp-for="Country_Id" class="E-martSelect form-control" asp-items="countrySelectList">
+                        <option selected disabled>----------- Required -----------</option>
                     </select>
+
+                    <span asp-validation-for="Country_Id" class="text-danger"></span>
                 </div>
             </div>
-            <div class="form-group">
-                @if(Model.Id ==0)
+            <div class="form-group row">
+                @if (Model.Id == 0)
                 {
-                    <input type="submit" value="Create" class="bordered-btn black"/>
+                    <input type="submit" value="Create" class="E-martButton mb-3" />
+                    <a href="/User/UpsertAddress/0" class="E-martButton">Clear</a>
                 }
-                else{                    <input type="submit" value="Update" class="bordered-btn black"/>
+                else
+                {
+                    <input type="submit" value="Update" class="E-martButton mb-3" />
+                    <a href="/Home" class="E-martButton">Cancel</a>
                 }
-                <a href="/User/UpsertAddress/0"  class="bordered-btn black">Clear</a>
+                
             </div>
         </form>
+        <div class="hr"></div>
     </div>
 </div>
 
@@ -128,6 +125,3 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
-
-
-

@@ -1,0 +1,181 @@
+﻿@model ecommerce.ViewModel.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_MyLayout";
+}
+
+<!-- CSS Here -->
+@section Links{
+    <link rel="stylesheet" href="~/css/css_Account/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/flaticon.css" />
+    <link rel="stylesheet" href="~/css/css_Account/slicknav.css" />
+    <link rel="stylesheet" href="~/css/css_Account/animate.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/magnific-popup.css" />
+    <link rel="stylesheet" href="~/css/css_Account/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="~/css/css_Account/themify-icons.css" />
+    <link rel="stylesheet" href="~/css/css_Account/slick.css" />
+    <link rel="stylesheet" href="~/css/css_Account/nice-select.css" />
+    <link rel="stylesheet" href="~/css/css_Account/style.css" />
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Secure & Reliable</p>
+                    <h1>Login</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end breadcrumb section -->
+
+<!-- <================> SignUp_part Start <=================> -->
+<section class="login_part section_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>New to our Shop?</h2>
+                        <p>
+                            There are advances being made in science and technology
+                            everyday, and a good example of this is the
+                        </p> 
+                        <a href="/Account/Register" class="btn_3">Create an Account</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="login_part_form" style="width: 100%;">
+                    <div class="login_part_form_iner">
+                        <h3>
+                            Welcome Back ! <br>
+                            Please Sign in now
+                        </h3>
+                        <form action="/Account/Login">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="col-md-12 form-group p_star">
+                                <input asp-for="UserName" type="text" class="form-control" id="name" name="name" value="" placeholder="User Name" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div> 
+                            <div class="col-md-12 form-group p_star">
+                                <input asp-for="Password" type="password" class="form-control" id="name" name="name" value="" placeholder="Password" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account d-flex align-items-center">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" asp-for="RememberMe" type="checkbox" id="f-option" name="selector" />
+                                        @Html.DisplayNameFor(model => model.RememberMe)
+                                    </label>
+                                </div>
+                                <button type="submit" value="submit" class="btn_3">
+                                    Log in
+                                </button>                               
+                            </div>                            
+                        </form>
+                        <div >
+                            <section>
+                                @{
+                                    if (Model.ExternalLogins.Count != 0)
+                                    {
+                                        <form method="post" action="/Account/ExternalLogin/@Model.ReturnUrl" /*asp-action ="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" * / class="form-horizontal">
+                                            <div>
+                                                <p>
+                                                    @foreach (var provider in Model.ExternalLogins)
+                                                    {
+                                                        string imageSrc = string.Empty;
+                                                        switch (provider.DisplayName)
+                                                        {
+                                                            case "Google":
+                                                                imageSrc = "https://gfx4arab.com/wp-content/uploads/2020/06/google-icon.svg";
+                                                                break;
+                                                            case "Facebook":
+                                                                imageSrc = "https://cdn.freebiesupply.com/logos/large/2x/facebook-3-logo-png-transparent.png";
+                                                                break;
+                                                            case "Microsoft":
+                                                                imageSrc = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Microsoft_Store_logo.svg/1200px-Microsoft_Store_logo.svg.png"; break;
+                                                        }
+                                                        <button type="submit" class="btn btn-light btn-block"
+                                                                style="color:#212529; background-color: #f8f9fa;border-color: #f8f9fa;"
+                                                        name="provider" value="@provider.Name" 
+                                                        title="Log in using your @provider.DisplayName account">
+                                                            <img src="@imageSrc" alt="@provider.DisplayName" style="height: 20px;" />
+                                                            Login With @provider.DisplayName
+                                                        </button>
+                                                    }
+                                                </p>
+                                            </div>
+                                        </form>
+                                    }
+                                }
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <================> SignUp_part End <=================> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Register">Create Account </a>
+</div>
+*@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

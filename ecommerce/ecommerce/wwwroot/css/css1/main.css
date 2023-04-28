@@ -1210,7 +1210,7 @@ input[type="submit"] {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  border-radius: 50px !important;
+  border-radius: 50px;
 }
 
 /*input[type="submit"]:hover {

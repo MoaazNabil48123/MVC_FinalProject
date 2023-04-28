@@ -66,7 +66,7 @@ public class AccountController : Controller
     #endregion
 
     #region SignIn
-    public async Task<IActionResult> Login(string returnUrl)
+    public async Task<IActionResult> Login(string? returnUrl)
 
     {
         LoginViewModel model = new LoginViewModel

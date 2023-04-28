@@ -30,7 +30,7 @@ public class Repository<T> : IRepository<T> where T : class
         }
         return query.ToList();
     }
-    public List<T> GetAll(params Expression<Func<T, bool>>[] filters)//GetAll with filters
+    public List<T> GetAll(params Expression<Func<T, bool>>[] filters) //GetAll with filters
     {
         IQueryable<T> query = _context.Set<T>();
         foreach (var filter in filters)
@@ -51,7 +51,7 @@ public class Repository<T> : IRepository<T> where T : class
         {
             query = query.Include(include);
         }
-        return query.ToList().First(r => (int)r.GetType().GetProperty("ID").GetValue(r) == id);
+        return query.ToList().First(r => (int)r.GetType().GetProperty("Id").GetValue(r) == id);
     }
 
     public void Update(T element)

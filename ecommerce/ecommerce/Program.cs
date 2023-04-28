@@ -24,6 +24,8 @@ namespace ecommerce
 			builder.Services.AddScoped<IRepository<ShopOrder>, Repository<ShopOrder>>();
 			builder.Services.AddScoped<IRepository<Address>, Repository<Address>>();
 			builder.Services.AddScoped<IRepository<Country>, Repository<Country>>();
+			builder.Services.AddScoped<IRepository<Variation>, Repository<Variation>>();
+			builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
 
 
             // auth for register and login

@@ -51,9 +51,10 @@ public class AccountController : Controller
             IdentityResult result =await userManager.CreateAsync(userModel, newUser.Password);
             if (result.Succeeded)
             {
-                //await userManager.AddToRoleAsync(userModel, "Admin");
-                await signInManager.SignInAsync(userModel, false);
-                return RedirectToAction("Index", "Home");
+				//await userManager.AddToRoleAsync(userModel, "Admin");
+				//var result3 = await signInManager.SignInAsync(userModel, false);
+				await signInManager.SignInAsync(userModel, false);
+				return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -97,7 +98,8 @@ public class AccountController : Controller
                     //cookie
                     await signInManager.SignInAsync(userModel, userVM.RememberMe);
 
-                    return Redirect(userVM.previousUrl);
+                    //return Redirect(userVM.previousUrl);
+                    return RedirectToAction("Index", "Home");
                 }
             }
             ModelState.AddModelError("", "Login Fail Data wrong");
@@ -110,7 +112,7 @@ public class AccountController : Controller
 
     #region SignOut
 
-    public async Task<IActionResult> SignOut()
+    public async Task<IActionResult> LogOut()
     {
         await signInManager.SignOutAsync();
         return RedirectToAction("Index", "Home");
@@ -118,7 +120,7 @@ public class AccountController : Controller
     #endregion
 
     #region External Login
-    [HttpPost]
+    [HttpPost, ValidateAntiForgeryToken]
     public IActionResult ExternalLogin(string provider, string returnUrl)
     {
         var redirectUrl = Url.Action("ExternalLoginCallBack", "Account", new { ReturnUrl = returnUrl });
@@ -180,15 +182,16 @@ public class AccountController : Controller
                     //then attach to him the external login info and create cookie
                     user = new ApplicationUser
                     {
-                        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
+                        //UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
+                        UserName = "qiqiqiqiqi",
                         Email = info.Principal.FindFirstValue(ClaimTypes.Email)
                     };
-                    await userManager.CreateAsync(user);
+                    var result = await userManager.CreateAsync(user);
                 }
                 //if we have local user with the same email so attach the external login info 
                 //to that user in "AspNetUserLogin" and then create the cookie for him 
-                userManager.AddLoginAsync(user, info);
-                signInManager.SignInAsync(user, isPersistent: false);
+                await userManager.AddLoginAsync(user, info);
+                await signInManager.SignInAsync(user, false);
                 return LocalRedirect(returnUrl);
 
             }
@@ -273,4 +276,5 @@ public class AccountController : Controller
         return View("Address",ACVM);
     }
     #endregion
+    
 }

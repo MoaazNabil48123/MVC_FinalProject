@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Login";
+    Layout = "_MyLayout";
 }
 
 @section Links{
@@ -13,7 +14,7 @@
         <h3 class="text-center mb-5" style="color:#F28123">Log in</h3>
         <form method="post" action="/Account/Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group row mb-3">
+            <div class="form-group row mb-4">
                 <label asp-for="UserName" class="control-label text-uppercase text-white col-4 mt-2"></label>
                 <div class="col-8">
                     <div class="E-martInputText">
@@ -22,15 +23,15 @@
                     </div>
                     <span asp-validation-for="UserName" class="text-danger col-8 align-content-end"></span>
                 </div>
-            </div>
-            <div class="form-group row mb-3">
+            </div>          
+            <div class="form-group row mb-4">
                 <label asp-for="Password" class="control-label text-uppercase text-white col-4 mt-2"></label>
                 <div class="col-8">
                     <div class="E-martInputText">
                         <input asp-for="Password" class="E-martInputText form-control" />
                         <span class="E-martInputText"></span>
                     </div>
-                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <span asp-validation-for="Password" class="text-danger col-8 align-content-end"></span>
                 </div>
             </div>
             <label class="text-white text-uppercase mb-3">
@@ -47,7 +48,7 @@
                 @{
                     if (Model.ExternalLogins?.Count != 0)
                     {
-                        <form method="post" action="/Account/ExternalLogin/@Model.ReturnUrl" /*asp-action ="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" * / class="form-horizontal">
+                        <form method="post" asp-action ="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" class="form-horizontal">
                             <div>
                                 <p class="mb-4 row">
                                     @foreach (var provider in Model.ExternalLogins)
@@ -78,14 +79,12 @@
                     }
                 }
             </section>
-
         </div>
-        <div class="text-white text-uppercase mb-4">Don't have an account? <a href="/Account/Register" style="color:#0d6efd; text-decoration:underline">Signup</a></div>
-
+        <div class="text-white text-uppercase mb-4">Don't have an account? 
+            <a href="/Account/Register" style="color:#0d6efd; text-decoration:underline">Signup</a></div>
         <div class="hr"></div>
     </div>
 </div>
-
 
 @section Scripts {
     @{

@@ -11306,24 +11306,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\moaaz\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ahmed\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed\\Documents\\GitHub1\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
       "projectName": "ecommerce",
-      "projectPath": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
-      "packagesPath": "C:\\Users\\moaaz\\.nuget\\packages\\",
-      "outputPath": "E:\\ITI\\14- Entity Framwork, MVC\\MVC\\01- lab\\FinalProject\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
+      "projectPath": "C:\\Users\\ahmed\\Documents\\GitHub1\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
+      "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ahmed\\Documents\\GitHub1\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\moaaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

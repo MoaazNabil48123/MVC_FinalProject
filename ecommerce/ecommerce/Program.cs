@@ -1,6 +1,7 @@
 using ecommerce.Context;
 using ecommerce.Models;
 using ecommerce.Repository;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Stripe;
@@ -19,7 +20,7 @@ public class Program
 		var builder = WebApplication.CreateBuilder(args);
 
         #region Services
-            builder.Services.AddControllersWithViews();
+        builder.Services.AddControllersWithViews();
             // Context register
             builder.Services.AddDbContext<AppDbContext>(options =>
                    options.UseSqlServer(builder.Configuration.GetConnectionString("CS1")));
@@ -50,6 +51,7 @@ public class Program
 			options.Password.RequireUppercase = false;
 			options.Password.RequireDigit = true;
 			options.Password.RequiredLength = 5;
+            
 
 
 		})

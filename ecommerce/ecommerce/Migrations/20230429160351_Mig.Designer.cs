@@ -12,8 +12,8 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230427163157_New")]
-    partial class New
+    [Migration("20230429160351_Mig")]
+    partial class Mig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

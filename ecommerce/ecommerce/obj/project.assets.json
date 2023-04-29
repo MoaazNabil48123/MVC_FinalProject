@@ -11306,19 +11306,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amr Elsaid\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1-iTi-\\19- Back End\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
+      "projectUniqueName": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
       "projectName": "ecommerce",
-      "projectPath": "D:\\1-iTi-\\19- Back End\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
-      "packagesPath": "C:\\Users\\Amr Elsaid\\.nuget\\packages\\",
-      "outputPath": "D:\\1-iTi-\\19- Back End\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
+      "projectPath": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Amr Elsaid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11398,7 +11398,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

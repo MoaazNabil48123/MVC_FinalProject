@@ -35,11 +35,11 @@ namespace ecommerce.Models
         public int Country_Id { get; set; }
 
         [ForeignKey("ApplicationUser")]
-        public string UserId { get; set; }
+        public string? UserId { get; set; } = string.Empty;
 
         public virtual Country? Country { get; set; }
 
-        public virtual List<ShopOrder> ShopOrders { get; set; }
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual List<ShopOrder> ShopOrders { get; set; } = new List<ShopOrder>();
+        public virtual ApplicationUser? ApplicationUser { get; set; }
     }
 }

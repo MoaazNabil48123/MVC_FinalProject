@@ -37,6 +37,7 @@ public class Program
             builder.Services.AddScoped<IRepository<OrderStatus>, Repository<OrderStatus>>();
             builder.Services.AddScoped<IRepository<Coupon>, Repository<Coupon>>();
             builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+            builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 
 
 

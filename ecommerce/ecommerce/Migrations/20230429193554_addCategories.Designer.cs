@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ecommerce.Context;
 
@@ -11,9 +12,11 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230429193554_addCategories")]
+    partial class addCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -348,7 +351,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 4,
-                            Name = "Socks"
+                            Name = "socks"
                         },
                         new
                         {
@@ -358,17 +361,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 6,
-                            Name = "Shirt"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Washer"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Fryer"
+                            Name = "shirt"
                         });
                 });
 
@@ -1836,22 +1829,6 @@ namespace ecommerce.Migrations
                             Description = "Jamila Women Stripped oversized shirt with two pockets",
                             Image = "/Image/Products/17.jpg",
                             Name = "Jamila"
-                        },
-                        new
-                        {
-                            Id = 36,
-                            CategoryId = 7,
-                            Description = "Toshiba - Washing Machine - 8kg - Silver - Inverter - 1400rpm - TW-BJ90M4E(SK)",
-                            Image = "/Image/Products/18.jpg",
-                            Name = "Toshiba - Washing Machine"
-                        },
-                        new
-                        {
-                            Id = 37,
-                            CategoryId = 8,
-                            Description = "Nutricook AF357V AIR FRYER 3 VISION 5.7L 1700W Black clear window - International warranty",
-                            Image = "/Image/Products/19.jpg",
-                            Name = "Nutricook AF357V AIR FRYER"
                         });
                 });
 

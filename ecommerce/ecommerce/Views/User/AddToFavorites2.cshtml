@@ -1,0 +1,36 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "AddToFavorites";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+@*<a onclick="AddToFavorites(@Model.Id)" id="AddToFavoritesAnchor"><i style="color:red" class="fa-regular fa-heart"></i></a>*@
+@*<a onclick="AddToFavorites(20)" id="AddToFavoritesAnchor"><i style="color:#AB0808;font-size:20px" class="fa-regular fa-heart"></i></a>
+*@<script>
+    function AddToFavorites(id) {
+		$.ajax({
+			url: "/User/AddToFavorites?productId=" + id,
+			type: "POST",
+			success: function (response) {
+				if (response) {
+					document.getElementById('AddToFavoritesAnchor').innerHTML = '<i style="color:#AB0808;font-size:20px" class="fa-solid fa-heart" > </i>';
+				}
+				else{
+					document.getElementById('AddToFavoritesAnchor').innerHTML = '<i style="color:#AB0808;font-size:20px" class="fa-regular fa-heart"></i>';
+				}
+			},
+			error: function (xhr, textStatus, errorThrown) {
+				console.log(xhr.responseText);
+			}
+		});
+
+    }
+</script>

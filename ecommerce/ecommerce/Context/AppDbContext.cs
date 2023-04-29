@@ -83,9 +83,10 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 					Name = worksheet.Cells[row, 2].Value.ToString(),
 					Description = worksheet.Cells[row, 3].Value.ToString(),
 					Image = worksheet.Cells[row, 4].Value.ToString(),
-					CategoryId = int.Parse(worksheet.Cells[row, 5].Value.ToString())
+					CategoryId = int.Parse(worksheet.Cells[row, 5].Value.ToString()),
+                    Star = int.Parse(worksheet.Cells[row, 6].Value.ToString()),
 
-				};
+                };
 				productList.Add(entity);
 			}
 			modelBuilder.Entity<Product>().HasData(productList);

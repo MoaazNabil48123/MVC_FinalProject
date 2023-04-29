@@ -4,6 +4,7 @@
 }
 @section Links{
     <link rel="stylesheet" href="/css/UserViews.css" />
+    @*<link rel="stylesheet" href="/css/User/ChangePassword.css" />*@
 }
 <!-- Text area Start-->
 <div class="breadcrumb-section breadcrumb-bg">
@@ -11,8 +12,9 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="breadcrumb-text">
-                    
-                    <h1>Hello </h1><h1 style="color:#f28123">Moaaz</h1>
+
+                    @*<h1>Hello </h1><h1 style="color:#f28123">Moaaz</h1>*@
+                    <h1>Hello </h1><h1 style="color:#f28123">@User.Identity.Name</h1>
                 </div>
             </div>
         </div>
@@ -20,57 +22,63 @@
 </div>
 
 <!-- Text area End -->
-<div class="row userProfile">
-    <div class="col-3 SideBar">
-        <ul>
-            <li  class="active">
-                <a asp-action="Update"><i class="fa-solid fa-id-card"></i>Profile</a>
-            </li>
-            <li>
-                <a asp-action="ChangePassword"><i class="fa-solid fa-lock"></i>Change Password</a>
-            </li>
-            <li >
-                <a asp-action="UpsertAddress"><i class="fa-solid fa-location-dot"></i>Add Address</a>
-            </li>
-        </ul>
-    </div>
-    <div class="col-9" id="changableContent">
-        <form method="post" action="/User/Update">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group row">
-                <label asp-for="UserName" class="control-label col-lg-2 col-sm-12"></label>
-                <div class="col-lg-10 col-sm-12">
-                    <input asp-for="UserName" class="form-control" />
-                    <span asp-validation-for="UserName" class="text-danger"></span>
+<div class=" row  justify-content-center bg-light" style="padding-top:80px">
+    <div class="col-6" id="changableContent">
+        <div class="border border-1 border-dark p-3" style="border-radius:2rem;">
+            <h4 class="text-center mb-5" style="color:#F28123">Personal Info</h4>
+            <form method="post" action="/User/UpsertAddress">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row mb-3">
+                    <label asp-for="UserName" class="control-label text-uppercase text-dark col-4 mt-2"></label>
+                    <div class="col-8">
+                        <div class="E-martInputText">
+                            <input asp-for="UserName" class="E-martInputText form-control " />
+                            <span class="E-martInputText"></span>
+                        </div>
+                        <span asp-validation-for="UserName" class="text-danger col-8 align-content-end"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label asp-for="Email" class="control-label col-lg-2 col-sm-12"></label>
-                <div class="col-lg-10 col-sm-12">
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                <div class="form-group row mb-3">
+                    <label asp-for="Email" class="control-label text-uppercase text-dark col-4 mt-2"></label>
+                    <div class="col-8">
+                        <div class="E-martInputText">
+                            <input asp-for="Email" class="E-martInputText form-control" />
+                            <span class="E-martInputText"></span>
+                        </div>
+
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label asp-for="Phone" class="control-label col-lg-2 col-sm-12"></label>
-                <div class="col-lg-10 col-sm-12">
-                    <input asp-for="Phone" class="form-control" />
-                    <span asp-validation-for="Phone" class="text-danger"></span>
+                <div class="form-group row mb-4">
+                    <label asp-for="Phone" class="control-label text-uppercase text-dark col-4 mt-2"></label>
+                    <div class="col-8">
+                        <div class="E-martInputText">
+                            <input asp-for="Phone" class="E-martInputText form-control" />
+                            <span class="E-martInputText"></span>
+                        </div>
+
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save Changes" class="boxed-btn black" />
-                <a asp-action="Update" class="boxed-btn black">Reset</a>
-            </div>
-        </form>
+                <div class="form-group row justify-content-center">
+                    <input type="submit" value="Save Changes" class="bordered-btn black col-3" style="border-radius:0px" />
+                    <div class="col-3 ms-3"><a asp-action="Update" class="bordered-btn black w-100" style="border-radius:0px">Reset</a></div>
+                </div>
+            </form>
+            <div class="hr"></div>
+
+
+        </div>
+        <div class="border border-1 border-dark p-3 mt-4" style="border-radius:2rem;">
             @if (Model.addresses.Count == 0)
             {
-                <h4>you don't have any addresses. <a asp-action="UpsertAddress">add one</a></h4>
+                <h5 class="ms-2 text-center"><i class="fa-solid fa-location-dot me-1"></i>you don't have any addresses. <a asp-action="UpsertAddress">add one</a></h5>
             }
             else
             {
+                <div class="ms-2 mb-3"><a href="/User/UpsertAddress"><i class="fa-solid fa-location-dot"></i>   Add Address</a> </div>
 
-                <table class="table">
+                <table class="table table-striped table-hover table-bordered border-1 text-center" style="vertical-align:middle">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -82,39 +90,41 @@
                         @for (int i = 0; i < Model.addresses.Count; i++)
                         {
                             <tr>
-                                <th scope="row">@(i+1)</th>
+                                <th scope="row">@(i + 1)</th>
                                 <td>
-                                    <div>Unit: @Model.addresses[i].Unit_Number, Building: @Model.addresses[i].Street_Number</div>
-                                    <div>ST1: @Model.addresses[i].Address_line1</div>
+                                    <div><span class="fw-bold">Unit:</span> @Model.addresses[i].Unit_Number, <span class="fw-bold">Building:</span> @Model.addresses[i].Street_Number</div>
+                                    <div><span class="fw-bold">ST_1:</span> @Model.addresses[i].Address_line1</div>
                                     @if (string.IsNullOrEmpty(Model.addresses[i].Address_line2))
                                     {
-                                        <div>ST1: @Model.addresses[i].Address_line2</div>
+                                        <div><span class="fw-bold">ST_2:</span> @Model.addresses[i].Address_line2</div>
                                     }
-                                    <div>@Model.addresses[i].Region, @Model.addresses[i].City, @Model.addresses[i].Country.Country_Name</div>
-                                    <div>Postal Code: @Model.addresses[i].Postal_Code</div>
+                                    <div @*class="fw-bold"*@>@Model.addresses[i].Region, @Model.addresses[i].City, @Model.addresses[i].Country.Country_Name</div>
+                                    <div><span class="fw-bold">Postal Code:</span> @Model.addresses[i].Postal_Code</div>
                                 </td>
                                 @if (Model.addresses[i].IsDefault)
                                 {
                                     <td>
-                                        <div><span class="text-success"><i class="fa-solid fa-check"></i>Default</span></div>
-                                        <div><a asp-action="UpsertAddress" asp-route-id="@Model.addresses[i].Id" class="btn btn-info">Edit</a></div>
-                                        <div><a onclick="DeleteAddress(@Model.addresses[i].Id)" class="btn btn-danger">Delete</a></div>
+                                        <div class="mb-2"><span class="text-success"><i class="fa-solid fa-check me-2"></i>Default</span></div>
+                                        <div><a asp-action="UpsertAddress" asp-route-id="@Model.addresses[i].Id" class="btn bordered-btn black px-4 py-1 rounded-2" style="border-radius:0px">Edit</a>  |  <a onclick="DeleteAddress(@Model.addresses[i].Id)" class="btn btn-danger">Delete</a></div>
                                     </td>
                                 }
                                 else
                                 {
                                     <td>
-                                        <div><a asp-action="SetAsDefault" asp-route-id="@Model.addresses[i].Id" class="">Set as Default</a></div>
-                                        <div><a asp-action="UpsertAddress" asp-route-id="@Model.addresses[i].Id" class="btn btn-info">Edit</a></div>
-                                    <div><a onclick="DeleteAddress(@Model.addresses[i].Id)" class="btn btn-danger">Delete</a></div>
+                                        <div >
+                                            <div class="mb-2"><a asp-action="SetAsDefault" asp-route-id="@Model.addresses[i].Id" class="text-decoration-underline">Set as Default</a></div>
+                                            <div><a asp-action="UpsertAddress" asp-route-id="@Model.addresses[i].Id" class="btn bordered-btn black px-4 py-1 rounded-2" style="border-radius:0px">Edit</a>  |  <a onclick="DeleteAddress(@Model.addresses[i].Id)" class="btn btn-danger">Delete</a></div>
+                                        </div>
+
                                     </td>
-                                    
+
                                 }
                             </tr>
                         }
                     </tbody>
                 </table>
             }
+        </div>
 
 
     </div>
@@ -126,7 +136,7 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        function DeleteAddress(id){
+        function DeleteAddress(id) {
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",

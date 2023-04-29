@@ -1,5 +1,6 @@
 ﻿using ecommerce.Models;
 using ecommerce.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,7 @@ namespace ecommerce.Controllers
 		#endregion
 
 		#region Display all cart products
-		//[Authorize]
+		[Authorize]
 		public IActionResult Index()
 		{
 			ApplicationUser user = userManager.Users.Include(user => user.CartProducts)
@@ -85,6 +86,13 @@ namespace ecommerce.Controllers
 				status = false,
 				message = "Expired Coupon"
 			});
+		}
+		#endregion
+
+		#region Add to cart
+		public IActionResult AddToCart()
+		{
+			return Json(true);
 		}
 		#endregion
 	}

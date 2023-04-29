@@ -7,11 +7,11 @@
 
 <!-- CSS Here -->
 @section Links{
-    <link rel="stylesheet" href="/css/User/ChangePassword.css" />
+    <link rel="stylesheet" href="/css/User/UpsertAddress.css" />
 }
 
 <div class="row bachground">
-    <div class="E-martContent">
+    <div class="E-martContent" style="height:650px">
         <h3 class="text-center mb-5" style="color:#F28123">Sign up</h3>
         <form method="post" action="/Account/Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -68,8 +68,9 @@
             <div class="form-group">
                 <input type="submit" value="Sign up" class="E-martButton mb-3 w-100" />
             </div>
-        </form>           
-        <a style="text-decoration: underline" class="text-uppercase mb-4" href="/Account/Login">Already have an Account?</a>
+        </form>
+        <div class="text-uppercase text-white mb-4">Already have an Account? <a style="text-decoration: underline" href="/Account/Login">Sign in.</a></div>
+        
         <div class="hr"></div>
     </div>
 </div>

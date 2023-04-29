@@ -1,0 +1,113 @@
+﻿@model UserProfil_VM
+@{
+    ViewData["Title"] = "Profile";
+}
+@section Links{
+    <link rel="stylesheet" href="/css/User/ChangePassword.css" />
+}
+
+<div class="row bachground">
+    <div class="E-martContent">
+        <h3 class="text-center mb-5" style="color:#F28123">Personal Info</h3>
+        <form method="post" action="/User/UpsertAddress">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row mb-3">
+                <label asp-for="UserName" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="UserName" class="E-martInputText form-control " />
+                        <span class="E-martInputText"></span>
+                    </div>
+                    <span asp-validation-for="UserName" class="text-danger col-8 align-content-end"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label asp-for="Email" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Email" class="E-martInputText form-control" />
+                        <span class="E-martInputText"></span>
+                    </div>
+
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-4">
+                <label asp-for="Phone" class="control-label text-uppercase text-white col-4 mt-2"></label>
+                <div class="col-8">
+                    <div class="E-martInputText">
+                        <input asp-for="Phone" class="E-martInputText form-control" />
+                        <span class="E-martInputText"></span>
+                    </div>
+
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save Changes" class="E-martButton mb-3 w-100" />
+                <div><a asp-action="Update" class="E-martButton w-100">Reset</a></div>
+            </div>
+        </form>
+        <div class="hr"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function DeleteAddress(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/User/DeleteAddress/" + id;
+                }
+            })
+        }
+
+    </script>
+
+}
+
+
+
+
+
+
+<form method="post" action="/User/Update">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group row">
+        <label asp-for="UserName" class="control-label col-lg-2 col-sm-12 mt-1"></label>
+        <div class="col-lg-10 col-sm-12">
+            <input asp-for="UserName" class="form-control" />
+            <span asp-validation-for="UserName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Email" class="control-label col-lg-2 col-sm-12 mt-1"></label>
+        <div class="col-lg-10 col-sm-12">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Phone" class="control-label col-lg-2 col-sm-12 mt-1"></label>
+        <div class="col-lg-10 col-sm-12">
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save Changes" class="bordered-btn black" />
+        <a asp-action="Update" class="bordered-btn black">Reset</a>
+    </div>
+</form>

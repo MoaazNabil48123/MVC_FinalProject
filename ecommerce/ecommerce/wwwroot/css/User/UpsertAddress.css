@@ -8,13 +8,13 @@
 .bachground {
     background: url(../../Image/img1/hero-bg.jpg) no-repeat center;
     background-size: cover;
-    height: 100vh;
+    height: 135vh;
 }
 
 .E-martContent {
     margin: 100px auto;
     padding: 30px 40px 30px 40px;
-    height: 600px;
+    height: 750px;
     width: 680px;
     background: rgba(0, 0, 0,0.38);
     border-radius: 42px;

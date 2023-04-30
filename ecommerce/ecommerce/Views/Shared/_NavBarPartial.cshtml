@@ -53,7 +53,7 @@
                                 </ul>
                             </li>
                 </div>
-                            @if (User.Identity.IsAuthenticated)
+                            @if (!User.Identity.IsAuthenticated)
                             {
                     <div style="display:flex;align-items:center;">
                         <li>
@@ -70,7 +70,7 @@
                             <ul class="sub-menu">
                                 <li><a href="/User/Update"><i class="fa-solid fa-id-card"></i>   Profile</a></li>
                                 <li><a href="/User/ChangePassword"><i class="fa-solid fa-lock"></i>   Change password</a></li>
-                                @*<li><a href="/User/UpsertAddress"><i class="fa-solid fa-location-dot"></i>   Add Address</a></li>*@
+                                            @*<li><a href="/User/UpsertAddress"><i class="fa-solid fa-location-dot"></i>   Add Address</a></li>*@
                                 <hr style="margin:0px" />
                                 <li><a href="/Account/logout" class="text-danger"><i class="fa-solid fa-right-from-bracket"></i>   Log Out</a></li>
                             </ul>

@@ -1,41 +1,65 @@
 ﻿using ecommerce.Models;
 using ecommerce.Repository;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using NuGet.Protocol.Core.Types;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace ecommerce.Controllers
 {
-	public class ProductController : Controller
-	{
-		IRepository<Product> ProductRepo;
-		IRepository<Variation> VariationRepo;
-		IRepository<ProductItem> ProductItemRepo;
-		public ProductController(IRepository<Product> ProductRepo, IRepository<Variation> VariationRepo, IRepository<ProductItem> ProductItemRepo)
-		{
-			this.ProductRepo = ProductRepo;
-			this.VariationRepo = VariationRepo;
-			this.ProductItemRepo = ProductItemRepo;
-		}
+    public class ProductController : Controller
+    {
+        IRepository<Product> ProductRepo;
+        IRepository<Variation> VariationRepo;
+        IRepository<ProductItem> ProductItemRepo;
+        private UserManager<ApplicationUser> userManager;
 
-		public IActionResult Index(int categoryId)
-		{
-            return View(ProductRepo.Get(p => p.CategoryId == categoryId));
-		}
-		public IActionResult Details(int productId)
-		{
-			Product product = ProductRepo.GetById(productId, p => p.Category, p => p.ProductItems);
+        public ProductController(IRepository<Product> ProductRepo,
+            IRepository<Variation> VariationRepo,
+            IRepository<ProductItem> ProductItemRepo,
+            UserManager<ApplicationUser> userManager)
+        {
+            this.ProductRepo = ProductRepo;
+            this.VariationRepo = VariationRepo;
+            this.ProductItemRepo = ProductItemRepo;
+            this.userManager = userManager;
+        }
 
-			//List<Variation> variations =VariationRepo.GetAll(v=>v.CategoryId==product.CategoryId);
-			List<Variation> variationWithOptions =VariationRepo.GetAll(v=>v.VariationOptions);
+        public IActionResult Index(int categoryId)
+        {
+            var x = ProductRepo.GetAll(p => p.ProductItems).Where(p => p.CategoryId == categoryId).ToList();
 
-			//ViewData["variations"] = variations;
-			ViewData["variationWithOptions"] = variationWithOptions;
-
-			List<ProductItem> productItems =ProductItemRepo.GetAll(p=>p.ProductConfigurations);
-			var selectedproductItems =productItems.Where(p=>p.ProductId== productId);
-			ViewData["selectedproductItems"] = selectedproductItems;
+            return View(x);
+        }
+        public IActionResult Details(int productId)
+        {
+            Product product = ProductRepo.GetById(productId, p => p.Category, p => p.ProductItems);
+            if (User.Identity.IsAuthenticated)
+            {
+                ApplicationUser user = userManager.Users.Include(user => user.Products)
+                    .First(user => user.UserName == User.Identity.Name);
+                if (user.Products.Contains(product))
+                {
+                    ViewBag.isAddedToFavorites = true;
+                }
+                else
+                {
+                    ViewBag.isAddedToFavorites = false;
+                }
+            }
+            else
+            {
+                ViewBag.isAddedToFavorites = false;
+            }
+            //List<Variation> variations =VariationRepo.GetAll(v=>v.CategoryId==product.CategoryId);
+            List<Variation> variationWithOptions = VariationRepo.GetAll(v => v.VariationOptions)
+                .Where(variation => variation.CategoryId == product.CategoryId).ToList();
+            //ViewData["variations"] = variations;
+            ViewData["variationWithOptions"] = variationWithOptions;
+            List<ProductItem> productItems = ProductItemRepo.GetAll(p => p.ProductConfigurations);
+            var selectedproductItems = productItems.Where(p => p.ProductId == productId);
+            ViewData["selectedproductItems"] = selectedproductItems;
             return View(product);
-		}
-	}
+        }
+    }
 }

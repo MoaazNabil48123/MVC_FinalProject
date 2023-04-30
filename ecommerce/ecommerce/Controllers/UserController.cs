@@ -222,17 +222,14 @@ public class UserController : Controller
 	#endregion
 
 	#region Add to user favorites
-	public IActionResult AddToFavorites2()
-	{
-		return PartialView();
-	}
-	[Authorize]
+
+	//[Authorize]
 	public async Task<IActionResult> AddToFavorites(int productId)
 	{
-		ApplicationUser? user = userManager.Users.Include(user => user.Products)
-			.FirstOrDefault(user => user.UserName == User.Identity.Name);
 		//ApplicationUser? user = userManager.Users.Include(user => user.Products)
-		//	.FirstOrDefault(user => user.UserName == "moaaz");
+		//	.FirstOrDefault(user => user.UserName == User.Identity.Name);
+		ApplicationUser? user = userManager.Users.Include(user => user.Products)
+			.FirstOrDefault(user => user.UserName == "moaaz");
 		Product product = productRepo.GetById(productId);
 		if (!user.Products.Contains(product))
 		{
@@ -250,15 +247,15 @@ public class UserController : Controller
 	#endregion
 
 	#region Show user favorites
-	[Authorize, Route("/User/Favorites")]
+	[/*Authorize,*/ Route("/User/Favorites")]
 	public async Task<IActionResult> DisplayFavorites()
 	{
-		ApplicationUser user = userManager.Users.Include(user => user.Products)
-			.ThenInclude(product => product.ProductItems)
-			.First(user => user.UserName == User.Identity.Name);
 		//ApplicationUser user = userManager.Users.Include(user => user.Products)
 		//	.ThenInclude(product => product.ProductItems)
-		//	.First(user => user.UserName == "moaaz");
+		//	.First(user => user.UserName == User.Identity.Name);
+		ApplicationUser user = userManager.Users.Include(user => user.Products)
+			.ThenInclude(product => product.ProductItems)
+			.First(user => user.UserName == "moaaz");
 		return View(user.Products);
 	}
 	#endregion

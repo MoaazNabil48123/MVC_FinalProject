@@ -1,216 +1,193 @@
 ﻿@model Product
 @{
-    ViewData["Title"] = "Details";
-    Layout = "_MyLayout";
+    ViewData["Title"] = $"{Model.Name} Details";
 }
 
 @section Links{
-    <link rel="stylesheet" href="~/css/css_Shop/style.css" />
-    <link rel="stylesheet" href="~/css/css_Shop/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/css_Shop/fontawesome-all.min.css" />
-   <link rel="stylesheet" href="~/css/css_Shop/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/css/css_Shop/flaticon.css">
-    <link rel="stylesheet" href="~/css/css_Shop/slicknav.css">
-    <link rel="stylesheet" href="~/css/css_Shop/animate.min.css">
-    <link rel="stylesheet" href="~/css/css_Shop/magnific-popup.css">
-    <link rel="stylesheet" href="~/css/css_Shop/themify-icons.css">
-    <link rel="stylesheet" href="~/css/css_Shop/slick.css">
-    <link rel="stylesheet" href="~/css/css_Shop/nice-select.css">
-
-
-
-
-
-  @*  <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">*@
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="~/css/style.css" rel="stylesheet">
-
-
-
-
 }
-    <!-- Hero Area Start-->
-   <div class="slider-area ">
-        <div class="single-slider slider-height2 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap text-center">
-                            <h2>Emart Shop</h2>
-                        </div>
-                    </div>
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Secure & Reliable</p>
+                    <h1>@Model.Name Details</h1>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Hero Area End-->
-
-
-
-
-
-
-
+</div>
+<!-- end breadcrumb section -->
 <!-- Shop Detail Start -->
-<div class="container-fluid pb-5">
-    <div class="row px-xl-5">
-        <div class="col-lg-5 mb-30" style="justify-content: center">
+<div class="container-fluid pb-5" style="padding-top:100px; padding-bottom:135px">
+    <div class="row px-xl-5 justify-content-center">
+        <div class="col-lg-4 mb-30" style="justify-content: center">
             <div id="product-carousel" class="carousel slide" data-ride="carousel" style="justify-content: center">
-                <div class="carousel-inner bg-light" style="justify-content: center">
-                    
-                        
-                        <div class="carousel-item active" >
-                            <img class="w-20 h-20" src="@Model.Image" alt="Image" style="justify-content: center">
+                <div class="carousel-inner bg-light d-flex justify-content-center" style="justify-content: center">
+                    <div >
+                        <img src="@Model.Image" alt="Image" style="max-height:450px; max-width:100%">
                     </div>
-                    
-                   
                 </div>
-           
             </div>
         </div>
+        <div class="col-lg-6 h-auto mb-30">
+            <div class="h-100 bg-light p-30 d-flex flex-column justify-content-between">
+                <div>
+                    <h3>@Model.Name :</h3>@*Name*@
+                    <h5 class="mb-3 ">@Model.Description</h5>@*Description*@
+                    <div class=" mb-3">
+                        @*Price*@
+                        <h4 class="m-0" style="display:inline-block; color:#F28123">Price: $</h4>
+                        <h4 id="price" style="display:inline-block; color:#F28123">@Model.ProductItems[0].Price</h4>
+                    </div>
+                    @{
+                        int j = 0;
+                    }
+                    @foreach (Variation variation in ViewBag.variationWithOptions)
+                    {
+                        int i = 0;
+                        j++;
+                        <div class="d-flex flex-column" id="var">
+                            <strong class="text-dark mr-3" for="flexRadioDefault1">@variation.Name :</strong>@*VariationName*@
+                            <form>
+                                <div class="custom-control custom-radio d-flex align-items-center">
 
-        <div class="col-lg-7 h-auto mb-30">
-            <div class="h-100 bg-light p-30">
-                <h3>@Model.Name</h3>
-               
-                <div >
-                    <h3 class="text-dark mr-3" style="display: inline-block">
-                        Price: $
-                    </h3>
-                    <h3 class="font-weight-semi-bold mb-4" id="price" style="display: inline-block">@Model.ProductItems[0].Price</h3>
-                </div>
-                <p class="mb-4">
-                    @Model.Description
-                </p>
+                                    @foreach (VariationOptions x in variation.VariationOptions)
+                                    {
+                                        if (i == 0)
+                                        {
+                                            <input class="ms-3 me-1" type="radio" name="flexRadioDefault+@j" id="flexRadioDefault1" checked value="@x.Id" onclick="GetPrice()">
 
-                @{
-                    int j = 0;
-                }
-                @foreach (Variation variation in ViewBag.variationWithOptions)
-                {
-                    j++;
-                    <div class="d-flex mb-@j+2" id="var">
-                        <strong class="text-dark mr-3" for="flexRadioDefault1">
-
-                            @variation.Name
-
-
-                        </strong>
-                        <form>
-
-                        <div class="custom-control custom-radio ">
-                        @foreach (VariationOptions x in variation.VariationOptions)
-                        {
-                                    <span style="width:30px; display: inline-block;"></span>
-                            <input class="form-check-input" type="radio" name="flexRadioDefault+@j" id="flexRadioDefault1" value="@x.Id" onclick="GetPrice()">
-                            <label class="form-check-label" for="flexRadioDefault1">
-
-                                @x.Value
-
-                            </label>
-                                                }
+                                        }
+                                        else
+                                        {
+                                            <input class="ms-3 me-1" type="radio" name="flexRadioDefault+@j" id="flexRadioDefault1" value="@x.Id" onclick="GetPrice()">
+                                        }
+                                        <label class="form-check-label" for="flexRadioDefault1">@x.Value</label>
+                                        i++;
+                                    }
+                                </div>
+                            </form>
                         </div>
-                        </form>
-                    </div>
-                }
-                <p id="modelId" hidden>@Model.Id</p>
-             
-                <div class="d-flex align-items-center mb-4 pt-2">
-                    <div class="input-group quantity mr-3" style="width: 130px;">
-                      
-                        <span class="input-group-text bg-primary text-white border-0 fw-semibold"
-                              id="inputGroup-sizing-default">
-                            Count
-                        </span>
-                        <input type="number" value="1" class="form-control text-end" min="0" id="counter" />
 
-                    
-                    </div>
-                    <button class="btn btn-primary px-3">
-                        <i class="fa fa-shopping-cart mr-1"></i> Add To
-                        Cart
-                    </button>
-                    <button class="btn btn-primary px-3" asp-action="Index?@Model.CategoryId">
-                        <i class="fa fa-shopping-cart mr-1" ></i> Back To Home
-                    </button>
+                    }
+                    <p id="modelId" hidden>@Model.Id</p>
                 </div>
-              
+                @*Buttons*@
+                <div class="mt-4">
+                    @*                    <div class="input-group quantity mr-3" style="width: 130px;">
+                    <span class="input-group-text bg-primary text-white border-0 fw-semibold"
+                    id="inputGroup-sizing-default">Count</span>
+                    <input type="number" value="1" class="form-control text-end" min="0" id="counter" />
+                    </div>*@
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        @if (ViewBag.isAddedToFavorites)
+                        {
+                            <a class="bordered-btn black me-3 rounded-0 text-decoration-none" onclick="AddToFavorites(@Model.Id)" id="AddToFavoritesAnchor">
+                                <i class="fa-solid fa-heart"></i> Added to favorites
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="bordered-btn black me-3 rounded-0 text-decoration-none" onclick="AddToFavorites(@Model.Id)" id="AddToFavoritesAnchor">
+                                <i class="fa-regular fa-heart"></i> Add to favorites
+                            </a>
+                        }
+                    }
+                    else
+                    {
+                        <a class="bordered-btn black me-3 rounded-0 text-decoration-none" onclick="AddToFavorites(@Model.Id)" id="AddToFavoritesAnchor">
+                            <i class="fa-regular fa-heart"></i> Add to favorites
+                        </a>
+                    }
+
+
+                    <a class="bordered-btn black me-3 rounded-0 text-decoration-none" onclick="AddToCart(@Model.Id)" id="AddToCartAnchor">
+                        <i class="fa fa-shopping-cart mr-1"></i> Add To Cart
+                    </a>
+                    <a class="bordered-btn black rounded-0 text-decoration-none" asp-action="Index" asp-route-CategoryId="@Model.CategoryId">
+                        <i class="fa fa-shopping-cart mr-1"></i> Back To Shop
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
-  
+
 </div>
 <!-- Shop Detail End -->
-
-
-
-
-
-
-
-
-
-
-
 @section Scripts{
-
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-   
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="~/easing/easing.min.js"></script>
     <script src="~/js/owl.carousel.min.js"></script>
-
     <script src="~/js/main.js"></script>
-
-   
     <script>
-
-        function GetPrice() {
+        function AddToFavorites(id) {
+            $.ajax({
+                url: "/User/AddToFavorites?productId=" + id,
+                type: "POST",
+                success: function (response) {
+                    if (response) {
+                        document.getElementById('AddToFavoritesAnchor').innerHTML = '<i class="fa-solid fa-heart" ></i> Remove from favorites';
+                    }
+                    else {
+                        document.getElementById('AddToFavoritesAnchor').innerHTML = '<i class="fa-regular fa-heart"></i> Add to favorites';
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+        function AddToCart(productId) {
             let elements = document.querySelectorAll("#flexRadioDefault1");
-            console.log(elements);
-         
             let selected = [];
             for (const element of elements) {
                 if (element.checked) {
                     selected.push(element.value);
                 }
             }
-            console.log(selected)
-            let nos = document.querySelectorAll("#var").length
-            console.log(nos)
-            if(selected.length==nos){
-                GetPriceAjax(selected);
-            }
-           
-           return selected;
-           
-
+            $.ajax({
+                url: "/Cart/AddToCart",
+                type: "POST",
+                data: {
+                    variationOptions: selected,
+                    productId: productId
+                },
+                success: function (response) {
+                    if (response) {
+                        document.getElementById('AddToCartAnchor').innerHTML = '<i class="fa fa-shopping-cart mr-1"></i> Remove from Cart';
+                    }
+                    else {
+                        document.getElementById('AddToCartAnchor').innerHTML = '<i class="fa fa-shopping-cart mr-1"></i> Add To Cart';
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    console.log(xhr.responseText);
+                }
+            });
         }
         
-    </script>
-    <script>
+        function GetPrice() {
+            let elements = document.querySelectorAll("#flexRadioDefault1");
+            let selected = [];
+            for (const element of elements) {
+                if (element.checked) {
+                    selected.push(element.value);
+                }
+            }
+            GetPriceAjax(selected);
+            return selected;
+        }
 
         function GetPriceAjax(selected) {
-            ;
-
-           
-
             var productId = parseInt(document.getElementById("modelId").innerText)
             $.ajax({
                 url: "/ProductItem/GetProductItem",
@@ -229,13 +206,30 @@
                 }
             });
         }
-        
+
     </script>
 
-
-  
-
-
-
-
 }
+
+
+
+
+
+
+@*                            function GetPrice() {
+            let elements = document.querySelectorAll("#flexRadioDefault1");
+            //console.log(elements);
+            let selected = [];
+            for (const element of elements) {
+                if (element.checked) {
+                    selected.push(element.value);
+                }
+            }
+            //console.log(selected)
+            //let nos = document.querySelectorAll("#var").length
+            //console.log(nos)
+            //if (selected.length == nos) {
+            //}
+            GetPriceAjax(selected);
+            return selected;
+        }*@

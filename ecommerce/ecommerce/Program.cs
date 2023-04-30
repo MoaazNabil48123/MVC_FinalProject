@@ -42,6 +42,7 @@ public class Program
         builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
         builder.Services.AddScoped<IRepository<Variation>, Repository<Variation>>();
         builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
+        builder.Services.AddScoped<IRepository<Models.Review>, Repository<Models.Review>>();
 
 
         // auth for register and login

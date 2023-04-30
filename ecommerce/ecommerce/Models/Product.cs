@@ -15,4 +15,6 @@ public class Product
 	public Category? Category { get; set; }
 	public List<ProductItem>? ProductItems { get; set; } = new List<ProductItem>();
 	public List<ApplicationUser>? ApplicationUsers { get; set; } = new List<ApplicationUser>();
+
+	public List<Review> Reviews { get; set; }= new List<Review>();
 }

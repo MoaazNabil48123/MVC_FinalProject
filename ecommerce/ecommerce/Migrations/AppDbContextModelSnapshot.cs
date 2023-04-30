@@ -4249,19 +4249,19 @@ namespace ecommerce.Migrations
                         {
                             Id = 1,
                             Name = "Regular",
-                            Price = 20f
+                            Price = 10f
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Express",
-                            Price = 50f
+                            Name = "Fast",
+                            Price = 20f
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Free",
-                            Price = 0f
+                            Name = "Express",
+                            Price = 50f
                         });
                 });
 

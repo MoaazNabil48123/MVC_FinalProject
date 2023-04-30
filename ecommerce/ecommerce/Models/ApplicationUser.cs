@@ -12,6 +12,8 @@ namespace ecommerce.Models
         public List<ShopOrder> ShopOrders { get; set; } = new List<ShopOrder>();
         public List<Product> Products { get; set; } = new List<Product>();//to add the favorites of the user
 
+        public List<Review> Reviews { get; set; } = new List<Review>();
+
 	}
 }
  

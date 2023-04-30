@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\1-iTi-\\19- Back End\\Project\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amr Elsaid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "D:\\__ITI\\ASP.NET\\FINAL\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {}
-  },
-  "projects": {
-    "D:\\__ITI\\ASP.NET\\FINAL\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\__ITI\\ASP.NET\\FINAL\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
-        "projectName": "ecommerce",
-        "projectPath": "D:\\__ITI\\ASP.NET\\FINAL\\MVC_FinalProject\\ecommerce\\ecommerce\\ecommerce.csproj",
-        "packagesPath": "C:\\Users\\mahmo\\.nuget\\packages\\",
-        "outputPath": "D:\\__ITI\\ASP.NET\\FINAL\\MVC_FinalProject\\ecommerce\\ecommerce\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\mahmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 0895d4758eefa0d2850e3f40ea1cb281095ec3d4
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

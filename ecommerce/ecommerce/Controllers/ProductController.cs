@@ -2,6 +2,7 @@
 using ecommerce.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol.Core.Types;
 
 namespace ecommerce.Controllers
 {
@@ -17,10 +18,9 @@ namespace ecommerce.Controllers
 			this.ProductItemRepo = ProductItemRepo;
 		}
 
-		[Authorize]
 		public IActionResult Index(int categoryId)
 		{
-            return View(ProductRepo.GetAll(p => p.CategoryId == categoryId));
+            return View(ProductRepo.Get(p => p.CategoryId == categoryId));
 		}
 		public IActionResult Details(int productId)
 		{

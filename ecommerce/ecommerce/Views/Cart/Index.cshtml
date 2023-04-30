@@ -131,7 +131,7 @@
 					@if (Model.Count > 0)
 					{
 						<div class="cart-buttons">
-							<a href="/Home/Checkout" class="bordered-btn black">Check Out</a>
+							<a href="/order/Checkout" onclick="setFinalPrice()" class="bordered-btn black">Check Out</a>
 						</div>
 					}
 				</div>
@@ -171,9 +171,11 @@
 				cartSubTotal = cartSubTotal + parseFloat(x.innerText);
 			}
 			document.getElementById('cartSubTotal').innerText = cartSubTotal;
-			//change coupon reduction
+			////change coupon reduction
 			var div = document.getElementById('couponReductionDiv');
-			div.innerText =- parseFloat(cartSubTotal) * parseFloat(div.dataset.reduction);
+			if (div.dataset.reduction != "") {
+				div.innerText = - parseFloat(cartSubTotal) * parseFloat(div.dataset.reduction);
+			}
 			//change the total price of the cart
 			document.getElementById('cartTotal').innerText = cartSubTotal -
 				parseFloat(document.getElementById('couponReductionDiv').innerText);
@@ -194,8 +196,12 @@
 
 		}
 		function ApplyCoupon() {
+
 			//get coupon value
 			var couponName = document.getElementById("couponName").value;
+            if (couponName == "") {
+                return;
+            }
 			//get div where the message will be typed in
 			var couponTextDiv = document.getElementById("couponTextDiv");
 			//get div where the reduction of the coupon will be typed in
@@ -228,9 +234,16 @@
 					console.log(xhr.responseText);
 				}
 			});
+			
 
 
 
+		}
+		function setFinalPrice(){
+			var couponName = document.getElementById('couponName').value;
+			console.log(couponName);
+			return;
+			window.location.href = "/order/checkout?couponName=" + couponName;
 
 		}
 

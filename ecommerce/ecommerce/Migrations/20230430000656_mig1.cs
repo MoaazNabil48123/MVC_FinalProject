@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ecommerce.Migrations
 {
     /// <inheritdoc />
-    public partial class Mig : Migration
+    public partial class mig1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -149,7 +149,7 @@ namespace ecommerce.Migrations
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -170,7 +170,7 @@ namespace ecommerce.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -190,7 +190,7 @@ namespace ecommerce.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,13 +208,13 @@ namespace ecommerce.Migrations
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_AspNetUserRoles_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -234,7 +234,7 @@ namespace ecommerce.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -246,6 +246,7 @@ namespace ecommerce.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Star = table.Column<int>(type: "int", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -256,7 +257,7 @@ namespace ecommerce.Migrations
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -276,7 +277,7 @@ namespace ecommerce.Migrations
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -294,7 +295,7 @@ namespace ecommerce.Migrations
                     Postal_Code = table.Column<int>(type: "int", nullable: false),
                     IsDefault = table.Column<bool>(type: "bit", nullable: false),
                     Country_Id = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -303,14 +304,13 @@ namespace ecommerce.Migrations
                         name: "FK_Addresses_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Addresses_Countries_Country_Id",
                         column: x => x.Country_Id,
                         principalTable: "Countries",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -334,13 +334,13 @@ namespace ecommerce.Migrations
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_PaymentMethods_PaymentTypes_PaymentTypeId",
                         column: x => x.PaymentTypeId,
                         principalTable: "PaymentTypes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -358,13 +358,13 @@ namespace ecommerce.Migrations
                         column: x => x.ApplicationUsersId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_ApplicationUserProduct_Products_ProductsId",
                         column: x => x.ProductsId,
                         principalTable: "Products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -387,7 +387,7 @@ namespace ecommerce.Migrations
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -407,7 +407,7 @@ namespace ecommerce.Migrations
                         column: x => x.VariationId,
                         principalTable: "Variations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -433,7 +433,7 @@ namespace ecommerce.Migrations
                         column: x => x.ShippingAddressId,
                         principalTable: "Addresses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_ShopOrders_AspNetUsers_UserId",
                         column: x => x.UserId,
@@ -445,13 +445,13 @@ namespace ecommerce.Migrations
                         column: x => x.OrderStatusId,
                         principalTable: "OrderStatus",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_ShopOrders_ShippingMethods_ShippingMethodId",
                         column: x => x.ShippingMethodId,
                         principalTable: "ShippingMethods",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -472,13 +472,13 @@ namespace ecommerce.Migrations
                         column: x => x.ApplicationUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_CartProducts_ProductItems_ProductItemId",
                         column: x => x.ProductItemId,
                         principalTable: "ProductItems",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -496,7 +496,7 @@ namespace ecommerce.Migrations
                         column: x => x.ProductItemId,
                         principalTable: "ProductItems",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_ProductConfigurations_VariationOptions_VariationOptionsId",
                         column: x => x.VariationOptionsId,
@@ -524,13 +524,13 @@ namespace ecommerce.Migrations
                         column: x => x.ProductItemId,
                         principalTable: "ProductItems",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_OrderLines_ShopOrders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "ShopOrders",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.InsertData(
@@ -538,9 +538,14 @@ namespace ecommerce.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { 1, "Tshirt" },
-                    { 2, "Shoes" },
-                    { 3, "Phone" }
+                    { 1, "T-shirt" },
+                    { 2, "trousers " },
+                    { 3, "Shoes" },
+                    { 4, "Socks" },
+                    { 5, "Watch" },
+                    { 6, "Shirt" },
+                    { 7, "Washer" },
+                    { 8, "Fryer" }
                 });
 
             migrationBuilder.InsertData(
@@ -779,39 +784,46 @@ namespace ecommerce.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "CategoryId", "Description", "Image", "Name" },
+                columns: new[] { "Id", "CategoryId", "Description", "Image", "Name", "Star" },
                 values: new object[,]
                 {
-                    { 1, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 2, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 3, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 4, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 5, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 6, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 7, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 8, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 9, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 10, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 11, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 12, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 13, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 14, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 15, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 16, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 17, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 18, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 19, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 20, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 21, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 22, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 23, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 24, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 25, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 26, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 27, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 28, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" },
-                    { 29, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle" },
-                    { 30, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight" }
+                    { 1, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle", 5 },
+                    { 2, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight", 4 },
+                    { 3, 1, "Hero Basic mens Round Neck Undershirt", "/Image/Products/3.jpg", "Hero Basic", 4 },
+                    { 4, 1, "Romba Men's Summer Text Sleeve Cotton T Shirt", "/Image/Products/4.jpg", "Romba", 5 },
+                    { 5, 1, "Andora Mens 33S22M30333 T-Shirt", "/Image/Products/5.jpg", "Andora", 4 },
+                    { 6, 1, "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves", "/Image/Products/6.jpg", "CAESAR", 4 },
+                    { 7, 1, "Nexus Original Cotton T-Shirt", "/Image/Products/7.jpg", "Nexus", 5 },
+                    { 8, 1, "Ravin EG Mens Ravin Chest Printed Cotton T-Shirt For Men S22M048 T-Shirt", "/Image/Products/8.jpg", "Ravin EG", 4 },
+                    { 9, 1, "CAESAR Mens Mens Printed Round Neck T-Shirt T-Shirt", "/Image/Products/9.jpg", "CAESAR", 4 },
+                    { 10, 1, "adidas Mens Train Essentials Seasonal Logo Training T-Shirt TRAINING T-SHIRTS for Men T-Shirt", "/Image/Products/10.jpg", "adidas", 5 },
+                    { 11, 1, "Adidas linear beach-bit short sleeve graphic t-shirt t-shirts for men", "/Image/Products/11.jpg", "adidas", 4 },
+                    { 12, 1, "BlackEdition Over size snake T-shirt", "/Image/Products/12.jpg", "Generic", 4 },
+                    { 13, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle", 5 },
+                    { 14, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight", 4 },
+                    { 15, 1, "Hero Basic mens Round Neck Undershirt", "/Image/Products/3.jpg", "Hero Basic", 4 },
+                    { 16, 1, "Romba Men's Summer Text Sleeve Cotton T Shirt", "/Image/Products/4.jpg", "Romba", 5 },
+                    { 17, 1, "Andora Mens 33S22M30333 T-Shirt", "/Image/Products/5.jpg", "Andora", 4 },
+                    { 18, 1, "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves", "/Image/Products/6.jpg", "CAESAR", 4 },
+                    { 19, 1, "Nexus Original Cotton T-Shirt", "/Image/Products/7.jpg", "Nexus", 5 },
+                    { 20, 1, "Ravin EG Mens Ravin Chest Printed Cotton T-Shirt For Men S22M048 T-Shirt", "/Image/Products/8.jpg", "Ravin EG", 4 },
+                    { 21, 1, "CAESAR Mens Mens Printed Round Neck T-Shirt T-Shirt", "/Image/Products/9.jpg", "CAESAR", 4 },
+                    { 22, 1, "adidas Mens Train Essentials Seasonal Logo Training T-Shirt TRAINING T-SHIRTS for Men T-Shirt", "/Image/Products/10.jpg", "adidas", 5 },
+                    { 23, 1, "Adidas linear beach-bit short sleeve graphic t-shirt t-shirts for men", "/Image/Products/11.jpg", "adidas", 4 },
+                    { 24, 1, "BlackEdition Over size snake T-shirt", "/Image/Products/12.jpg", "Generic", 4 },
+                    { 25, 1, "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt", "/Image/Products/1.jpg", "American Eagle", 5 },
+                    { 26, 1, "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top", "/Image/Products/2.jpg", "Knight", 4 },
+                    { 27, 1, "Hero Basic mens Round Neck Undershirt", "/Image/Products/3.jpg", "Hero Basic", 4 },
+                    { 28, 1, "Romba Men's Summer Text Sleeve Cotton T Shirt", "/Image/Products/4.jpg", "Romba", 5 },
+                    { 29, 1, "Andora Mens 33S22M30333 T-Shirt", "/Image/Products/5.jpg", "Andora", 4 },
+                    { 30, 1, "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves", "/Image/Products/6.jpg", "CAESAR", 4 },
+                    { 31, 2, "HIGH QUALITY Classic-fit Men's Pants for Gentleman", "/Image/Products/13.jpg", "BLACK TIGER", 5 },
+                    { 32, 3, "Mintra CAI Women Shoes", "/Image/Products/14.jpg", "Mintra", 4 },
+                    { 33, 4, "STITCH mens Pack of 5 Lycra Ankle Socks", "/Image/Products/15.jpg", "STITCH", 4 },
+                    { 34, 5, "SEIKO QUARTZ Metal Band Analg Watch for Men BLUE Dial SUR399P1", "/Image/Products/16.jpg", "SEIKO", 5 },
+                    { 35, 6, "Jamila Women Stripped oversized shirt with two pockets", "/Image/Products/17.jpg", "Jamila", 4 },
+                    { 36, 7, "Toshiba - Washing Machine - 8kg - Silver - Inverter - 1400rpm - TW-BJ90M4E(SK)", "/Image/Products/18.jpg", "Toshiba - Washing Machine", 4 },
+                    { 37, 8, "Nutricook AF357V AIR FRYER 3 VISION 5.7L 1700W Black clear window - International warranty", "/Image/Products/19.jpg", "Nutricook AF357V AIR FRYER", 5 }
                 });
 
             migrationBuilder.InsertData(

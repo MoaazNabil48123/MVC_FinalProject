@@ -14,7 +14,7 @@ namespace ecommerce.ViewModel
         public int AddressId { get; set; }
         public string UserId { get; set; }
         public string AppUserEmail { get; set; }
-
+        public float Reduction { get; set; }    
         public float subTotal { get; set; }
         public string AppUserName { get; set; } 
 

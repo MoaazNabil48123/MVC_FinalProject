@@ -8,6 +8,7 @@ public class Product
 	public string Name { get; set; } = string.Empty;
 	public string Description { get; set; } = string.Empty;
 	public string Image { get; set; } = string.Empty;
+	public int Star { get; set; }
 	[ForeignKey(nameof(Category))]
 	public int CategoryId { get; set; }
 	//Navigational Properties

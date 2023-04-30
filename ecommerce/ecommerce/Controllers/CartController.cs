@@ -63,6 +63,10 @@ namespace ecommerce.Controllers
 		#region Check Coupon
 		public IActionResult CheckCoupon(string couponName)
 		{
+			if(couponName is null)
+			{
+				return Json(false);
+			}
 			Coupon coupon = couponRepo.Get(coupon => coupon.Name == couponName.Normalize()).FirstOrDefault();
 			if (coupon is null)
 			{

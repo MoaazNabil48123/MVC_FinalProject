@@ -36,7 +36,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
 
-		optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
+		optionsBuilder.UseSqlServer("Server=.; Database=Ecommerce; Trusted_Connection=true; Encrypt=false; MultipleActiveResultSets=True");
 
 	}
 
@@ -83,9 +83,10 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 					Name = worksheet.Cells[row, 2].Value.ToString(),
 					Description = worksheet.Cells[row, 3].Value.ToString(),
 					Image = worksheet.Cells[row, 4].Value.ToString(),
-					CategoryId = int.Parse(worksheet.Cells[row, 5].Value.ToString())
+					CategoryId = int.Parse(worksheet.Cells[row, 5].Value.ToString()),
+                    Star = int.Parse(worksheet.Cells[row, 6].Value.ToString()),
 
-				};
+                };
 				productList.Add(entity);
 			}
 			modelBuilder.Entity<Product>().HasData(productList);

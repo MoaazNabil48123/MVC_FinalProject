@@ -1,7 +1,13 @@
-﻿
+﻿@using ecommerce.ViewModel;
+@using Microsoft.Extensions.Options;
+@inject IOptions<StripeSettings> stripe;
+@model OrderViewModel
 @{
-    ViewData["Title"] = "Checkout";
+	ViewData["Title"] = "CheckOut";
+	float subTotal = 0;
+	Model.subTotal = subTotal;
 }
+
 
 <!-- breadcrumb-section -->
 <div class="breadcrumb-section breadcrumb-bg">
@@ -36,13 +42,74 @@
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
 								<div class="card-body">
 									<div class="billing-address-form">
-										<form action="index.html">
-											<p><input type="text" placeholder="Name"></p>
-											<p><input type="email" placeholder="Email"></p>
-											<p><input type="text" placeholder="Address"></p>
-											<p><input type="tel" placeholder="Phone"></p>
-											<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-										</form>
+										@if (Model.Addresses.Count > 0)
+										{
+											int i = 0;
+											foreach (var item in Model.Addresses)
+											{
+												i++;
+												<div class="d-flex">
+													<input type="radio"
+												   asp-for="AddressId"
+												   value="@item.Id" />
+
+													<div class="card">
+														<div class="card-body">
+															<div class="bg-light p-30">
+																<div class="row">
+																	<div class="col-md-6 form-group">
+																		<label>First Name: </label>
+																		<label>@Model.User.UserName</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Last Name: </label>
+																		<label>@Model.User.UserName</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>E-mail: </label>
+																		<label>@Model.User.Email</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Mobile No.: </label>
+																		<label>@Model.User.PhoneNumber</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Address Line 1: </label>
+																		<label>@item.Address_line1</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Address Line 2: </label>
+																		<label>@item.Address_line2</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Country: </label>
+																		<label>@item.Country.Country_Name</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>City: </label>
+																		<label>@item.City</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Region: </label>
+																		<label>@item.Region</label>
+																	</div>
+																	<div class="col-md-6 form-group">
+																		<label>Postal Code: </label>
+																		<label>@item.Postal_Code</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											}
+
+										}
+										else
+										{
+											<h6 class="mb-3 text-danger">You Don't have Any Addresses.</h6>
+
+										}
 									</div>
 								</div>
 							</div>

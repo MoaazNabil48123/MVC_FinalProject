@@ -56,7 +56,7 @@ namespace ecommerce.Controllers
             review.UserId = appUser.Id;
             review.CreatedOn = DateTime.Now;
             ReviewRepo.Add(review);
-            return RedirectToAction("Details", productId);
+            return RedirectToAction("Details", new { productId = productId });
 
         }
     }

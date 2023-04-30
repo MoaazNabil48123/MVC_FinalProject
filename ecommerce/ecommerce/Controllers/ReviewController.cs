@@ -3,6 +3,7 @@ using ecommerce.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace ecommerce.Controllers
 {
@@ -23,16 +24,16 @@ namespace ecommerce.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> AddReview(int productId,string comment)
+        public async Task<IActionResult> AddReview(int productId,string Comment)
         {
-           ApplicationUser appUser = await UserManager.FindByNameAsync(User.Identity.Name);
+            ApplicationUser appUser = await UserManager.FindByNameAsync(User.Identity.Name);
             Review review = new Review();
-            review.Comment = comment;
+            review.Comment = Comment;
             review.ProductId = productId;
-            review.UserId =appUser.Id;
-            review.CreatedOn= DateTime.Now;
+            review.UserId = appUser.Id;
+            review.CreatedOn = DateTime.Now;
             ReviewRepo.Add(review);
-            return View($"~/Views/Product/Details?productId={productId}");
+            return RedirectToAction("Details","Product", new { productId = productId });
 
         }
     }

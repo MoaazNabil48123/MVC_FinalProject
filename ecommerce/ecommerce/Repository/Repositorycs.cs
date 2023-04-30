@@ -58,7 +58,7 @@ public class Repository<T> : IRepository<T> where T : class
         {
             query = query.Include(include);
         }
-        return query.ToList().First(r => (int)r.GetType().GetProperty("ID").GetValue(r) == id);
+        return query.ToList().First(r => (int)r.GetType().GetProperty("Id").GetValue(r) == id);
     }
 
     public void Update(T element)

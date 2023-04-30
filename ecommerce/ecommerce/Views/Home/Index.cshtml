@@ -3,111 +3,111 @@
     ViewData["Title"] = "Home Page";
 }
 @section Links{
-	<link rel="stylesheet" href="~/css/css_Shop/style.css" />
+    <link rel="stylesheet" href="~/css/css_Shop/style.css" />
 }
 
 <!-- Text area Start-->
 <div class="hero-area hero-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-9 offset-lg-2 text-center">
-				<div class="hero-text">
-					<div class="hero-text-tablecell">
-						<p class="subtitle">Secure & Reliable</p>
-						<h1>The next generation of Ecommerce</h1>
-						<div class="hero-btns">
-							<a href="/Account/login" class="boxed-btn">Sign In</a>
-							<a href="contact.html" class="bordered-btn">Contact Us</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center">
+                <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                        <p class="subtitle">Secure & Reliable</p>
+                        <h1>The next generation of Ecommerce</h1>
+                        <div class="hero-btns">
+                            <a href="/Account/login" class="boxed-btn">Sign In</a>
+                            <a href="contact.html" class="bordered-btn">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Text area End -->
 <!-- features section Start-->
-<div class="list-section pt-80 pb-80">
-	<div class="container">
+<div class=" pt-80 pb-80">
+    <div class="container">
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<div class="list-box d-flex align-items-center">
-					<div class="list-icon">
-						<i class="fas fa-shipping-fast"></i>
-					</div>
-					<div class="content">
-						<h3>Free Shipping</h3>
-						<p>When order over $75</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-				<div class="list-box d-flex align-items-center">
-					<div class="list-icon">
-						<i class="fas fa-phone-volume"></i>
-					</div>
-					<div class="content">
-						<h3>24/7 Support</h3>
-						<p>Get support all day</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="list-box d-flex justify-content-start align-items-center">
-					<div class="list-icon">
-						<i class="fas fa-sync"></i>
-					</div>
-					<div class="content">
-						<h3>Refund</h3>
-						<p>Get refund within 3 days!</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="list-box d-flex align-items-center">
+                    <div class="list-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Free Shipping</h3>
+                        <p>When order over $75</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="list-box d-flex align-items-center">
+                    <div class="list-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="content">
+                        <h3>24/7 Support</h3>
+                        <p>Get support all day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="list-box d-flex justify-content-start align-items-center">
+                    <div class="list-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Refund</h3>
+                        <p>Get refund within 3 days!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	</div>
+    </div>
 </div>
 <!-- features section End-->
 <!-- Category section Start-->
-<div class="product-section mt-150 mb-150">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 offset-lg-2 text-center">
-				<div class="section-title">
-					<h3><span class="orange-text">Select</span> a Category</h3>
-				</div>
-			</div>
-		</div>
+<div class="product-section bg-light" style="padding-top:50px;padding-bottom:50px; background-color:#f5f5f5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="mb-5 section-title">
+                    <h3><span class="orange-text">Select</span> a Category</h3>
+                </div>
+            </div>
+        </div>
 
-		<section class="popular-items latest-padding">
-			<div class="'container">
-				<div class="tab-content" id="nav-tabContent">
-					<!-- card -->
-					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-						<div class="row">
-							@foreach (Category category in Model)
-							{
-								<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-									<div class="single-popular-items mb-50 text-center">
-										<div class="popular-img">
-											<img style="height:400px" src="/Image/Products/1.jpg" alt="">
-											@*<img style="height:400px" src="@category.Products[0].Image" alt="">*@
-											<div class="img-cap">
-												<span>Show Products</span>
-											</div>
-										</div>
-										<div class="popular-caption">
-											<h3><a href="/Product/Index?categoryId=@category.Id">@category.Name</a></h3>
-										</div>
-									</div>
-								</div>
-							}
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+        <section class="popular-items latest-padding" style="padding-top:0px;padding-bottom:0px">
+            <div class="'container px-5">
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- card -->
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row">
+                            @foreach (Category category in Model)
+                            {
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                                    <div class="single-popular-items mb-50 text-center">
+                                        <div class="popular-img">
+                                            @*<img style="height:400px" src="/Image/Products/1.jpg" alt="">*@
+                                            <img style="height:300px" src="@category.Products[0].Image" alt="">
+                                            <div class="img-cap">
+                                                <span>Show Products</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular-caption">
+                                            <h3><a href="/Product/Index?categoryId=@category.Id">@category.Name</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 <!-- Category section End -->

@@ -12,8 +12,8 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230429231220_SeedingProductStars")]
-    partial class SeedingProductStars
+    [Migration("20230430000656_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -213,7 +213,6 @@ namespace ecommerce.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -337,17 +336,42 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Tshirt"
+                            Name = "T-shirt"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Shoes"
+                            Name = "trousers "
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Phone"
+                            Name = "Shoes"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Socks"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Watch"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Shirt"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Washer"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Fryer"
                         });
                 });
 
@@ -1561,90 +1585,90 @@ namespace ecommerce.Migrations
                         {
                             Id = 3,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Hero Basic mens Round Neck Undershirt",
+                            Image = "/Image/Products/3.jpg",
+                            Name = "Hero Basic",
                             Star = 4
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "Romba Men's Summer Text Sleeve Cotton T Shirt",
+                            Image = "/Image/Products/4.jpg",
+                            Name = "Romba",
                             Star = 5
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Andora Mens 33S22M30333 T-Shirt",
+                            Image = "/Image/Products/5.jpg",
+                            Name = "Andora",
                             Star = 4
                         },
                         new
                         {
                             Id = 6,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves",
+                            Image = "/Image/Products/6.jpg",
+                            Name = "CAESAR",
                             Star = 4
                         },
                         new
                         {
                             Id = 7,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Nexus Original Cotton T-Shirt",
+                            Image = "/Image/Products/7.jpg",
+                            Name = "Nexus",
                             Star = 5
                         },
                         new
                         {
                             Id = 8,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "Ravin EG Mens Ravin Chest Printed Cotton T-Shirt For Men S22M048 T-Shirt",
+                            Image = "/Image/Products/8.jpg",
+                            Name = "Ravin EG",
                             Star = 4
                         },
                         new
                         {
                             Id = 9,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "CAESAR Mens Mens Printed Round Neck T-Shirt T-Shirt",
+                            Image = "/Image/Products/9.jpg",
+                            Name = "CAESAR",
                             Star = 4
                         },
                         new
                         {
                             Id = 10,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "adidas Mens Train Essentials Seasonal Logo Training T-Shirt TRAINING T-SHIRTS for Men T-Shirt",
+                            Image = "/Image/Products/10.jpg",
+                            Name = "adidas",
                             Star = 5
                         },
                         new
                         {
                             Id = 11,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Adidas linear beach-bit short sleeve graphic t-shirt t-shirts for men",
+                            Image = "/Image/Products/11.jpg",
+                            Name = "adidas",
                             Star = 4
                         },
                         new
                         {
                             Id = 12,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "BlackEdition Over size snake T-shirt",
+                            Image = "/Image/Products/12.jpg",
+                            Name = "Generic",
                             Star = 4
                         },
                         new
@@ -1669,90 +1693,90 @@ namespace ecommerce.Migrations
                         {
                             Id = 15,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Hero Basic mens Round Neck Undershirt",
+                            Image = "/Image/Products/3.jpg",
+                            Name = "Hero Basic",
                             Star = 4
                         },
                         new
                         {
                             Id = 16,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "Romba Men's Summer Text Sleeve Cotton T Shirt",
+                            Image = "/Image/Products/4.jpg",
+                            Name = "Romba",
                             Star = 5
                         },
                         new
                         {
                             Id = 17,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Andora Mens 33S22M30333 T-Shirt",
+                            Image = "/Image/Products/5.jpg",
+                            Name = "Andora",
                             Star = 4
                         },
                         new
                         {
                             Id = 18,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves",
+                            Image = "/Image/Products/6.jpg",
+                            Name = "CAESAR",
                             Star = 4
                         },
                         new
                         {
                             Id = 19,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Nexus Original Cotton T-Shirt",
+                            Image = "/Image/Products/7.jpg",
+                            Name = "Nexus",
                             Star = 5
                         },
                         new
                         {
                             Id = 20,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "Ravin EG Mens Ravin Chest Printed Cotton T-Shirt For Men S22M048 T-Shirt",
+                            Image = "/Image/Products/8.jpg",
+                            Name = "Ravin EG",
                             Star = 4
                         },
                         new
                         {
                             Id = 21,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "CAESAR Mens Mens Printed Round Neck T-Shirt T-Shirt",
+                            Image = "/Image/Products/9.jpg",
+                            Name = "CAESAR",
                             Star = 4
                         },
                         new
                         {
                             Id = 22,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "adidas Mens Train Essentials Seasonal Logo Training T-Shirt TRAINING T-SHIRTS for Men T-Shirt",
+                            Image = "/Image/Products/10.jpg",
+                            Name = "adidas",
                             Star = 5
                         },
                         new
                         {
                             Id = 23,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Adidas linear beach-bit short sleeve graphic t-shirt t-shirts for men",
+                            Image = "/Image/Products/11.jpg",
+                            Name = "adidas",
                             Star = 4
                         },
                         new
                         {
                             Id = 24,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "BlackEdition Over size snake T-shirt",
+                            Image = "/Image/Products/12.jpg",
+                            Name = "Generic",
                             Star = 4
                         },
                         new
@@ -1777,37 +1801,100 @@ namespace ecommerce.Migrations
                         {
                             Id = 27,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Hero Basic mens Round Neck Undershirt",
+                            Image = "/Image/Products/3.jpg",
+                            Name = "Hero Basic",
                             Star = 4
                         },
                         new
                         {
                             Id = 28,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "Romba Men's Summer Text Sleeve Cotton T Shirt",
+                            Image = "/Image/Products/4.jpg",
+                            Name = "Romba",
                             Star = 5
                         },
                         new
                         {
                             Id = 29,
                             CategoryId = 1,
-                            Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
-                            Image = "/Image/Products/1.jpg",
-                            Name = "American Eagle",
+                            Description = "Andora Mens 33S22M30333 T-Shirt",
+                            Image = "/Image/Products/5.jpg",
+                            Name = "Andora",
                             Star = 4
                         },
                         new
                         {
                             Id = 30,
                             CategoryId = 1,
-                            Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
-                            Image = "/Image/Products/2.jpg",
-                            Name = "Knight",
+                            Description = "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves",
+                            Image = "/Image/Products/6.jpg",
+                            Name = "CAESAR",
                             Star = 4
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CategoryId = 2,
+                            Description = "HIGH QUALITY Classic-fit Men's Pants for Gentleman",
+                            Image = "/Image/Products/13.jpg",
+                            Name = "BLACK TIGER",
+                            Star = 5
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CategoryId = 3,
+                            Description = "Mintra CAI Women Shoes",
+                            Image = "/Image/Products/14.jpg",
+                            Name = "Mintra",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CategoryId = 4,
+                            Description = "STITCH mens Pack of 5 Lycra Ankle Socks",
+                            Image = "/Image/Products/15.jpg",
+                            Name = "STITCH",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CategoryId = 5,
+                            Description = "SEIKO QUARTZ Metal Band Analg Watch for Men BLUE Dial SUR399P1",
+                            Image = "/Image/Products/16.jpg",
+                            Name = "SEIKO",
+                            Star = 5
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CategoryId = 6,
+                            Description = "Jamila Women Stripped oversized shirt with two pockets",
+                            Image = "/Image/Products/17.jpg",
+                            Name = "Jamila",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CategoryId = 7,
+                            Description = "Toshiba - Washing Machine - 8kg - Silver - Inverter - 1400rpm - TW-BJ90M4E(SK)",
+                            Image = "/Image/Products/18.jpg",
+                            Name = "Toshiba - Washing Machine",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CategoryId = 8,
+                            Description = "Nutricook AF357V AIR FRYER 3 VISION 5.7L 1700W Black clear window - International warranty",
+                            Image = "/Image/Products/19.jpg",
+                            Name = "Nutricook AF357V AIR FRYER",
+                            Star = 5
                         });
                 });
 
@@ -4387,9 +4474,7 @@ namespace ecommerce.Migrations
 
                     b.HasOne("ecommerce.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("Addresses")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("ApplicationUser");
 

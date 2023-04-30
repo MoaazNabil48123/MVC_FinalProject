@@ -99,7 +99,7 @@ public class AccountController : Controller
                     await signInManager.SignInAsync(userModel, userVM.RememberMe);
 
                     //return Redirect(userVM.previousUrl);
-                    return LocalRedirect(userVM.ReturnUrl);
+                    return LocalRedirect(userVM.ReturnUrl ==null ? "/" : userVM.ReturnUrl);
                 }
             }
             ModelState.AddModelError("", "Login Fail Data wrong");

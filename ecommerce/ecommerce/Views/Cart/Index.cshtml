@@ -131,7 +131,7 @@
 					@if (Model.Count > 0)
 					{
 						<div class="cart-buttons">
-							<a href="/order/Checkout" onclick="setFinalPrice()" class="bordered-btn black">Check Out</a>
+							<a onclick="setFinalPrice()" class="bordered-btn black">Check Out</a>
 						</div>
 					}
 				</div>
@@ -199,9 +199,6 @@
 
 			//get coupon value
 			var couponName = document.getElementById("couponName").value;
-            if (couponName == "") {
-                return;
-            }
 			//get div where the message will be typed in
 			var couponTextDiv = document.getElementById("couponTextDiv");
 			//get div where the reduction of the coupon will be typed in
@@ -241,8 +238,9 @@
 		}
 		function setFinalPrice(){
 			var couponName = document.getElementById('couponName').value;
+
 			console.log(couponName);
-			return;
+
 			window.location.href = "/order/checkout?couponName=" + couponName;
 
 		}

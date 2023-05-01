@@ -29,7 +29,7 @@ public class UserController : Controller
 	#endregion
 
 	#region Update Profile Data
-	//[Authorize]
+	[Authorize]
 	public IActionResult Update()
 	{
 		ApplicationUser user = userManager.Users.Include(e => e.Addresses)
@@ -47,7 +47,7 @@ public class UserController : Controller
 		return View(model);
 	}
 	[HttpPost]
-	//[Authorize]
+	[Authorize]
 	public async Task<IActionResult> Update(UserProfil_VM updatedUser)
 	{
 		ApplicationUser user = userManager.Users.Include(e => e.Addresses)
@@ -92,7 +92,7 @@ public class UserController : Controller
 		return View(model);
 	}
 	[HttpPost]
-	//[Authorize]
+	[Authorize]
 	public async Task<IActionResult> UpsertAddress(Address newAddress)
 	{
 		if (ModelState.IsValid)
@@ -222,10 +222,7 @@ public class UserController : Controller
 	#endregion
 
 	#region Add to user favorites
-	public IActionResult AddToFavorites2()
-	{
-		return PartialView();
-	}
+
 	[Authorize]
 	public async Task<IActionResult> AddToFavorites(int productId)
 	{
@@ -264,7 +261,7 @@ public class UserController : Controller
 	#endregion
 
 	#region Remove From user favorites
-	//[Authorize]
+	[Authorize]
 	public async Task<IActionResult> RemoveFromFavorites(int productId)
 	{
 		ApplicationUser user = userManager.Users

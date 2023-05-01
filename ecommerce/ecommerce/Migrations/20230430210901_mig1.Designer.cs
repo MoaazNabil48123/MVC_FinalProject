@@ -12,7 +12,7 @@ using ecommerce.Context;
 namespace ecommerce.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230430000656_mig1")]
+    [Migration("20230430210901_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -360,11 +360,6 @@ namespace ecommerce.Migrations
                         },
                         new
                         {
-                            Id = 6,
-                            Name = "Shirt"
-                        },
-                        new
-                        {
                             Id = 7,
                             Name = "Washer"
                         },
@@ -372,6 +367,11 @@ namespace ecommerce.Migrations
                         {
                             Id = 8,
                             Name = "Fryer"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Phone"
                         });
                 });
 
@@ -1579,7 +1579,7 @@ namespace ecommerce.Migrations
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
                             Image = "/Image/Products/2.jpg",
                             Name = "Knight",
-                            Star = 4
+                            Star = 3
                         },
                         new
                         {
@@ -1597,7 +1597,7 @@ namespace ecommerce.Migrations
                             Description = "Romba Men's Summer Text Sleeve Cotton T Shirt",
                             Image = "/Image/Products/4.jpg",
                             Name = "Romba",
-                            Star = 5
+                            Star = 1
                         },
                         new
                         {
@@ -1606,7 +1606,7 @@ namespace ecommerce.Migrations
                             Description = "Andora Mens 33S22M30333 T-Shirt",
                             Image = "/Image/Products/5.jpg",
                             Name = "Andora",
-                            Star = 4
+                            Star = 2
                         },
                         new
                         {
@@ -1615,7 +1615,7 @@ namespace ecommerce.Migrations
                             Description = "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves",
                             Image = "/Image/Products/6.jpg",
                             Name = "CAESAR",
-                            Star = 4
+                            Star = 5
                         },
                         new
                         {
@@ -1624,7 +1624,7 @@ namespace ecommerce.Migrations
                             Description = "Nexus Original Cotton T-Shirt",
                             Image = "/Image/Products/7.jpg",
                             Name = "Nexus",
-                            Star = 5
+                            Star = 3
                         },
                         new
                         {
@@ -1642,7 +1642,7 @@ namespace ecommerce.Migrations
                             Description = "CAESAR Mens Mens Printed Round Neck T-Shirt T-Shirt",
                             Image = "/Image/Products/9.jpg",
                             Name = "CAESAR",
-                            Star = 4
+                            Star = 1
                         },
                         new
                         {
@@ -1651,7 +1651,7 @@ namespace ecommerce.Migrations
                             Description = "adidas Mens Train Essentials Seasonal Logo Training T-Shirt TRAINING T-SHIRTS for Men T-Shirt",
                             Image = "/Image/Products/10.jpg",
                             Name = "adidas",
-                            Star = 5
+                            Star = 2
                         },
                         new
                         {
@@ -1660,7 +1660,7 @@ namespace ecommerce.Migrations
                             Description = "Adidas linear beach-bit short sleeve graphic t-shirt t-shirts for men",
                             Image = "/Image/Products/11.jpg",
                             Name = "adidas",
-                            Star = 4
+                            Star = 5
                         },
                         new
                         {
@@ -1669,7 +1669,7 @@ namespace ecommerce.Migrations
                             Description = "BlackEdition Over size snake T-shirt",
                             Image = "/Image/Products/12.jpg",
                             Name = "Generic",
-                            Star = 4
+                            Star = 3
                         },
                         new
                         {
@@ -1678,7 +1678,7 @@ namespace ecommerce.Migrations
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
                             Image = "/Image/Products/1.jpg",
                             Name = "American Eagle",
-                            Star = 5
+                            Star = 4
                         },
                         new
                         {
@@ -1687,7 +1687,7 @@ namespace ecommerce.Migrations
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
                             Image = "/Image/Products/2.jpg",
                             Name = "Knight",
-                            Star = 4
+                            Star = 1
                         },
                         new
                         {
@@ -1696,7 +1696,7 @@ namespace ecommerce.Migrations
                             Description = "Hero Basic mens Round Neck Undershirt",
                             Image = "/Image/Products/3.jpg",
                             Name = "Hero Basic",
-                            Star = 4
+                            Star = 2
                         },
                         new
                         {
@@ -1714,7 +1714,7 @@ namespace ecommerce.Migrations
                             Description = "Andora Mens 33S22M30333 T-Shirt",
                             Image = "/Image/Products/5.jpg",
                             Name = "Andora",
-                            Star = 4
+                            Star = 3
                         },
                         new
                         {
@@ -1732,7 +1732,7 @@ namespace ecommerce.Migrations
                             Description = "Nexus Original Cotton T-Shirt",
                             Image = "/Image/Products/7.jpg",
                             Name = "Nexus",
-                            Star = 5
+                            Star = 1
                         },
                         new
                         {
@@ -1741,7 +1741,7 @@ namespace ecommerce.Migrations
                             Description = "Ravin EG Mens Ravin Chest Printed Cotton T-Shirt For Men S22M048 T-Shirt",
                             Image = "/Image/Products/8.jpg",
                             Name = "Ravin EG",
-                            Star = 4
+                            Star = 2
                         },
                         new
                         {
@@ -1750,7 +1750,7 @@ namespace ecommerce.Migrations
                             Description = "CAESAR Mens Mens Printed Round Neck T-Shirt T-Shirt",
                             Image = "/Image/Products/9.jpg",
                             Name = "CAESAR",
-                            Star = 4
+                            Star = 5
                         },
                         new
                         {
@@ -1759,7 +1759,7 @@ namespace ecommerce.Migrations
                             Description = "adidas Mens Train Essentials Seasonal Logo Training T-Shirt TRAINING T-SHIRTS for Men T-Shirt",
                             Image = "/Image/Products/10.jpg",
                             Name = "adidas",
-                            Star = 5
+                            Star = 3
                         },
                         new
                         {
@@ -1777,7 +1777,7 @@ namespace ecommerce.Migrations
                             Description = "BlackEdition Over size snake T-shirt",
                             Image = "/Image/Products/12.jpg",
                             Name = "Generic",
-                            Star = 4
+                            Star = 1
                         },
                         new
                         {
@@ -1786,7 +1786,7 @@ namespace ecommerce.Migrations
                             Description = "American Eagle Men U-0181-2395-604 Super Soft Graphic T-Shirt",
                             Image = "/Image/Products/1.jpg",
                             Name = "American Eagle",
-                            Star = 5
+                            Star = 2
                         },
                         new
                         {
@@ -1795,7 +1795,7 @@ namespace ecommerce.Migrations
                             Description = "Knight Mens Stretch Round Neck T-Shirt Half sleeves Kngh Base Layer Top",
                             Image = "/Image/Products/2.jpg",
                             Name = "Knight",
-                            Star = 4
+                            Star = 5
                         },
                         new
                         {
@@ -1804,7 +1804,7 @@ namespace ecommerce.Migrations
                             Description = "Hero Basic mens Round Neck Undershirt",
                             Image = "/Image/Products/3.jpg",
                             Name = "Hero Basic",
-                            Star = 4
+                            Star = 3
                         },
                         new
                         {
@@ -1813,7 +1813,7 @@ namespace ecommerce.Migrations
                             Description = "Romba Men's Summer Text Sleeve Cotton T Shirt",
                             Image = "/Image/Products/4.jpg",
                             Name = "Romba",
-                            Star = 5
+                            Star = 4
                         },
                         new
                         {
@@ -1822,7 +1822,7 @@ namespace ecommerce.Migrations
                             Description = "Andora Mens 33S22M30333 T-Shirt",
                             Image = "/Image/Products/5.jpg",
                             Name = "Andora",
-                            Star = 4
+                            Star = 1
                         },
                         new
                         {
@@ -1831,7 +1831,7 @@ namespace ecommerce.Migrations
                             Description = "CAESAR Mens MensSport T-Shirt With Short Sleeves MensSport T-Shirt With Short Sleeves",
                             Image = "/Image/Products/6.jpg",
                             Name = "CAESAR",
-                            Star = 4
+                            Star = 2
                         },
                         new
                         {
@@ -1849,7 +1849,7 @@ namespace ecommerce.Migrations
                             Description = "Mintra CAI Women Shoes",
                             Image = "/Image/Products/14.jpg",
                             Name = "Mintra",
-                            Star = 4
+                            Star = 3
                         },
                         new
                         {
@@ -1867,16 +1867,7 @@ namespace ecommerce.Migrations
                             Description = "SEIKO QUARTZ Metal Band Analg Watch for Men BLUE Dial SUR399P1",
                             Image = "/Image/Products/16.jpg",
                             Name = "SEIKO",
-                            Star = 5
-                        },
-                        new
-                        {
-                            Id = 35,
-                            CategoryId = 6,
-                            Description = "Jamila Women Stripped oversized shirt with two pockets",
-                            Image = "/Image/Products/17.jpg",
-                            Name = "Jamila",
-                            Star = 4
+                            Star = 1
                         },
                         new
                         {
@@ -1885,7 +1876,7 @@ namespace ecommerce.Migrations
                             Description = "Toshiba - Washing Machine - 8kg - Silver - Inverter - 1400rpm - TW-BJ90M4E(SK)",
                             Image = "/Image/Products/18.jpg",
                             Name = "Toshiba - Washing Machine",
-                            Star = 4
+                            Star = 5
                         },
                         new
                         {
@@ -1894,7 +1885,115 @@ namespace ecommerce.Migrations
                             Description = "Nutricook AF357V AIR FRYER 3 VISION 5.7L 1700W Black clear window - International warranty",
                             Image = "/Image/Products/19.jpg",
                             Name = "Nutricook AF357V AIR FRYER",
+                            Star = 3
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 14 Pro Max, 1TB, Space Black - Unlocked (Renewed Premium)",
+                            Image = "/Image/Products/25.jpg",
+                            Name = "Apple iPhone 14 Pro Max",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 11, 64GB, Black - Unlocked (Renewed)",
+                            Image = "/Image/Products/26.jpg",
+                            Name = "Apple iPhone 11",
+                            Star = 1
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CategoryId = 9,
+                            Description = "Apple iPhone XR, 64GB, Black - Unlocked (Renewed)",
+                            Image = "/Image/Products/27.jpg",
+                            Name = "Apple iPhone XR",
+                            Star = 2
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 12 Mini, 64GB, White - Unlocked (Renewed Premium)",
+                            Image = "/Image/Products/28.jpg",
+                            Name = "Apple iPhone 12 Mini",
                             Star = 5
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 12, 64GB, Green - Fully Unlocked (Renewed)",
+                            Image = "/Image/Products/29.jpg",
+                            Name = "Apple iPhone 12",
+                            Star = 3
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CategoryId = 9,
+                            Description = "Apple iPhone XS Max, US Version, 64GB, Space Gray - Unlocked (Renewed)",
+                            Image = "/Image/Products/30.jpg",
+                            Name = "Apple iPhone XS Max",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 13, 128GB, Product Red - Unlocked (Renewed Premium)",
+                            Image = "/Image/Products/31.jpg",
+                            Name = "Apple iPhone 13",
+                            Star = 1
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CategoryId = 9,
+                            Description = "Apple iPhone XS, US Version, 256GB, Space Gray - Unlocked (Renewed)",
+                            Image = "/Image/Products/32.jpg",
+                            Name = "Apple iPhone XS",
+                            Star = 2
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 13 Pro Max, 128GB, Sierra Blue - Unlocked (Renewed Premium)",
+                            Image = "/Image/Products/33.jpg",
+                            Name = "Apple iPhone 13 Pro Max",
+                            Star = 5
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 14 Pro, 1TB, Deep Purple - Unlocked (Renewed Premium)",
+                            Image = "/Image/Products/34.jpg",
+                            Name = "Apple iPhone 14 Pro",
+                            Star = 3
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CategoryId = 9,
+                            Description = " Apple iPhone 13 Pro, 128GB, Gold - Unlocked (Renewed Premium)",
+                            Image = "/Image/Products/35.jpg",
+                            Name = "Apple iPhone 13 Pro",
+                            Star = 4
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CategoryId = 9,
+                            Description = "Apple iPhone 12 Pro Max, 256GB, Pacific Blue - Unlocked (Renewed Premium)\n",
+                            Image = "/Image/Products/36.jpg",
+                            Name = "Apple iPhone 12 Pro Max",
+                            Star = 1
                         });
                 });
 
@@ -3112,6 +3211,1076 @@ namespace ecommerce.Migrations
                         {
                             ProductItemId = 120,
                             VariationOptionsId = 4
+                        },
+                        new
+                        {
+                            ProductItemId = 121,
+                            VariationOptionsId = 9
+                        },
+                        new
+                        {
+                            ProductItemId = 121,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 122,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 122,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 123,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 123,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 124,
+                            VariationOptionsId = 9
+                        },
+                        new
+                        {
+                            ProductItemId = 124,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 125,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 125,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 126,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 126,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 127,
+                            VariationOptionsId = 9
+                        },
+                        new
+                        {
+                            ProductItemId = 127,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 128,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 128,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 129,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 129,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 130,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 130,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 131,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 131,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 132,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 132,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 133,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 133,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 134,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 134,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 135,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 135,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 136,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 136,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 137,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 137,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 138,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 138,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 139,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 139,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 140,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 140,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 141,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 141,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 142,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 142,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 143,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 143,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 144,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 144,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 145,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 145,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 146,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 146,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 147,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 147,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 148,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 148,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 149,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 149,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 150,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 150,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 151,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 151,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 152,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 152,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 153,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 153,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 154,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 154,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 155,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 155,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 156,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 156,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 157,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 157,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 158,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 158,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 159,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 159,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 160,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 160,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 161,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 161,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 162,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 162,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 163,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 163,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 164,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 164,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 165,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 165,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 166,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 166,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 167,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 167,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 168,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 168,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 169,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 169,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 170,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 170,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 171,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 171,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 172,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 172,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 173,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 173,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 174,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 174,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 175,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 175,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 176,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 176,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 177,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 177,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 178,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 178,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 179,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 179,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 180,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 180,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 181,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 181,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 182,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 182,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 183,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 183,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 184,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 184,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 185,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 185,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 186,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 186,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 187,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 187,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 188,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 188,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 189,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 189,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 190,
+                            VariationOptionsId = 5
+                        },
+                        new
+                        {
+                            ProductItemId = 190,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 191,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 191,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 192,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 192,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 193,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 193,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 194,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 194,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 195,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 195,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 196,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 196,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 197,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 197,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 198,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 198,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 199,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 199,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 200,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 200,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 201,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 201,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 202,
+                            VariationOptionsId = 9
+                        },
+                        new
+                        {
+                            ProductItemId = 202,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 203,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 203,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 204,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 204,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 205,
+                            VariationOptionsId = 9
+                        },
+                        new
+                        {
+                            ProductItemId = 205,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 206,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 206,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 207,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 207,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 208,
+                            VariationOptionsId = 9
+                        },
+                        new
+                        {
+                            ProductItemId = 208,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 209,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 209,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 210,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 210,
+                            VariationOptionsId = 14
+                        },
+                        new
+                        {
+                            ProductItemId = 211,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 211,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 212,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 212,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 213,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 213,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 214,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 214,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 215,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 215,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 216,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 216,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 217,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 217,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 218,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 218,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 219,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 219,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 220,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 221,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 221,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 222,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 222,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 223,
+                            VariationOptionsId = 11
+                        },
+                        new
+                        {
+                            ProductItemId = 223,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 224,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 224,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 225,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 225,
+                            VariationOptionsId = 7
+                        },
+                        new
+                        {
+                            ProductItemId = 226,
+                            VariationOptionsId = 10
+                        },
+                        new
+                        {
+                            ProductItemId = 227,
+                            VariationOptionsId = 8
+                        },
+                        new
+                        {
+                            ProductItemId = 227,
+                            VariationOptionsId = 12
+                        },
+                        new
+                        {
+                            ProductItemId = 228,
+                            VariationOptionsId = 6
+                        },
+                        new
+                        {
+                            ProductItemId = 228,
+                            VariationOptionsId = 12
                         });
                 });
 
@@ -4225,7 +5394,1013 @@ namespace ecommerce.Migrations
                             ProductId = 30,
                             SKU = "Knight-XL-Blue",
                             StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1500f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-1000-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1200f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-500-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1000f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1500f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-1000-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1200f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-500-Gray",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1000f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-265-Gray",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1500f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-1000-Red",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1200f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-500-Red",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Image = "/Image/Products/25.jpg",
+                            Price = 1000f,
+                            ProductId = 38,
+                            SKU = "Apple iPhone 14 Pro Max-265-Red",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 300f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-64-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 420f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 500f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 300f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-64-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 420f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 500f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 300f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-64-Red",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 420f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-128-Red",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Image = "/Image/Products/26.jpg",
+                            Price = 500f,
+                            ProductId = 39,
+                            SKU = "Apple iPhone 11-265-Red",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 224f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-64-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 300f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 141,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 410f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 142,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 224f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-64-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 300f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 410f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 145,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 224f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-64-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 300f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Image = "/Image/Products/27.jpg",
+                            Price = 410f,
+                            ProductId = 40,
+                            SKU = "Apple iPhone XR-265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 390f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-64-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 450f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 520f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 390f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-64-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 450f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 520f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 390f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-64-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 450f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Image = "/Image/Products/28.jpg",
+                            Price = 520f,
+                            ProductId = 41,
+                            SKU = "Apple iPhone 12 Mini-265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 450f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12-64-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 500f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 159,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 550f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 450f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -64-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 500f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 550f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 163,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 450f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -64-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 500f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Image = "/Image/Products/29.jpg",
+                            Price = 550f,
+                            ProductId = 42,
+                            SKU = "Apple iPhone 12 -265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 270f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max-64-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 350f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 430f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 270f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -64-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 350f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 430f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 270f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -64-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 350f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Image = "/Image/Products/30.jpg",
+                            Price = 430f,
+                            ProductId = 43,
+                            SKU = "Apple iPhone XS Max -265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 668f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13-512-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 770f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 830f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 668f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -512-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 770f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 830f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 668f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -512-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 770f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Image = "/Image/Products/31.jpg",
+                            Price = 830f,
+                            ProductId = 44,
+                            SKU = "Apple iPhone 13 -265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 270f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS -64-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 350f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 430f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 270f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -64-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 350f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 430f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 270f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -64-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 350f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Image = "/Image/Products/32.jpg",
+                            Price = 430f,
+                            ProductId = 45,
+                            SKU = "Apple iPhone XS  -265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 1200f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max-512-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 194,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 940f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 1050f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 1200f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -512-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 197,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 940f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 198,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 1050f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 1200f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -512-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 940f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Image = "/Image/Products/33.jpg",
+                            Price = 1050f,
+                            ProductId = 46,
+                            SKU = "Apple iPhone 13 Max -265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 202,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1300f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-1000-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1150f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-500-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1000f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 205,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1300f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-1000-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1150f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-500-Gray",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1000f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-265-Gray",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1300f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-1000-Red",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1150f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-500-Red",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 210,
+                            Image = "/Image/Products/34.jpg",
+                            Price = 1000f,
+                            ProductId = 47,
+                            SKU = "Apple iPhone 14 Pro-265-Red",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 980f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro-512-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 850f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 740f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 214,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 980f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -512-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 850f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 740f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 980f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -512-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 850f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Image = "/Image/Products/35.jpg",
+                            Price = 740f,
+                            ProductId = 48,
+                            SKU = "Apple iPhone 13 Pro -265-Gray",
+                            StockQty = 200
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 1150f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max-512-Black",
+                            StockQty = 50
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 850f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -128-Black",
+                            StockQty = 120
+                        },
+                        new
+                        {
+                            Id = 222,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 800f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -265-Black",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 1150f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -512-Gold",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 850f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -128-Gold",
+                            StockQty = 8
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 800f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -265-Gold",
+                            StockQty = 40
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 1150f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -512-Gray",
+                            StockQty = 60
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 850f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -128-Gray",
+                            StockQty = 170
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Image = "/Image/Products/36.jpg",
+                            Price = 800f,
+                            ProductId = 49,
+                            SKU = "Apple iPhone 12 Pro Max -265-Gray",
+                            StockQty = 200
                         });
+                });
+
+            modelBuilder.Entity("ecommerce.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Review");
                 });
 
             modelBuilder.Entity("ecommerce.Models.ShippingMethod", b =>
@@ -4251,7 +6426,7 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Regular",
+                            Name = "Fast",
                             Price = 20f
                         },
                         new
@@ -4263,8 +6438,8 @@ namespace ecommerce.Migrations
                         new
                         {
                             Id = 3,
-                            Name = "Free",
-                            Price = 0f
+                            Name = "Regular",
+                            Price = 10f
                         });
                 });
 
@@ -4347,6 +6522,18 @@ namespace ecommerce.Migrations
                             Id = 2,
                             CategoryId = 1,
                             Name = "Size"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 9,
+                            Name = "Color"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 9,
+                            Name = "Space"
                         });
                 });
 
@@ -4395,6 +6582,66 @@ namespace ecommerce.Migrations
                             Id = 4,
                             Value = "XL",
                             VariationId = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Value = "64",
+                            VariationId = 4
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Value = "128",
+                            VariationId = 4
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Value = "265",
+                            VariationId = 4
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Value = "512",
+                            VariationId = 4
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Value = "1000",
+                            VariationId = 4
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Value = "Gold",
+                            VariationId = 3
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Value = "Black",
+                            VariationId = 3
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Value = "Gray",
+                            VariationId = 3
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Value = "Pacific blue",
+                            VariationId = 3
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Value = "Red",
+                            VariationId = 3
                         });
                 });
 
@@ -4579,6 +6826,25 @@ namespace ecommerce.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("ecommerce.Models.Review", b =>
+                {
+                    b.HasOne("ecommerce.Models.Product", "Product")
+                        .WithMany("Reviews")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ecommerce.Models.ApplicationUser", "User")
+                        .WithMany("Reviews")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ecommerce.Models.ShopOrder", b =>
                 {
                     b.HasOne("ecommerce.Models.OrderStatus", "OrderStatus")
@@ -4647,6 +6913,8 @@ namespace ecommerce.Migrations
 
                     b.Navigation("CartProducts");
 
+                    b.Navigation("Reviews");
+
                     b.Navigation("ShopOrders");
                 });
 
@@ -4665,6 +6933,8 @@ namespace ecommerce.Migrations
             modelBuilder.Entity("ecommerce.Models.Product", b =>
                 {
                     b.Navigation("ProductItems");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("ecommerce.Models.ProductItem", b =>

@@ -39,14 +39,14 @@
                                 <div class="popular-img">
                                     <img style="height:350px" src="@product.Image" alt="">
                                     <div class="img-cap">
-                                        <span><a style="color:white; font-size:20px" href="/Product/Details?productId=@product.Id">Details</a></span>
+                                        <a style="color:white; font-size:20px; text-decoration:none" href="/Product/Details?productId=@product.Id"><span>Details</span></a>
                                     </div>
                                     <div class="favorit-items">
                                         <span class="flaticon-heart"></span>
                                     </div>
                                 </div>
                                 <div class="popular-caption">
-                                    <h3><a href="/Product/Details?productId=@product.Id">@product.Name</a></h3>
+                                    <h3><a href="/Product/Details?productId=@product.Id" class="text-decoration-none">@product.Name</a></h3>
                                     <div class="row justify-content-center">
                                         <div class="col-8">
                                             @for (int i = 1; i <= product.Star; i++)

@@ -29,6 +29,8 @@
 		<form asp-controller="Order" asp-action="CheckOut" method="post">
 			<input asp-for="UserId" hidden />
 			<input asp-for="CartProducts" hidden />
+			<input asp-for="Reduction" hidden />
+
 			<div class="row">
 			<div class="col-lg-8">
 				<div class="checkout-accordion-wrap">
@@ -40,7 +42,7 @@
 										Billing Address
 									</button>
 								</h5>
-									<input type="submit" asp-action="UpsertAddress" asp-controller="User" value="Add Address" class="boxed-btn ms-3" />
+									<input type="submit" asp-action="UpsertAddress" asp-controller="User" value="Add Address" class="bordered-btn black ms-3" />
 							</div>
 
 							<div>
@@ -170,43 +172,31 @@
 						<tbody class="order-details-body">
 							<tr>
 								<td>Product</td>
-								<td>Total</td>
+								<td>Total Payment</td>
 							</tr>
-							@foreach (var cartProduct in Model.CartProducts)
+								@if (Model.Reduction > 0)
+								{
+									<tr>
+										<td colspan="2" class="text-success">Copoun is Applied!</td>
+									</tr>
+
+								}
+								@foreach (var cartProduct in Model.CartProducts)
 							{
 								<tr>
 									<td>@cartProduct.ProductItem.Product.Name</td>
-									<td>$@(cartProduct.ProductItem.Price * cartProduct.Quantity)</td>
+										<td>$@(cartProduct.ProductItem.Price * (1 - Model.Reduction) * cartProduct.Quantity)</td>
 								</tr>
-								subTotal += cartProduct.ProductItem.Price;
+									subTotal += cartProduct.ProductItem.Price * (1 - Model.Reduction) * cartProduct.Quantity;
 							}
 						</tbody>
 						<tbody class="checkout-details">
-								@if (Model.Reduction > 0)
-								{
-									<tr>
-										<td>Copoun</td>
-										<td>@(Model.Reduction * 100) + %</td>
-									</tr>
-
-								}
-								@if (Model.Reduction > 0)
-								{
-									<tr>
-										<td class="text-success">Subtotal<br />Copoun Applied</td>
-										<td>$@(subTotal * Model.Reduction)</td>
-									</tr>
-									<h6>$@(subTotal * Model.Reduction)</h6>
-
-								}
-								else
-								{
-									<tr>
+								
+								<tr>
 										<td>Subtotal</td>
 										<td>$@subTotal</td>
 									</tr>
 
-								}
 								
 							<tr>
 									<td>Shipping</td>
@@ -226,12 +216,17 @@
 						}
 						else
 						{
-							<input type="submit" value="Place Order" class="boxed-btn" />
+							<input type="submit" value="Place Order" class="bordered-btn black ms-3" />
 						}
 
 				</div>
 			</div>
 		</div>
+			@{
+				Model.subTotal = subTotal;
+			}
+			<input asp-for="subTotal" hidden />
+
 		</form>
 	</div>
 </div>
@@ -252,6 +247,8 @@
 			total.innerText = '$' + totalPrice;
 
 	}
+		window.onload = changeShipping;
+		
         $(document).ready(
             function () {
 			$('.shipping-radio-class:first-child').prop('checked', true);

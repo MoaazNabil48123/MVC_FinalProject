@@ -13,6 +13,7 @@
     <div class="E-martContent">
         <h3 class="text-center mb-5" style="color:#F28123">Log in</h3>
         <form method="post" action="/Account/Login">
+            <input asp-for="ReturnUrl" hidden />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group row mb-4">
                 <label asp-for="UserName" class="control-label text-uppercase text-white col-4 mt-2"></label>

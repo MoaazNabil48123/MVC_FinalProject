@@ -5,9 +5,9 @@
             <div class="col-lg-12 col-sm-12 text-center">
                 <div class="main-menu-wrap">
                     <!-- logo -->
-                    <div class="site-logo">
+                    <div class="site-logo me-5">
                         <a href="/Home/Index">
-                            <img src="/Image/img1/logo.png" />
+                            <img src="/Image/img1/logo3.png" />
                         </a>
                     </div>
                     <!-- logo -->
@@ -17,41 +17,12 @@
                             <div>
                             <li class="current-list-item">
                                 <a href="/Home/Index">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Static Home</a></li>
-                                    <li><a href="index_2.html">Slider Home</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="checkout.html">Check Out</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="/Product/Index">Shop</a></li>
-                                </ul>
                             </li>
                             <li>
-                                <a href="news.html">News</a>
-                                <ul class="sub-menu">
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="single-news.html">Single News</a></li>
-                                </ul>
+                                <a href="#categries">Shop</a>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li>
-                                <a href="/Product/Index?CategoryId=1">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="checkout.html">Check Out</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#categries">About</a></li>
+                            <li><a href="#categries">Contact</a></li>
                 </div>
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -70,7 +41,7 @@
                             <ul class="sub-menu">
                                 <li><a href="/User/Update"><i class="fa-solid fa-id-card"></i>   Profile</a></li>
                                 <li><a href="/User/ChangePassword"><i class="fa-solid fa-lock"></i>   Change password</a></li>
-                                @*<li><a href="/User/UpsertAddress"><i class="fa-solid fa-location-dot"></i>   Add Address</a></li>*@
+                                            @*<li><a href="/User/UpsertAddress"><i class="fa-solid fa-location-dot"></i>   Add Address</a></li>*@
                                 <hr style="margin:0px" />
                                 <li><a href="/Account/logout" class="text-danger"><i class="fa-solid fa-right-from-bracket"></i>   Log Out</a></li>
                             </ul>
@@ -81,7 +52,7 @@
                             {
                     <li>
                         <div class="header-icons">
-                            <a class="search-bar-icon" href="/Account/Login">Sing In</a>
+                            <a class="search-bar-icon" href="/Account/Login">Sign In</a>
                             <a class="shopping-cart" href="/Account/Register">Sign Up</a>
                         </div>
                     </li>

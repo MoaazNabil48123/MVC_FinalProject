@@ -99,7 +99,7 @@ public class AccountController : Controller
                     await signInManager.SignInAsync(userModel, userVM.RememberMe);
 
                     //return Redirect(userVM.previousUrl);
-                    return LocalRedirect(userVM.ReturnUrl);
+                    return LocalRedirect(userVM.ReturnUrl ==null ? "/" : userVM.ReturnUrl);
                 }
             }
             ModelState.AddModelError("", "Login Fail Data wrong");
@@ -182,8 +182,8 @@ public class AccountController : Controller
                     //then attach to him the external login info and create cookie
                     user = new ApplicationUser
                     {
-                        //UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-                        UserName = "qiqiqiqiqi",
+                        UserName = info.Principal.FindFirstValue(ClaimTypes.Name).Split(' ').First(),
+                        //UserName = User.Identity.Name,
                         Email = info.Principal.FindFirstValue(ClaimTypes.Email)
                     };
                     var result = await userManager.CreateAsync(user);

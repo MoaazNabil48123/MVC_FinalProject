@@ -26,23 +26,25 @@ public class Program
 
         builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
         // Repo Register
-        builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
-        builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
-        builder.Services.AddScoped<IRepository<ShopOrder>, Repository<ShopOrder>>();
-        builder.Services.AddScoped<IRepository<Address>, Repository<Address>>();
-        builder.Services.AddScoped<IRepository<Country>, Repository<Country>>();
-        builder.Services.AddScoped<IRepository<PaymentMethod>, Repository<PaymentMethod>>();
-        builder.Services.AddScoped<IRepository<ApplicationUser>, Repository<ApplicationUser>>();
-        builder.Services.AddScoped<IRepository<ShippingMethod>, Repository<ShippingMethod>>();
-        builder.Services.AddScoped<IRepository<OrderStatus>, Repository<OrderStatus>>();
-        builder.Services.AddScoped<IRepository<Coupon>, Repository<Coupon>>();
-        builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
-        builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
-        builder.Services.AddScoped<IRepository<Variation>, Repository<Variation>>();
-        builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
-        builder.Services.AddScoped<IRepository<Variation>, Repository<Variation>>();
-        builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
-        builder.Services.AddScoped<IRepository<Models.Review>, Repository<Models.Review>>();
+
+        builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        //builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+        //builder.Services.AddScoped<IRepository<CartProducts>, Repository<CartProducts>>();
+        //builder.Services.AddScoped<IRepository<ShopOrder>, Repository<ShopOrder>>();
+        //builder.Services.AddScoped<IRepository<Address>, Repository<Address>>();
+        //builder.Services.AddScoped<IRepository<Country>, Repository<Country>>();
+        //builder.Services.AddScoped<IRepository<PaymentMethod>, Repository<PaymentMethod>>();
+        //builder.Services.AddScoped<IRepository<ApplicationUser>, Repository<ApplicationUser>>();
+        //builder.Services.AddScoped<IRepository<ShippingMethod>, Repository<ShippingMethod>>();
+        //builder.Services.AddScoped<IRepository<OrderStatus>, Repository<OrderStatus>>();
+        //builder.Services.AddScoped<IRepository<Coupon>, Repository<Coupon>>();
+        //builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+        //builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+        //builder.Services.AddScoped<IRepository<Variation>, Repository<Variation>>();
+        //builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
+        //builder.Services.AddScoped<IRepository<Variation>, Repository<Variation>>();
+        //builder.Services.AddScoped<IRepository<ProductItem>, Repository<ProductItem>>();
+        //builder.Services.AddScoped<IRepository<Models.Review>, Repository<Models.Review>>();
 
 
         // auth for register and login

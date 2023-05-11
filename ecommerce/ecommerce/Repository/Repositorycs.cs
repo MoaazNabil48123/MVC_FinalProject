@@ -11,11 +11,6 @@ public class Repository<T> : IRepository<T> where T : class
     {
         _context = context;
     }
-    public void Add(T element)
-    {
-        _context.Add<T>(element);
-        _context.SaveChanges();
-    }
 
     public List<T> GetAll()
     {
@@ -30,14 +25,13 @@ public class Repository<T> : IRepository<T> where T : class
         }
         return query.ToList();
     }
-    public List<T> GetAllThenInclude<T1,T2>(Expression<Func<T, T1>> include, Expression<Func<T1,T2>> thenInclude)//GetAll with include(join with another table)
+    public List<T> GetAllThenInclude<T1,T2>(Expression<Func<T, T1>> include, Expression<Func<T1,T2>> thenInclude)
     {
         IQueryable<T> query = _context.Set<T>();
         query = query.Include(include).ThenInclude(thenInclude);
-        
         return query.ToList();
     }
-    public List<T> Get(params Expression<Func<T, bool>>[] filters)//GetAll with filters
+    public List<T> Get(params Expression<Func<T, bool>>[] filters)
     {
         IQueryable<T> query = _context.Set<T>();
         foreach (var filter in filters)
@@ -47,11 +41,12 @@ public class Repository<T> : IRepository<T> where T : class
         return query.ToList();
     }
 
-    public T GetById(int id)
+    public T? GetById(int id)
     {
-        return _context.Set<T>().ToList().First(r => (int)r.GetType().GetProperty("Id").GetValue(r) == id);
+        //return _context.Set<T>().ToList().First(r => (int)r.GetType().GetProperty("Id").GetValue(r) == id);
+        return _context.Find<T>(id);
     }
-    public T GetById(int id, params Expression<Func<T, object>>[] includes)
+    public T? GetById(int id, params Expression<Func<T, object>>[] includes)
     {
         IQueryable<T> query = _context.Set<T>();
         foreach (var include in includes)
@@ -59,6 +54,11 @@ public class Repository<T> : IRepository<T> where T : class
             query = query.Include(include);
         }
         return query.ToList().First(r => (int)r.GetType().GetProperty("Id").GetValue(r) == id);
+    }
+    public void Add(T element)
+    {
+        _context.Add<T>(element);
+        _context.SaveChanges();
     }
 
     public void Update(T element)
